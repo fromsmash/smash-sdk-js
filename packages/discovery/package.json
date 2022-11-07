@@ -1,6 +1,7 @@
 {
 	"name": "@smash-sdk/discovery",
 	"version": "0.0.1-alpha.8",
+	"license": "MIT",
 	"description": "",
 	"main": "index.js",
 	"types": "index.d.ts",

@@ -1,6 +1,7 @@
 {
     "name": "@smash-sdk/transfer",
     "version": "0.0.1-alpha.64",
+    "license": "MIT",
     "description": "",
     "main": "index.js",
     "types": "index.d.ts",
@@ -19,8 +20,8 @@
         "test": "jest"
     },
     "dependencies": {
-        "smash-sdk-core": "^0.0.1-alpha.53",
-        "fast-xml-parser": "^4.0.11"
+        "fast-xml-parser": "^4.0.11",
+        "smash-sdk-core": "^0.0.1-alpha.53"
     },
     "keywords": [
         "smash",
