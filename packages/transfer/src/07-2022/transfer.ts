@@ -1,6 +1,7 @@
 import { Client } from "@smash-sdk/core";
 import { HttpRequest, HttpRequestHostParameters, SDKError, ClientParameters, config } from "@smash-sdk/core";
 import { errors } from "./errors";
+export * from "./errors";
 import { CreateTeamTransferInput, CreateTeamTransferOutput } from "./types/CreateTeamTransfer/CreateTeamTransfer";
 import { CreateTeamTransferResponse } from "./types/CreateTeamTransfer/CreateTeamTransferResponse";
 export * from "./types/CreateTeamTransfer/CreateTeamTransfer";
