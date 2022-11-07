@@ -1,0 +1,30 @@
+{
+    "name": "@smash-sdk/transfer",
+    "version": "0.0.1-alpha.64",
+    "description": "",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "directories": {
+        "dist": "dist",
+        "test": "__tests__"
+    },
+    "repository": {
+        "type": "git",
+        "url": "github url uin the future"
+    },
+    "scripts": {
+        "compile": "tsc",
+        "clean": "rimraf dist && rimraf node_modules",
+        "build": "npm run clean && npm i && npm run compile && cp ./package.json ./dist/",
+        "test": "jest"
+    },
+    "dependencies": {
+        "smash-sdk-core": "^0.0.1-alpha.53",
+        "fast-xml-parser": "^4.0.11"
+    },
+    "keywords": [
+        "smash",
+        "sdk",
+        "transfer"
+    ]
+}

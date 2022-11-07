@@ -1,1 +1,0 @@
-# smash-sdk-js

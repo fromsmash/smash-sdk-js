@@ -1,0 +1,9 @@
+node_modules/
+**/**/node_modules/
+
+packages/*/07-2020
+packages/*/10-2019
+lerna-debug.log
+npm-debug.log
+packages/*/dist
+.idea

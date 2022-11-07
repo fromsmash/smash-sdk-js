@@ -1,0 +1,29 @@
+{
+	"name": "@smash-sdk/domain",
+	"version": "0.0.1-alpha.3",
+	"description": "",
+	"main": "index.js",
+	"types": "index.d.ts",
+	"directories": {
+		"dist": "dist",
+		"test": "__tests__"
+	},
+	"repository": {
+		"type": "git",
+		"url": "github url uin the future"
+	},
+	"scripts": {
+		"compile": "tsc",
+		"clean": "rimraf dist && rimraf node_modules",
+		"build": "npm run clean && npm i && npm run compile && cp ./package.json ./dist/",
+		"test": "jest"
+	},
+	"dependencies": {
+		"smash-sdk-core": "^0.0.1-alpha.53"
+	},
+	"keywords": [
+		"smash",
+		"sdk",
+		"domain"
+	]
+}
