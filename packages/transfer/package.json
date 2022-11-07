@@ -21,7 +21,7 @@
     },
     "dependencies": {
         "fast-xml-parser": "^4.0.11",
-        "smash-sdk-core": "^0.0.1"
+        "@smash-sdk/core": "^0.0.1"
     },
     "keywords": [
         "smash",
