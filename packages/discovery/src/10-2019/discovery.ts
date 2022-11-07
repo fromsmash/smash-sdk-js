@@ -1,5 +1,5 @@
-import { Client } from "smash-sdk-core";
-import { HttpRequest, HttpRequestHostParameters, SDKError, ClientParameters, config } from "smash-sdk-core";
+import { Client } from "smash-sdk/core";
+import { HttpRequest, HttpRequestHostParameters, SDKError, ClientParameters, config } from "smash-sdk/core";
 import { errors } from "./errors";
 export * from "./errors";
 import { ListPublicServicesInput, ListPublicServicesOutput } from "./types/ListPublicServices/ListPublicServices";

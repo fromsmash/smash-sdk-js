@@ -1,4 +1,4 @@
-import { Client, HttpRequest, HttpRequestUrlParameters, ClientParameters, SDKError, UnknownError } from "smash-sdk-core";
+import { Client, HttpRequest, HttpRequestUrlParameters, ClientParameters, SDKError, UnknownError } from "smash-sdk/core";
 import { errors } from "./errors";
 import { UploadTransferFilePartInput, UploadTransferFilePartOutput } from "./types/UploadTransferFilePart/UploadTransferFilePart";
 import { UploadTransferFilePartResponse } from "./types/UploadTransferFilePart/UploadTransferFilePartResponse";

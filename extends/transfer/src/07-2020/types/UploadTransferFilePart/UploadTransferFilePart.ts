@@ -1,4 +1,4 @@
-import { UploadProgressEvent } from "smash-sdk-core";
+import { UploadProgressEvent } from "smash-sdk/core";
 export interface UploadTransferFilePartInput {
   url: string;
   content: string | Buffer | ArrayBuffer;
