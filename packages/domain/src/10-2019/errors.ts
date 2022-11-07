@@ -1,4 +1,4 @@
-import { UnknownError, NetworkError } from "smash-sdk/core";
+import { UnknownError, NetworkError } from "@smash-sdk/core";
 import { BadRequestError as CreateDomainBadRequestError } from "./types/CreateDomain/CreateDomainError";
 import { UnauthorizedError as CreateDomainUnauthorizedError } from "./types/CreateDomain/CreateDomainError";
 import { ForbiddenToCreateDomainError as CreateDomainForbiddenToCreateDomainError } from "./types/CreateDomain/CreateDomainError";

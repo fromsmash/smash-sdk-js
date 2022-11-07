@@ -1,4 +1,4 @@
-import { UnknownError, NetworkError } from "smash-sdk/core";
+import { UnknownError, NetworkError } from "@smash-sdk/core";
 import { BadRequestError as AcceptInvitationBadRequestError } from "./types/AcceptInvitation/AcceptInvitationError";
 import { InvalidSecretError as AcceptInvitationInvalidSecretError } from "./types/AcceptInvitation/AcceptInvitationError";
 import { InvalidInviteError as AcceptInvitationInvalidInviteError } from "./types/AcceptInvitation/AcceptInvitationError";

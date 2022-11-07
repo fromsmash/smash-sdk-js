@@ -1,4 +1,4 @@
-import { UnknownError, NetworkError } from "smash-sdk/core";
+import { UnknownError, NetworkError } from "@smash-sdk/core";
 import { BadRequestError as CreateTeamTransferBadRequestError } from "./types/CreateTeamTransfer/CreateTeamTransferError";
 import { UnauthorizedError as CreateTeamTransferUnauthorizedError } from "./types/CreateTeamTransfer/CreateTeamTransferError";
 import { ForbiddenError as CreateTeamTransferForbiddenError } from "./types/CreateTeamTransfer/CreateTeamTransferError";
