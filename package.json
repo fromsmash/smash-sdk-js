@@ -6,7 +6,7 @@
     "build": "lerna run build",
     "test": "lerna run test",
     "release": "lerna publish --contents dist from-package --no-private --git-head ${CODEBUILD_RESOLVED_SOURCE_VERSION} --yes",
-    "release:npm": "lerna publish --contents dist from-package --no-private --yes"
+    "release:npm": "lerna publish"
   },
   "devDependencies": {
     "@lerna-lite/cli": "^1.11.3",
