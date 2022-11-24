@@ -1,6 +1,6 @@
 export interface GetTeamTransferQueueInput {
     teamId: string;
-    size: string;
+    size: number;
 }
 
 export interface GetTeamTransferQueueOutput {

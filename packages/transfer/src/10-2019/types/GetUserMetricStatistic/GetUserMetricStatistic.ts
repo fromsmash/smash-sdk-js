@@ -1,9 +1,9 @@
 export interface GetUserMetricStatisticInput {
-    user: string;
+    userId: string;
     metricName: string;
     statisticName: string;
-    startDate?: number;
-    endDate?: number;
+    startDate?: string;
+    endDate?: string;
     unit?: string;
 }
 

@@ -13,7 +13,7 @@ export class UnauthorizedError extends SDKError {}
 /**
                          
         */
-export class ForbiddenError extends SDKError {}
+export class TransferNotUploadedError extends SDKError {}
 
 /**
                          
@@ -38,7 +38,7 @@ export class GatewayTimeoutError extends SDKError {}
 export default {
     BadRequestError,
     UnauthorizedError,
-    ForbiddenError,
+    TransferNotUploadedError,
     NotFoundError,
     InternalServerError,
     BadGatewayError,

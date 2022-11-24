@@ -1,5 +1,5 @@
 export interface DeleteReportInput {
-    id: string;
+    reportId: string;
 }
 
 export interface DeleteReportOutput {

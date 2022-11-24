@@ -15,7 +15,7 @@ export interface GetTransferFileOutput {
         ext: string;
         name: string;
         size: number;
-        crc32: string;
+        crc32: number;
         region: string;
         bucket: string;
         previewsLocation: string;

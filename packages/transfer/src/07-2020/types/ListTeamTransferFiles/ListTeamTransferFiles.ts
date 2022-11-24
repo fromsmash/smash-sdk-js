@@ -16,7 +16,7 @@ export interface ListTeamTransferFilesOutput {
         size: number;
         name: string;
         views: number;
-        crc32: string;
+        crc32: number;
         downloads: number;
     }[];
 }

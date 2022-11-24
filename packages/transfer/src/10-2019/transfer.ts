@@ -62,6 +62,9 @@ export * from "./types/GetTransfer/GetTransfer";
 import { GetTransferFileInput, GetTransferFileOutput } from "./types/GetTransferFile/GetTransferFile";
 import { GetTransferFileResponse } from "./types/GetTransferFile/GetTransferFileResponse";
 export * from "./types/GetTransferFile/GetTransferFile";
+import { GetTransferFilePreviewInput, GetTransferFilePreviewOutput } from "./types/GetTransferFilePreview/GetTransferFilePreview";
+import { GetTransferFilePreviewResponse } from "./types/GetTransferFilePreview/GetTransferFilePreviewResponse";
+export * from "./types/GetTransferFilePreview/GetTransferFilePreview";
 import { GetTransferPreviewInput, GetTransferPreviewOutput } from "./types/GetTransferPreview/GetTransferPreview";
 import { GetTransferPreviewResponse } from "./types/GetTransferPreview/GetTransferPreviewResponse";
 export * from "./types/GetTransferPreview/GetTransferPreview";
@@ -156,12 +159,12 @@ export class Transfer extends ExtendedTransfer {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "POST",
-                    path: "/team/:team/transfer",
+                    path: "/team/:teamId/transfer",
                     headers: {
                         Authorization: "Bearer " + this.token,
                     },
                     pathParameters: {
-                        team: params.team,
+                        teamId: params.teamId,
                     },
                     queryParameters: {
                         version: "10-2019",
@@ -426,12 +429,12 @@ export class Transfer extends ExtendedTransfer {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "DELETE",
-                    path: "/report/:id",
+                    path: "/report/:reportId",
                     headers: {
                         Authorization: "Bearer " + this.token,
                     },
                     pathParameters: {
-                        id: params.id,
+                        reportId: params.reportId,
                     },
                     queryParameters: {
                         version: "10-2019",
@@ -499,12 +502,12 @@ export class Transfer extends ExtendedTransfer {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "DELETE",
-                    path: "/transfer/:id",
+                    path: "/transfer/:transferId",
                     headers: {
                         Authorization: "Bearer " + this.token,
                     },
                     pathParameters: {
-                        id: params.id,
+                        transferId: params.transferId,
                     },
                     queryParameters: {
                         version: "10-2019",
@@ -649,12 +652,12 @@ export class Transfer extends ExtendedTransfer {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "GET",
-                    path: "/report/:id",
+                    path: "/report/:reportId",
                     headers: {
                         Authorization: "Bearer " + this.token,
                     },
                     pathParameters: {
-                        id: params.id,
+                        reportId: params.reportId,
                     },
                     queryParameters: {
                         version: "10-2019",
@@ -685,12 +688,12 @@ export class Transfer extends ExtendedTransfer {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "GET",
-                    path: "/team/:team/metric/:metricName/statistic/:statisticName",
+                    path: "/team/:teamId/metric/:metricName/statistic/:statisticName",
                     headers: {
                         Authorization: "Bearer " + this.token,
                     },
                     pathParameters: {
-                        team: params.team,
+                        teamId: params.teamId,
                         metricName: params.metricName,
                         statisticName: params.statisticName,
                     },
@@ -807,9 +810,9 @@ export class Transfer extends ExtendedTransfer {
                     },
                     pathParameters: {
                         teamId: params.teamId,
-                        size: params.size,
                     },
                     queryParameters: {
+                        size: params.size,
                         version: "10-2019",
                     },
                     refreshTokenMethod: this.refreshTokenMethod,
@@ -838,13 +841,13 @@ export class Transfer extends ExtendedTransfer {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "GET",
-                    path: "/team/:team/user/:user/metric/:metricName/statistic/:statisticName",
+                    path: "/team/:teamId/user/:userId/metric/:metricName/statistic/:statisticName",
                     headers: {
                         Authorization: "Bearer " + this.token,
                     },
                     pathParameters: {
-                        team: params.team,
-                        user: params.user,
+                        teamId: params.teamId,
+                        userId: params.userId,
                         metricName: params.metricName,
                         statisticName: params.statisticName,
                     },
@@ -880,12 +883,12 @@ export class Transfer extends ExtendedTransfer {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "GET",
-                    path: "/transfer/:id",
+                    path: "/transfer/:transferId",
                     headers: {
                         Authorization: "Bearer " + this.token,
                     },
                     pathParameters: {
-                        id: params.id,
+                        transferId: params.transferId,
                     },
                     queryParameters: {
                         version: "10-2019",
@@ -947,18 +950,55 @@ export class Transfer extends ExtendedTransfer {
         });
     }
 
+    getTransferFilePreview(params: GetTransferFilePreviewInput): Promise<GetTransferFilePreviewOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "GET",
+                    path: "/transfer/:transferId/file/:fileId/preview",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        transferId: params.transferId,
+                        fileId: params.fileId,
+                    },
+                    queryParameters: {
+                        version: "10-2019",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<GetTransferFilePreviewResponse>(request);
+                const parsedResponse = this.parseResponse<GetTransferFilePreviewResponse, GetTransferFilePreviewOutput>(response, this.errors.GetTransferFilePreviewError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
     getTransferPreview(params: GetTransferPreviewInput): Promise<GetTransferPreviewOutput> {
         return new Promise(async (resolve, reject) => {
             try {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "GET",
-                    path: "/transfer/:id/preview",
+                    path: "/transfer/:transferId/preview",
                     headers: {
                         Authorization: "Bearer " + this.token,
                     },
                     pathParameters: {
-                        id: params.id,
+                        transferId: params.transferId,
                     },
                     queryParameters: {
                         e: params.e,
@@ -1025,12 +1065,12 @@ export class Transfer extends ExtendedTransfer {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "GET",
-                    path: "/user/:user/metric/:metricName/statistic/:statisticName",
+                    path: "/user/:userId/metric/:metricName/statistic/:statisticName",
                     headers: {
                         Authorization: "Bearer " + this.token,
                     },
                     pathParameters: {
-                        user: params.user,
+                        userId: params.userId,
                         metricName: params.metricName,
                         statisticName: params.statisticName,
                     },
@@ -1251,13 +1291,13 @@ export class Transfer extends ExtendedTransfer {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "GET",
-                    path: "/team/:teamId/user/:id/transfers",
+                    path: "/team/:teamId/user/:userId/transfers",
                     headers: {
                         Authorization: "Bearer " + this.token,
                     },
                     pathParameters: {
                         teamId: params.teamId,
-                        id: params.id,
+                        userId: params.userId,
                     },
                     queryParameters: {
                         version: "10-2019",
@@ -1507,12 +1547,12 @@ export class Transfer extends ExtendedTransfer {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "GET",
-                    path: "/user/:id/transfers",
+                    path: "/user/:userId/transfers",
                     headers: {
                         Authorization: "Bearer " + this.token,
                     },
                     pathParameters: {
-                        id: params.id,
+                        userId: params.userId,
                     },
                     queryParameters: {
                         version: "10-2019",

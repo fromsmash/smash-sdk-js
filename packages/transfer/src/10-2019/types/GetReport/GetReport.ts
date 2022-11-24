@@ -1,5 +1,5 @@
 export interface GetReportInput {
-    id: string;
+    reportId: string;
 }
 
 export interface GetReportOutput {

@@ -1,5 +1,5 @@
 export interface ListUserTransfersInput {
-    id: string;
+    userId: string;
 }
 
 export interface ListUserTransfersOutput {

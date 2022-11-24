@@ -1,8 +1,9 @@
-import { Client, HttpRequest, HttpRequestUrlParameters, ClientParameters, SDKError, UnknownError } from "@smash-sdk/core";
+import { Client, ClientParameters, HttpRequest, HttpRequestUrlParameters, SDKError, UnknownError } from "@smash-sdk/core";
 import { errors } from "./errors";
+import { DownloadInput, DownloadOutput } from "./types/Download/Download";
+import { DownloadResponse } from "./types/Download/DownloadResponse";
 import { UploadTransferFilePartInput, UploadTransferFilePartOutput } from "./types/UploadTransferFilePart/UploadTransferFilePart";
 import { UploadTransferFilePartResponse } from "./types/UploadTransferFilePart/UploadTransferFilePartResponse";
-import { XMLParser } from "fast-xml-parser";
 
 export class ExtendedTransfer extends Client {
 
@@ -12,10 +13,57 @@ export class ExtendedTransfer extends Client {
 		super(params);
 	}
 
+	download(params: DownloadInput): Promise<DownloadOutput> {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const requestParams: HttpRequestUrlParameters = {
+					url: params.url,
+					method: "GET",
+					responseType: 'stream',
+				};
+				const request = new HttpRequest(requestParams);
+				const response = await this.client.handle<DownloadResponse>(request);
+				const headers = response.headers;
+				const contentLength = headers['content-length'] as string;
+				const contentDisposition = headers['content-disposition'] as string;
+				const utf8FilenameRegex = /filename\*=UTF-8''([\w%\-\.]+)(?:; ?|$)/i;
+				const fileName = decodeURIComponent(utf8FilenameRegex.exec(contentDisposition)[1]);
+				if (this.isValidStatusCode(response.statusCode) === true) {
+					resolve({ stream: response.body, size: parseInt(contentLength), fileName });
+				} else {
+					const errorsNames = {
+						400: "BadRequestError",
+						401: "UnauthorizedError",
+						403: "FoobiddenError",
+						404: "NotFoundError",
+						500: "InternalServerError",
+						502: "BadGatewayError",
+						504: "GatewayTimeoutError",
+					}
+					if (this.errors.DownloadError[errorsNames[response.statusCode]]) {
+						const ClassError = this.errors.DownloadError[errorsNames[response.statusCode]];
+						reject(new ClassError(errorsNames[response.statusCode]));
+					} else {
+						reject(new UnknownError("Unsupported error code " + response.statusCode));
+					}
+				}
+			} catch (error) {
+				if (error instanceof Error) {
+					if (error instanceof SDKError) {
+						reject(error);
+					} else {
+						reject(new SDKError(error));
+					}
+				} else {
+					reject(new SDKError(error as string));
+				}
+			}
+		})
+	}
+
 	uploadTransferFilePart(params: UploadTransferFilePartInput): Promise<UploadTransferFilePartOutput> {
 		return new Promise(async (resolve, reject) => {
 			try {
-
 				const requestParams: HttpRequestUrlParameters = {
 					url: params.url,
 					method: "PUT",
@@ -28,10 +76,11 @@ export class ExtendedTransfer extends Client {
 					this.client.handle<UploadTransferFilePartResponse>(request),
 					computeCrc32(params.content),
 				]);
-				if (response?.headers?.['content-type'] === 'application/xml' && typeof response?.body === 'string') {
-					const XMLError = response.body as string;
-					const parser = new XMLParser();
-					const { Error } = parser.parse(XMLError);
+				if (this.isValidStatusCode(response.statusCode)) {
+					const parsedResponse: UploadTransferFilePartOutput = { part: { etag: response.headers.etag as string, crc32 } };
+					resolve(parsedResponse);
+				} else {
+					const { Error } = response.body;
 					const error: S3Error = {
 						name: Error.Code,
 						message: Error.Message,
@@ -40,14 +89,11 @@ export class ExtendedTransfer extends Client {
 						code: response.statusCode,
 					};
 					if (this.errors.UploadTransferFilePartError[error.name]) {
-						const classError = this.errors.UploadTransferFilePartError[error.name];
-						reject(new classError(error));
+						const ClassError = this.errors.UploadTransferFilePartError[error.name];
+						reject(new ClassError(error));
 					} else {
 						reject(new UnknownError(error.name));
 					}
-				} else {
-					const parsedResponse: UploadTransferFilePartOutput = { part: { etag: response.headers.etag as string, crc32 } };
-					resolve(parsedResponse);
 				}
 			} catch (error) {
 				if (error instanceof Error) {
@@ -109,9 +155,9 @@ function crc32ComputeBuffer(data: ArrayBuffer) {
 	let crc: number = crc32Initial;
 	const dataView = new DataView(data);
 	for (let i = 0; i < dataView.byteLength; i++) {
-		crc = (crc >>> 8) ^ table[dataView.getUint8(i) ^ (crc & 0x000000FF)];//eslint-disable-line no-bitwise
+		crc = (crc >>> 8) ^ table[dataView.getUint8(i) ^ (crc & 0x000000FF)];
 	}
-	crc = ~crc;//eslint-disable-line no-bitwise
+	crc = ~crc;
 	return crc < 0 ? crc32Initial + crc + 1 : crc;
 }
 

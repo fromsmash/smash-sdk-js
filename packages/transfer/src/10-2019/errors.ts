@@ -15,7 +15,7 @@ import { BadGatewayError as CreateTransferBadGatewayError } from "./types/Create
 import { GatewayTimeoutError as CreateTransferGatewayTimeoutError } from "./types/CreateTransfer/CreateTransferError";
 import { BadRequestError as CreateTransferFileBadRequestError } from "./types/CreateTransferFile/CreateTransferFileError";
 import { UnauthorizedError as CreateTransferFileUnauthorizedError } from "./types/CreateTransferFile/CreateTransferFileError";
-import { AlreadyLockedError as CreateTransferFileAlreadyLockedError } from "./types/CreateTransferFile/CreateTransferFileError";
+import { TransferAlreadyLockedError as CreateTransferFileTransferAlreadyLockedError } from "./types/CreateTransferFile/CreateTransferFileError";
 import { TransferIsInQueueError as CreateTransferFileTransferIsInQueueError } from "./types/CreateTransferFile/CreateTransferFileError";
 import { NotFoundError as CreateTransferFileNotFoundError } from "./types/CreateTransferFile/CreateTransferFileError";
 import { ConflictError as CreateTransferFileConflictError } from "./types/CreateTransferFile/CreateTransferFileError";
@@ -54,7 +54,7 @@ import { BadGatewayError as DeleteReportBadGatewayError } from "./types/DeleteRe
 import { GatewayTimeoutError as DeleteReportGatewayTimeoutError } from "./types/DeleteReport/DeleteReportError";
 import { BadRequestError as DeleteTeamTransferBadRequestError } from "./types/DeleteTeamTransfer/DeleteTeamTransferError";
 import { UnauthorizedError as DeleteTeamTransferUnauthorizedError } from "./types/DeleteTeamTransfer/DeleteTeamTransferError";
-import { ForbiddenError as DeleteTeamTransferForbiddenError } from "./types/DeleteTeamTransfer/DeleteTeamTransferError";
+import { TransferNotUploadedError as DeleteTeamTransferTransferNotUploadedError } from "./types/DeleteTeamTransfer/DeleteTeamTransferError";
 import { NotFoundError as DeleteTeamTransferNotFoundError } from "./types/DeleteTeamTransfer/DeleteTeamTransferError";
 import { InternalServerError as DeleteTeamTransferInternalServerError } from "./types/DeleteTeamTransfer/DeleteTeamTransferError";
 import { BadGatewayError as DeleteTeamTransferBadGatewayError } from "./types/DeleteTeamTransfer/DeleteTeamTransferError";
@@ -131,10 +131,17 @@ import { NotFoundError as GetTransferFileNotFoundError } from "./types/GetTransf
 import { InternalServerError as GetTransferFileInternalServerError } from "./types/GetTransferFile/GetTransferFileError";
 import { BadGatewayError as GetTransferFileBadGatewayError } from "./types/GetTransferFile/GetTransferFileError";
 import { GatewayTimeoutError as GetTransferFileGatewayTimeoutError } from "./types/GetTransferFile/GetTransferFileError";
+import { BadRequestError as GetTransferFilePreviewBadRequestError } from "./types/GetTransferFilePreview/GetTransferFilePreviewError";
+import { UnauthorizedError as GetTransferFilePreviewUnauthorizedError } from "./types/GetTransferFilePreview/GetTransferFilePreviewError";
+import { PasswordDoesNotMatchError as GetTransferFilePreviewPasswordDoesNotMatchError } from "./types/GetTransferFilePreview/GetTransferFilePreviewError";
+import { NotFoundError as GetTransferFilePreviewNotFoundError } from "./types/GetTransferFilePreview/GetTransferFilePreviewError";
+import { InternalServerError as GetTransferFilePreviewInternalServerError } from "./types/GetTransferFilePreview/GetTransferFilePreviewError";
+import { BadGatewayError as GetTransferFilePreviewBadGatewayError } from "./types/GetTransferFilePreview/GetTransferFilePreviewError";
+import { GatewayTimeoutError as GetTransferFilePreviewGatewayTimeoutError } from "./types/GetTransferFilePreview/GetTransferFilePreviewError";
 import { BadRequestError as GetTransferPreviewBadRequestError } from "./types/GetTransferPreview/GetTransferPreviewError";
 import { UnauthorizedError as GetTransferPreviewUnauthorizedError } from "./types/GetTransferPreview/GetTransferPreviewError";
 import { PasswordDoesNotMatchError as GetTransferPreviewPasswordDoesNotMatchError } from "./types/GetTransferPreview/GetTransferPreviewError";
-import { UnvalidEmailError as GetTransferPreviewUnvalidEmailError } from "./types/GetTransferPreview/GetTransferPreviewError";
+import { InvalidEmailError as GetTransferPreviewInvalidEmailError } from "./types/GetTransferPreview/GetTransferPreviewError";
 import { NotFoundError as GetTransferPreviewNotFoundError } from "./types/GetTransferPreview/GetTransferPreviewError";
 import { InternalServerError as GetTransferPreviewInternalServerError } from "./types/GetTransferPreview/GetTransferPreviewError";
 import { BadGatewayError as GetTransferPreviewBadGatewayError } from "./types/GetTransferPreview/GetTransferPreviewError";
@@ -234,6 +241,7 @@ import { BadRequestError as LockTransferBadRequestError } from "./types/LockTran
 import { UnauthorizedError as LockTransferUnauthorizedError } from "./types/LockTransfer/LockTransferError";
 import { TransferAlreadyLockedError as LockTransferTransferAlreadyLockedError } from "./types/LockTransfer/LockTransferError";
 import { TransferIsDirtyError as LockTransferTransferIsDirtyError } from "./types/LockTransfer/LockTransferError";
+import { TransferIsInQueueError as LockTransferTransferIsInQueueError } from "./types/LockTransfer/LockTransferError";
 import { NotFoundError as LockTransferNotFoundError } from "./types/LockTransfer/LockTransferError";
 import { InternalServerError as LockTransferInternalServerError } from "./types/LockTransfer/LockTransferError";
 import { BadGatewayError as LockTransferBadGatewayError } from "./types/LockTransfer/LockTransferError";
@@ -275,6 +283,13 @@ import { NotFoundError as UpdateTransferFilePartsNotFoundError } from "./types/U
 import { InternalServerError as UpdateTransferFilePartsInternalServerError } from "./types/UpdateTransferFileParts/UpdateTransferFilePartsError";
 import { BadGatewayError as UpdateTransferFilePartsBadGatewayError } from "./types/UpdateTransferFileParts/UpdateTransferFilePartsError";
 import { GatewayTimeoutError as UpdateTransferFilePartsGatewayTimeoutError } from "./types/UpdateTransferFileParts/UpdateTransferFilePartsError";
+import { BadRequestError as DownloadBadRequestError } from "./types/Download/DownloadError";
+import { UnauthorizedError as DownloadUnauthorizedError } from "./types/Download/DownloadError";
+import { FobiddenError as DownloadFobiddenError } from "./types/Download/DownloadError";
+import { NotFoundError as DownloadNotFoundError } from "./types/Download/DownloadError";
+import { InternalServerError as DownloadInternalServerError } from "./types/Download/DownloadError";
+import { BadGatewayError as DownloadBadGatewayError } from "./types/Download/DownloadError";
+import { GatewayTimeoutError as DownloadGatewayTimeoutError } from "./types/Download/DownloadError";
 import { BadRequestError as UploadTransferFilePartBadRequestError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
 import { InternalServerError as UploadTransferFilePartInternalServerError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
 import { NotFoundError as UploadTransferFilePartNotFoundError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
@@ -359,7 +374,7 @@ export const errors = {
     CreateTransferFileError: {
         BadRequest: CreateTransferFileBadRequestError,
         Unauthorized: CreateTransferFileUnauthorizedError,
-        AlreadyLocked: CreateTransferFileAlreadyLockedError,
+        TransferAlreadyLocked: CreateTransferFileTransferAlreadyLockedError,
         TransferIsInQueue: CreateTransferFileTransferIsInQueueError,
         NotFound: CreateTransferFileNotFoundError,
         Conflict: CreateTransferFileConflictError,
@@ -418,7 +433,7 @@ export const errors = {
     DeleteTeamTransferError: {
         BadRequest: DeleteTeamTransferBadRequestError,
         Unauthorized: DeleteTeamTransferUnauthorizedError,
-        Forbidden: DeleteTeamTransferForbiddenError,
+        TransferNotUploaded: DeleteTeamTransferTransferNotUploadedError,
         NotFound: DeleteTeamTransferNotFoundError,
         InternalServerError: DeleteTeamTransferInternalServerError,
         BadGateway: DeleteTeamTransferBadGatewayError,
@@ -546,11 +561,22 @@ export const errors = {
         UnknownError,
         NetworkError,
     },
+    GetTransferFilePreviewError: {
+        BadRequest: GetTransferFilePreviewBadRequestError,
+        Unauthorized: GetTransferFilePreviewUnauthorizedError,
+        PasswordDoesNotMatch: GetTransferFilePreviewPasswordDoesNotMatchError,
+        NotFound: GetTransferFilePreviewNotFoundError,
+        InternalServerError: GetTransferFilePreviewInternalServerError,
+        BadGateway: GetTransferFilePreviewBadGatewayError,
+        GatewayTimeout: GetTransferFilePreviewGatewayTimeoutError,
+        UnknownError,
+        NetworkError,
+    },
     GetTransferPreviewError: {
         BadRequest: GetTransferPreviewBadRequestError,
         Unauthorized: GetTransferPreviewUnauthorizedError,
         PasswordDoesNotMatch: GetTransferPreviewPasswordDoesNotMatchError,
-        UnvalidEmail: GetTransferPreviewUnvalidEmailError,
+        InvalidEmail: GetTransferPreviewInvalidEmailError,
         NotFound: GetTransferPreviewNotFoundError,
         InternalServerError: GetTransferPreviewInternalServerError,
         BadGateway: GetTransferPreviewBadGatewayError,
@@ -714,6 +740,7 @@ export const errors = {
         Unauthorized: LockTransferUnauthorizedError,
         TransferAlreadyLocked: LockTransferTransferAlreadyLockedError,
         TransferIsDirty: LockTransferTransferIsDirtyError,
+        TransferIsInQueue: LockTransferTransferIsInQueueError,
         NotFound: LockTransferNotFoundError,
         InternalServerError: LockTransferInternalServerError,
         BadGateway: LockTransferBadGatewayError,
@@ -775,6 +802,17 @@ export const errors = {
         InternalServerError: UpdateTransferFilePartsInternalServerError,
         BadGateway: UpdateTransferFilePartsBadGatewayError,
         GatewayTimeout: UpdateTransferFilePartsGatewayTimeoutError,
+        UnknownError,
+        NetworkError,
+    },
+    DownloadError: {
+        BadRequest: DownloadBadRequestError,
+        Unauthorized: DownloadUnauthorizedError,
+        Fobidden: DownloadFobiddenError,
+        NotFound: DownloadNotFoundError,
+        InternalServer: DownloadInternalServerError,
+        BadGateway: DownloadBadGatewayError,
+        GatewayTimeout: DownloadGatewayTimeoutError,
         UnknownError,
         NetworkError,
     },

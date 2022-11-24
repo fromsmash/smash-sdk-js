@@ -1,4 +1,10 @@
-import { UploadTransferFilePartOutput } from "./UploadTransferFilePart";
-import { BadRequestError, InternalServerError } from "./UploadTransferFilePartError";
+interface S3Error {
+    Error: {
+        Code: string;
+        Message: string;
+        RequestId: string;
+        Resource: string;
+    }
+}
 
-export type UploadTransferFilePartResponse = UploadTransferFilePartOutput | string | BadRequestError | InternalServerError;
+export type UploadTransferFilePartResponse = undefined | S3Error;

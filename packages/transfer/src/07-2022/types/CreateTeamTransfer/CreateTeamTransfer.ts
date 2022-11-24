@@ -1,8 +1,8 @@
 export interface CreateTeamTransferInput {
-    team: string;
+    teamId: string;
     size: number;
     filesNumber: number;
-    domain: string;
+    domain?: string;
     customUrl?: string;
     language?: string;
     availabilityDuration?: number;

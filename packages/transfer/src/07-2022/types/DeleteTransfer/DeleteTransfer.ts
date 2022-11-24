@@ -1,5 +1,5 @@
 export interface DeleteTransferInput {
-    id: string;
+    transferId: string;
 }
 
 export interface DeleteTransferOutput {

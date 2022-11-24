@@ -1,5 +1,5 @@
 export interface GetTransferInput {
-    id: string;
+    transferId: string;
 }
 
 export interface GetTransferOutput {

@@ -18,6 +18,10 @@ export class TransferAlreadyLockedError extends SDKError {}
                          
         */
 export class TransferIsDirtyError extends SDKError {}
+/**
+                         
+        */
+export class TransferIsInQueueError extends SDKError {}
 
 /**
                          
@@ -44,6 +48,7 @@ export default {
     UnauthorizedError,
     TransferAlreadyLockedError,
     TransferIsDirtyError,
+    TransferIsInQueueError,
     NotFoundError,
     InternalServerError,
     BadGatewayError,

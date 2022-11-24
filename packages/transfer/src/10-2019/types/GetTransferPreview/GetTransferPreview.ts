@@ -1,5 +1,5 @@
 export interface GetTransferPreviewInput {
-    id: string;
+    transferId: string;
     e?: string;
 }
 

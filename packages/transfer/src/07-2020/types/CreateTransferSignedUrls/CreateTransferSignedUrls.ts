@@ -1,6 +1,6 @@
 export interface CreateTransferSignedUrlsInput {
     transferId: string;
-    e: string;
+    e?: string;
 
     files?: {
         id: string;

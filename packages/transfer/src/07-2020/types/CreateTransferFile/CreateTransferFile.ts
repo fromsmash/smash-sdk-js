@@ -16,10 +16,10 @@ export interface CreateTransferFileOutput {
         ext: string;
         name: string;
         size: number;
-        crc32: string;
+        crc32?: number;
         region: string;
         bucket: string;
-        previewsLocation: string;
+        previewsLocation?: string;
         views: number;
         downloads: number;
         parts: {

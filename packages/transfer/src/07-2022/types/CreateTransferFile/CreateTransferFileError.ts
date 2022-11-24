@@ -13,7 +13,7 @@ export class UnauthorizedError extends SDKError {}
 /**
                          
         */
-export class AlreadyLockedError extends SDKError {}
+export class TransferAlreadyLockedError extends SDKError {}
 /**
                          
         */
@@ -47,7 +47,7 @@ export class GatewayTimeoutError extends SDKError {}
 export default {
     BadRequestError,
     UnauthorizedError,
-    AlreadyLockedError,
+    TransferAlreadyLockedError,
     TransferIsInQueueError,
     NotFoundError,
     ConflictError,

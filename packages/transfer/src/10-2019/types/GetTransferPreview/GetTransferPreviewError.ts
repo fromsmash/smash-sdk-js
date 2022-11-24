@@ -17,7 +17,7 @@ export class PasswordDoesNotMatchError extends SDKError {}
 /**
                          
         */
-export class UnvalidEmailError extends SDKError {}
+export class InvalidEmailError extends SDKError {}
 
 /**
                          
@@ -43,7 +43,7 @@ export default {
     BadRequestError,
     UnauthorizedError,
     PasswordDoesNotMatchError,
-    UnvalidEmailError,
+    InvalidEmailError,
     NotFoundError,
     InternalServerError,
     BadGatewayError,

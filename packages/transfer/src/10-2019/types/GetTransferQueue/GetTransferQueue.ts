@@ -1,5 +1,5 @@
 export interface GetTransferQueueInput {
-    size: string;
+    size: number;
 }
 
 export interface GetTransferQueueOutput {

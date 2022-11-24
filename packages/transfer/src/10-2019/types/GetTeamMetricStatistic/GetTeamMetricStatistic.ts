@@ -1,9 +1,9 @@
 export interface GetTeamMetricStatisticInput {
-    team: string;
+    teamId: string;
     metricName: string;
     statisticName: string;
-    startDate?: number;
-    endDate?: number;
+    startDate?: string;
+    endDate?: string;
     unit?: string;
 }
 
