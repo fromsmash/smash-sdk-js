@@ -1,26 +1,19 @@
 {
 	"name": "@smash-sdk/discovery",
-	"version": "0.0.6",
-	"license": "MIT",
-	"description": "",
-	"main": "index.js",
-	"types": "index.d.ts",
-	"directories": {
-		"dist": "dist",
-		"test": "__tests__"
-	},
+	"version": "0.0.7",
+	"description": "Smash Sdk discovery",
 	"repository": {
 		"type": "git",
-		"url": "github url uin the future"
+		"url": "https://github.com/fromsmash/smash-sdk-js"
 	},
 	"scripts": {
-		"compile": "tsc",
+		"transpile": "tsc",
 		"clean": "rimraf dist && rimraf node_modules",
-		"build": "npm run clean && npm i && npm run compile && cp ./package.json ./dist/",
+		"build": "npm run clean && npm i && npm run transpile && cp ./package.json ./dist/",
 		"test": "jest"
 	},
 	"dependencies": {
-		"@smash-sdk/core": "^0.0.2"
+		"@smash-sdk/core": "^1.0.0"
 	},
 	"keywords": [
 		"smash",
