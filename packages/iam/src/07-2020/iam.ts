@@ -2,147 +2,21 @@ import { Client } from "@smash-sdk/core";
 import { HttpRequest, HttpRequestHostParameters, SDKError, ClientParameters, config } from "@smash-sdk/core";
 import { errors } from "./errors";
 export * from "./errors";
-import { AcceptInvitationInput, AcceptInvitationOutput } from "./types/AcceptInvitation/AcceptInvitation";
-import { AcceptInvitationResponse } from "./types/AcceptInvitation/AcceptInvitationResponse";
-export * from "./types/AcceptInvitation/AcceptInvitation";
-import { AcceptUserInvitationInput, AcceptUserInvitationOutput } from "./types/AcceptUserInvitation/AcceptUserInvitation";
-import { AcceptUserInvitationResponse } from "./types/AcceptUserInvitation/AcceptUserInvitationResponse";
-export * from "./types/AcceptUserInvitation/AcceptUserInvitation";
-import { AttachGroupRoleInput, AttachGroupRoleOutput } from "./types/AttachGroupRole/AttachGroupRole";
-import { AttachGroupRoleResponse } from "./types/AttachGroupRole/AttachGroupRoleResponse";
-export * from "./types/AttachGroupRole/AttachGroupRole";
-import { AttachGroupUserInput, AttachGroupUserOutput } from "./types/AttachGroupUser/AttachGroupUser";
-import { AttachGroupUserResponse } from "./types/AttachGroupUser/AttachGroupUserResponse";
-export * from "./types/AttachGroupUser/AttachGroupUser";
-import { AttachRolePolicyInput, AttachRolePolicyOutput } from "./types/AttachRolePolicy/AttachRolePolicy";
-import { AttachRolePolicyResponse } from "./types/AttachRolePolicy/AttachRolePolicyResponse";
-export * from "./types/AttachRolePolicy/AttachRolePolicy";
-import { AttachTeamGroupInput, AttachTeamGroupOutput } from "./types/AttachTeamGroup/AttachTeamGroup";
-import { AttachTeamGroupResponse } from "./types/AttachTeamGroup/AttachTeamGroupResponse";
-export * from "./types/AttachTeamGroup/AttachTeamGroup";
-import { AttachTeamGroupRoleInput, AttachTeamGroupRoleOutput } from "./types/AttachTeamGroupRole/AttachTeamGroupRole";
-import { AttachTeamGroupRoleResponse } from "./types/AttachTeamGroupRole/AttachTeamGroupRoleResponse";
-export * from "./types/AttachTeamGroupRole/AttachTeamGroupRole";
-import { AttachTeamGroupUserInput, AttachTeamGroupUserOutput } from "./types/AttachTeamGroupUser/AttachTeamGroupUser";
-import { AttachTeamGroupUserResponse } from "./types/AttachTeamGroupUser/AttachTeamGroupUserResponse";
-export * from "./types/AttachTeamGroupUser/AttachTeamGroupUser";
-import { AttachTeamRoleInput, AttachTeamRoleOutput } from "./types/AttachTeamRole/AttachTeamRole";
-import { AttachTeamRoleResponse } from "./types/AttachTeamRole/AttachTeamRoleResponse";
-export * from "./types/AttachTeamRole/AttachTeamRole";
-import { AttachTeamUserInput, AttachTeamUserOutput } from "./types/AttachTeamUser/AttachTeamUser";
-import { AttachTeamUserResponse } from "./types/AttachTeamUser/AttachTeamUserResponse";
-export * from "./types/AttachTeamUser/AttachTeamUser";
-import { AttachTeamUserRoleInput, AttachTeamUserRoleOutput } from "./types/AttachTeamUserRole/AttachTeamUserRole";
-import { AttachTeamUserRoleResponse } from "./types/AttachTeamUserRole/AttachTeamUserRoleResponse";
-export * from "./types/AttachTeamUserRole/AttachTeamUserRole";
-import { AttachUserRoleInput, AttachUserRoleOutput } from "./types/AttachUserRole/AttachUserRole";
-import { AttachUserRoleResponse } from "./types/AttachUserRole/AttachUserRoleResponse";
-export * from "./types/AttachUserRole/AttachUserRole";
-import { ChangePasswordInput, ChangePasswordOutput } from "./types/ChangePassword/ChangePassword";
-import { ChangePasswordResponse } from "./types/ChangePassword/ChangePasswordResponse";
-export * from "./types/ChangePassword/ChangePassword";
-import { CreateAccountInput, CreateAccountOutput } from "./types/CreateAccount/CreateAccount";
-import { CreateAccountResponse } from "./types/CreateAccount/CreateAccountResponse";
-export * from "./types/CreateAccount/CreateAccount";
-import { CreateGroupInput, CreateGroupOutput } from "./types/CreateGroup/CreateGroup";
-import { CreateGroupResponse } from "./types/CreateGroup/CreateGroupResponse";
-export * from "./types/CreateGroup/CreateGroup";
-import { CreateGroupSCIMInput, CreateGroupSCIMOutput } from "./types/CreateGroupSCIM/CreateGroupSCIM";
-import { CreateGroupSCIMResponse } from "./types/CreateGroupSCIM/CreateGroupSCIMResponse";
-export * from "./types/CreateGroupSCIM/CreateGroupSCIM";
-import { CreatePolicyInput, CreatePolicyOutput } from "./types/CreatePolicy/CreatePolicy";
-import { CreatePolicyResponse } from "./types/CreatePolicy/CreatePolicyResponse";
-export * from "./types/CreatePolicy/CreatePolicy";
-import { CreateProviderInput, CreateProviderOutput } from "./types/CreateProvider/CreateProvider";
-import { CreateProviderResponse } from "./types/CreateProvider/CreateProviderResponse";
-export * from "./types/CreateProvider/CreateProvider";
-import { CreateRoleInput, CreateRoleOutput } from "./types/CreateRole/CreateRole";
-import { CreateRoleResponse } from "./types/CreateRole/CreateRoleResponse";
-export * from "./types/CreateRole/CreateRole";
-import { CreateTeamInput, CreateTeamOutput } from "./types/CreateTeam/CreateTeam";
-import { CreateTeamResponse } from "./types/CreateTeam/CreateTeamResponse";
-export * from "./types/CreateTeam/CreateTeam";
-import { CreateTokenInput, CreateTokenOutput } from "./types/CreateToken/CreateToken";
-import { CreateTokenResponse } from "./types/CreateToken/CreateTokenResponse";
-export * from "./types/CreateToken/CreateToken";
-import { CreateUserInput, CreateUserOutput } from "./types/CreateUser/CreateUser";
-import { CreateUserResponse } from "./types/CreateUser/CreateUserResponse";
-export * from "./types/CreateUser/CreateUser";
-import { CreateUserSCIMInput, CreateUserSCIMOutput } from "./types/CreateUserSCIM/CreateUserSCIM";
-import { CreateUserSCIMResponse } from "./types/CreateUserSCIM/CreateUserSCIMResponse";
-export * from "./types/CreateUserSCIM/CreateUserSCIM";
-import { CreateUserTokenInput, CreateUserTokenOutput } from "./types/CreateUserToken/CreateUserToken";
-import { CreateUserTokenResponse } from "./types/CreateUserToken/CreateUserTokenResponse";
-export * from "./types/CreateUserToken/CreateUserToken";
-import { DeleteAccountInput, DeleteAccountOutput } from "./types/DeleteAccount/DeleteAccount";
-import { DeleteAccountResponse } from "./types/DeleteAccount/DeleteAccountResponse";
-export * from "./types/DeleteAccount/DeleteAccount";
-import { DeleteGroupInput, DeleteGroupOutput } from "./types/DeleteGroup/DeleteGroup";
-import { DeleteGroupResponse } from "./types/DeleteGroup/DeleteGroupResponse";
-export * from "./types/DeleteGroup/DeleteGroup";
-import { DeleteGroupSCIMInput, DeleteGroupSCIMOutput } from "./types/DeleteGroupSCIM/DeleteGroupSCIM";
-import { DeleteGroupSCIMResponse } from "./types/DeleteGroupSCIM/DeleteGroupSCIMResponse";
-export * from "./types/DeleteGroupSCIM/DeleteGroupSCIM";
-import { DeletePolicyInput, DeletePolicyOutput } from "./types/DeletePolicy/DeletePolicy";
-import { DeletePolicyResponse } from "./types/DeletePolicy/DeletePolicyResponse";
-export * from "./types/DeletePolicy/DeletePolicy";
-import { DeleteProviderInput, DeleteProviderOutput } from "./types/DeleteProvider/DeleteProvider";
-import { DeleteProviderResponse } from "./types/DeleteProvider/DeleteProviderResponse";
-export * from "./types/DeleteProvider/DeleteProvider";
-import { DeleteRoleInput, DeleteRoleOutput } from "./types/DeleteRole/DeleteRole";
-import { DeleteRoleResponse } from "./types/DeleteRole/DeleteRoleResponse";
-export * from "./types/DeleteRole/DeleteRole";
-import { DeleteTeamInput, DeleteTeamOutput } from "./types/DeleteTeam/DeleteTeam";
-import { DeleteTeamResponse } from "./types/DeleteTeam/DeleteTeamResponse";
-export * from "./types/DeleteTeam/DeleteTeam";
-import { DeleteUserInput, DeleteUserOutput } from "./types/DeleteUser/DeleteUser";
-import { DeleteUserResponse } from "./types/DeleteUser/DeleteUserResponse";
-export * from "./types/DeleteUser/DeleteUser";
-import { DeleteUserSCIMInput, DeleteUserSCIMOutput } from "./types/DeleteUserSCIM/DeleteUserSCIM";
-import { DeleteUserSCIMResponse } from "./types/DeleteUserSCIM/DeleteUserSCIMResponse";
-export * from "./types/DeleteUserSCIM/DeleteUserSCIM";
-import { DetachGroupRoleInput, DetachGroupRoleOutput } from "./types/DetachGroupRole/DetachGroupRole";
-import { DetachGroupRoleResponse } from "./types/DetachGroupRole/DetachGroupRoleResponse";
-export * from "./types/DetachGroupRole/DetachGroupRole";
-import { DetachGroupUserInput, DetachGroupUserOutput } from "./types/DetachGroupUser/DetachGroupUser";
-import { DetachGroupUserResponse } from "./types/DetachGroupUser/DetachGroupUserResponse";
-export * from "./types/DetachGroupUser/DetachGroupUser";
-import { DetachRolePolicyInput, DetachRolePolicyOutput } from "./types/DetachRolePolicy/DetachRolePolicy";
-import { DetachRolePolicyResponse } from "./types/DetachRolePolicy/DetachRolePolicyResponse";
-export * from "./types/DetachRolePolicy/DetachRolePolicy";
-import { DetachTeamGroupInput, DetachTeamGroupOutput } from "./types/DetachTeamGroup/DetachTeamGroup";
-import { DetachTeamGroupResponse } from "./types/DetachTeamGroup/DetachTeamGroupResponse";
-export * from "./types/DetachTeamGroup/DetachTeamGroup";
-import { DetachTeamGroupRoleInput, DetachTeamGroupRoleOutput } from "./types/DetachTeamGroupRole/DetachTeamGroupRole";
-import { DetachTeamGroupRoleResponse } from "./types/DetachTeamGroupRole/DetachTeamGroupRoleResponse";
-export * from "./types/DetachTeamGroupRole/DetachTeamGroupRole";
-import { DetachTeamGroupUserInput, DetachTeamGroupUserOutput } from "./types/DetachTeamGroupUser/DetachTeamGroupUser";
-import { DetachTeamGroupUserResponse } from "./types/DetachTeamGroupUser/DetachTeamGroupUserResponse";
-export * from "./types/DetachTeamGroupUser/DetachTeamGroupUser";
-import { DetachTeamRoleInput, DetachTeamRoleOutput } from "./types/DetachTeamRole/DetachTeamRole";
-import { DetachTeamRoleResponse } from "./types/DetachTeamRole/DetachTeamRoleResponse";
-export * from "./types/DetachTeamRole/DetachTeamRole";
-import { DetachTeamUserInput, DetachTeamUserOutput } from "./types/DetachTeamUser/DetachTeamUser";
-import { DetachTeamUserResponse } from "./types/DetachTeamUser/DetachTeamUserResponse";
-export * from "./types/DetachTeamUser/DetachTeamUser";
-import { DetachTeamUserRoleInput, DetachTeamUserRoleOutput } from "./types/DetachTeamUserRole/DetachTeamUserRole";
-import { DetachTeamUserRoleResponse } from "./types/DetachTeamUserRole/DetachTeamUserRoleResponse";
-export * from "./types/DetachTeamUserRole/DetachTeamUserRole";
-import { DetachUserRoleInput, DetachUserRoleOutput } from "./types/DetachUserRole/DetachUserRole";
-import { DetachUserRoleResponse } from "./types/DetachUserRole/DetachUserRoleResponse";
-export * from "./types/DetachUserRole/DetachUserRole";
-import { ForgotPasswordInput, ForgotPasswordOutput } from "./types/ForgotPassword/ForgotPassword";
-import { ForgotPasswordResponse } from "./types/ForgotPassword/ForgotPasswordResponse";
-export * from "./types/ForgotPassword/ForgotPassword";
-import { GetAccountInput, GetAccountOutput } from "./types/GetAccount/GetAccount";
-import { GetAccountResponse } from "./types/GetAccount/GetAccountResponse";
-export * from "./types/GetAccount/GetAccount";
-import { GetGroupInput, GetGroupOutput } from "./types/GetGroup/GetGroup";
-import { GetGroupResponse } from "./types/GetGroup/GetGroupResponse";
-export * from "./types/GetGroup/GetGroup";
-import { GetGroupSCIMInput, GetGroupSCIMOutput } from "./types/GetGroupSCIM/GetGroupSCIM";
-import { GetGroupSCIMResponse } from "./types/GetGroupSCIM/GetGroupSCIMResponse";
-export * from "./types/GetGroupSCIM/GetGroupSCIM";
+import { UpdateTeamInput, UpdateTeamOutput } from "./types/UpdateTeam/UpdateTeam";
+import { UpdateTeamResponse } from "./types/UpdateTeam/UpdateTeamResponse";
+export * from "./types/UpdateTeam/UpdateTeam";
+import { UpdateTeamGroupInput, UpdateTeamGroupOutput } from "./types/UpdateTeamGroup/UpdateTeamGroup";
+import { UpdateTeamGroupResponse } from "./types/UpdateTeamGroup/UpdateTeamGroupResponse";
+export * from "./types/UpdateTeamGroup/UpdateTeamGroup";
+import { UpdateTeamUserInput, UpdateTeamUserOutput } from "./types/UpdateTeamUser/UpdateTeamUser";
+import { UpdateTeamUserResponse } from "./types/UpdateTeamUser/UpdateTeamUserResponse";
+export * from "./types/UpdateTeamUser/UpdateTeamUser";
+import { UpdateUserInput, UpdateUserOutput } from "./types/UpdateUser/UpdateUser";
+import { UpdateUserResponse } from "./types/UpdateUser/UpdateUserResponse";
+export * from "./types/UpdateUser/UpdateUser";
+import { UpdateUserSCIMInput, UpdateUserSCIMOutput } from "./types/UpdateUserSCIM/UpdateUserSCIM";
+import { UpdateUserSCIMResponse } from "./types/UpdateUserSCIM/UpdateUserSCIMResponse";
+export * from "./types/UpdateUserSCIM/UpdateUserSCIM";
 import { GetPolicyInput, GetPolicyOutput } from "./types/GetPolicy/GetPolicy";
 import { GetPolicyResponse } from "./types/GetPolicy/GetPolicyResponse";
 export * from "./types/GetPolicy/GetPolicy";
@@ -302,21 +176,147 @@ export * from "./types/UpdateProvider/UpdateProvider";
 import { UpdateRoleInput, UpdateRoleOutput } from "./types/UpdateRole/UpdateRole";
 import { UpdateRoleResponse } from "./types/UpdateRole/UpdateRoleResponse";
 export * from "./types/UpdateRole/UpdateRole";
-import { UpdateTeamInput, UpdateTeamOutput } from "./types/UpdateTeam/UpdateTeam";
-import { UpdateTeamResponse } from "./types/UpdateTeam/UpdateTeamResponse";
-export * from "./types/UpdateTeam/UpdateTeam";
-import { UpdateTeamGroupInput, UpdateTeamGroupOutput } from "./types/UpdateTeamGroup/UpdateTeamGroup";
-import { UpdateTeamGroupResponse } from "./types/UpdateTeamGroup/UpdateTeamGroupResponse";
-export * from "./types/UpdateTeamGroup/UpdateTeamGroup";
-import { UpdateTeamUserInput, UpdateTeamUserOutput } from "./types/UpdateTeamUser/UpdateTeamUser";
-import { UpdateTeamUserResponse } from "./types/UpdateTeamUser/UpdateTeamUserResponse";
-export * from "./types/UpdateTeamUser/UpdateTeamUser";
-import { UpdateUserInput, UpdateUserOutput } from "./types/UpdateUser/UpdateUser";
-import { UpdateUserResponse } from "./types/UpdateUser/UpdateUserResponse";
-export * from "./types/UpdateUser/UpdateUser";
-import { UpdateUserSCIMInput, UpdateUserSCIMOutput } from "./types/UpdateUserSCIM/UpdateUserSCIM";
-import { UpdateUserSCIMResponse } from "./types/UpdateUserSCIM/UpdateUserSCIMResponse";
-export * from "./types/UpdateUserSCIM/UpdateUserSCIM";
+import { AcceptInvitationInput, AcceptInvitationOutput } from "./types/AcceptInvitation/AcceptInvitation";
+import { AcceptInvitationResponse } from "./types/AcceptInvitation/AcceptInvitationResponse";
+export * from "./types/AcceptInvitation/AcceptInvitation";
+import { AcceptUserInvitationInput, AcceptUserInvitationOutput } from "./types/AcceptUserInvitation/AcceptUserInvitation";
+import { AcceptUserInvitationResponse } from "./types/AcceptUserInvitation/AcceptUserInvitationResponse";
+export * from "./types/AcceptUserInvitation/AcceptUserInvitation";
+import { AttachGroupRoleInput, AttachGroupRoleOutput } from "./types/AttachGroupRole/AttachGroupRole";
+import { AttachGroupRoleResponse } from "./types/AttachGroupRole/AttachGroupRoleResponse";
+export * from "./types/AttachGroupRole/AttachGroupRole";
+import { AttachGroupUserInput, AttachGroupUserOutput } from "./types/AttachGroupUser/AttachGroupUser";
+import { AttachGroupUserResponse } from "./types/AttachGroupUser/AttachGroupUserResponse";
+export * from "./types/AttachGroupUser/AttachGroupUser";
+import { AttachRolePolicyInput, AttachRolePolicyOutput } from "./types/AttachRolePolicy/AttachRolePolicy";
+import { AttachRolePolicyResponse } from "./types/AttachRolePolicy/AttachRolePolicyResponse";
+export * from "./types/AttachRolePolicy/AttachRolePolicy";
+import { AttachTeamGroupInput, AttachTeamGroupOutput } from "./types/AttachTeamGroup/AttachTeamGroup";
+import { AttachTeamGroupResponse } from "./types/AttachTeamGroup/AttachTeamGroupResponse";
+export * from "./types/AttachTeamGroup/AttachTeamGroup";
+import { AttachTeamGroupRoleInput, AttachTeamGroupRoleOutput } from "./types/AttachTeamGroupRole/AttachTeamGroupRole";
+import { AttachTeamGroupRoleResponse } from "./types/AttachTeamGroupRole/AttachTeamGroupRoleResponse";
+export * from "./types/AttachTeamGroupRole/AttachTeamGroupRole";
+import { AttachTeamGroupUserInput, AttachTeamGroupUserOutput } from "./types/AttachTeamGroupUser/AttachTeamGroupUser";
+import { AttachTeamGroupUserResponse } from "./types/AttachTeamGroupUser/AttachTeamGroupUserResponse";
+export * from "./types/AttachTeamGroupUser/AttachTeamGroupUser";
+import { AttachTeamRoleInput, AttachTeamRoleOutput } from "./types/AttachTeamRole/AttachTeamRole";
+import { AttachTeamRoleResponse } from "./types/AttachTeamRole/AttachTeamRoleResponse";
+export * from "./types/AttachTeamRole/AttachTeamRole";
+import { AttachTeamUserInput, AttachTeamUserOutput } from "./types/AttachTeamUser/AttachTeamUser";
+import { AttachTeamUserResponse } from "./types/AttachTeamUser/AttachTeamUserResponse";
+export * from "./types/AttachTeamUser/AttachTeamUser";
+import { AttachTeamUserRoleInput, AttachTeamUserRoleOutput } from "./types/AttachTeamUserRole/AttachTeamUserRole";
+import { AttachTeamUserRoleResponse } from "./types/AttachTeamUserRole/AttachTeamUserRoleResponse";
+export * from "./types/AttachTeamUserRole/AttachTeamUserRole";
+import { AttachUserRoleInput, AttachUserRoleOutput } from "./types/AttachUserRole/AttachUserRole";
+import { AttachUserRoleResponse } from "./types/AttachUserRole/AttachUserRoleResponse";
+export * from "./types/AttachUserRole/AttachUserRole";
+import { ChangePasswordInput, ChangePasswordOutput } from "./types/ChangePassword/ChangePassword";
+import { ChangePasswordResponse } from "./types/ChangePassword/ChangePasswordResponse";
+export * from "./types/ChangePassword/ChangePassword";
+import { CreateAccountInput, CreateAccountOutput } from "./types/CreateAccount/CreateAccount";
+import { CreateAccountResponse } from "./types/CreateAccount/CreateAccountResponse";
+export * from "./types/CreateAccount/CreateAccount";
+import { CreateGroupInput, CreateGroupOutput } from "./types/CreateGroup/CreateGroup";
+import { CreateGroupResponse } from "./types/CreateGroup/CreateGroupResponse";
+export * from "./types/CreateGroup/CreateGroup";
+import { CreateGroupSCIMInput, CreateGroupSCIMOutput } from "./types/CreateGroupSCIM/CreateGroupSCIM";
+import { CreateGroupSCIMResponse } from "./types/CreateGroupSCIM/CreateGroupSCIMResponse";
+export * from "./types/CreateGroupSCIM/CreateGroupSCIM";
+import { CreatePolicyInput, CreatePolicyOutput } from "./types/CreatePolicy/CreatePolicy";
+import { CreatePolicyResponse } from "./types/CreatePolicy/CreatePolicyResponse";
+export * from "./types/CreatePolicy/CreatePolicy";
+import { CreateProviderInput, CreateProviderOutput } from "./types/CreateProvider/CreateProvider";
+import { CreateProviderResponse } from "./types/CreateProvider/CreateProviderResponse";
+export * from "./types/CreateProvider/CreateProvider";
+import { CreateRoleInput, CreateRoleOutput } from "./types/CreateRole/CreateRole";
+import { CreateRoleResponse } from "./types/CreateRole/CreateRoleResponse";
+export * from "./types/CreateRole/CreateRole";
+import { CreateTeamInput, CreateTeamOutput } from "./types/CreateTeam/CreateTeam";
+import { CreateTeamResponse } from "./types/CreateTeam/CreateTeamResponse";
+export * from "./types/CreateTeam/CreateTeam";
+import { CreateTokenInput, CreateTokenOutput } from "./types/CreateToken/CreateToken";
+import { CreateTokenResponse } from "./types/CreateToken/CreateTokenResponse";
+export * from "./types/CreateToken/CreateToken";
+import { CreateUserInput, CreateUserOutput } from "./types/CreateUser/CreateUser";
+import { CreateUserResponse } from "./types/CreateUser/CreateUserResponse";
+export * from "./types/CreateUser/CreateUser";
+import { CreateUserSCIMInput, CreateUserSCIMOutput } from "./types/CreateUserSCIM/CreateUserSCIM";
+import { CreateUserSCIMResponse } from "./types/CreateUserSCIM/CreateUserSCIMResponse";
+export * from "./types/CreateUserSCIM/CreateUserSCIM";
+import { CreateUserTokenInput, CreateUserTokenOutput } from "./types/CreateUserToken/CreateUserToken";
+import { CreateUserTokenResponse } from "./types/CreateUserToken/CreateUserTokenResponse";
+export * from "./types/CreateUserToken/CreateUserToken";
+import { DeleteAccountInput, DeleteAccountOutput } from "./types/DeleteAccount/DeleteAccount";
+import { DeleteAccountResponse } from "./types/DeleteAccount/DeleteAccountResponse";
+export * from "./types/DeleteAccount/DeleteAccount";
+import { DeleteGroupInput, DeleteGroupOutput } from "./types/DeleteGroup/DeleteGroup";
+import { DeleteGroupResponse } from "./types/DeleteGroup/DeleteGroupResponse";
+export * from "./types/DeleteGroup/DeleteGroup";
+import { DeleteGroupSCIMInput, DeleteGroupSCIMOutput } from "./types/DeleteGroupSCIM/DeleteGroupSCIM";
+import { DeleteGroupSCIMResponse } from "./types/DeleteGroupSCIM/DeleteGroupSCIMResponse";
+export * from "./types/DeleteGroupSCIM/DeleteGroupSCIM";
+import { DeletePolicyInput, DeletePolicyOutput } from "./types/DeletePolicy/DeletePolicy";
+import { DeletePolicyResponse } from "./types/DeletePolicy/DeletePolicyResponse";
+export * from "./types/DeletePolicy/DeletePolicy";
+import { DeleteProviderInput, DeleteProviderOutput } from "./types/DeleteProvider/DeleteProvider";
+import { DeleteProviderResponse } from "./types/DeleteProvider/DeleteProviderResponse";
+export * from "./types/DeleteProvider/DeleteProvider";
+import { DeleteRoleInput, DeleteRoleOutput } from "./types/DeleteRole/DeleteRole";
+import { DeleteRoleResponse } from "./types/DeleteRole/DeleteRoleResponse";
+export * from "./types/DeleteRole/DeleteRole";
+import { DeleteTeamInput, DeleteTeamOutput } from "./types/DeleteTeam/DeleteTeam";
+import { DeleteTeamResponse } from "./types/DeleteTeam/DeleteTeamResponse";
+export * from "./types/DeleteTeam/DeleteTeam";
+import { DeleteUserInput, DeleteUserOutput } from "./types/DeleteUser/DeleteUser";
+import { DeleteUserResponse } from "./types/DeleteUser/DeleteUserResponse";
+export * from "./types/DeleteUser/DeleteUser";
+import { DeleteUserSCIMInput, DeleteUserSCIMOutput } from "./types/DeleteUserSCIM/DeleteUserSCIM";
+import { DeleteUserSCIMResponse } from "./types/DeleteUserSCIM/DeleteUserSCIMResponse";
+export * from "./types/DeleteUserSCIM/DeleteUserSCIM";
+import { DetachGroupRoleInput, DetachGroupRoleOutput } from "./types/DetachGroupRole/DetachGroupRole";
+import { DetachGroupRoleResponse } from "./types/DetachGroupRole/DetachGroupRoleResponse";
+export * from "./types/DetachGroupRole/DetachGroupRole";
+import { DetachGroupUserInput, DetachGroupUserOutput } from "./types/DetachGroupUser/DetachGroupUser";
+import { DetachGroupUserResponse } from "./types/DetachGroupUser/DetachGroupUserResponse";
+export * from "./types/DetachGroupUser/DetachGroupUser";
+import { DetachRolePolicyInput, DetachRolePolicyOutput } from "./types/DetachRolePolicy/DetachRolePolicy";
+import { DetachRolePolicyResponse } from "./types/DetachRolePolicy/DetachRolePolicyResponse";
+export * from "./types/DetachRolePolicy/DetachRolePolicy";
+import { DetachTeamGroupInput, DetachTeamGroupOutput } from "./types/DetachTeamGroup/DetachTeamGroup";
+import { DetachTeamGroupResponse } from "./types/DetachTeamGroup/DetachTeamGroupResponse";
+export * from "./types/DetachTeamGroup/DetachTeamGroup";
+import { DetachTeamGroupRoleInput, DetachTeamGroupRoleOutput } from "./types/DetachTeamGroupRole/DetachTeamGroupRole";
+import { DetachTeamGroupRoleResponse } from "./types/DetachTeamGroupRole/DetachTeamGroupRoleResponse";
+export * from "./types/DetachTeamGroupRole/DetachTeamGroupRole";
+import { DetachTeamGroupUserInput, DetachTeamGroupUserOutput } from "./types/DetachTeamGroupUser/DetachTeamGroupUser";
+import { DetachTeamGroupUserResponse } from "./types/DetachTeamGroupUser/DetachTeamGroupUserResponse";
+export * from "./types/DetachTeamGroupUser/DetachTeamGroupUser";
+import { DetachTeamRoleInput, DetachTeamRoleOutput } from "./types/DetachTeamRole/DetachTeamRole";
+import { DetachTeamRoleResponse } from "./types/DetachTeamRole/DetachTeamRoleResponse";
+export * from "./types/DetachTeamRole/DetachTeamRole";
+import { DetachTeamUserInput, DetachTeamUserOutput } from "./types/DetachTeamUser/DetachTeamUser";
+import { DetachTeamUserResponse } from "./types/DetachTeamUser/DetachTeamUserResponse";
+export * from "./types/DetachTeamUser/DetachTeamUser";
+import { DetachTeamUserRoleInput, DetachTeamUserRoleOutput } from "./types/DetachTeamUserRole/DetachTeamUserRole";
+import { DetachTeamUserRoleResponse } from "./types/DetachTeamUserRole/DetachTeamUserRoleResponse";
+export * from "./types/DetachTeamUserRole/DetachTeamUserRole";
+import { DetachUserRoleInput, DetachUserRoleOutput } from "./types/DetachUserRole/DetachUserRole";
+import { DetachUserRoleResponse } from "./types/DetachUserRole/DetachUserRoleResponse";
+export * from "./types/DetachUserRole/DetachUserRole";
+import { ForgotPasswordInput, ForgotPasswordOutput } from "./types/ForgotPassword/ForgotPassword";
+import { ForgotPasswordResponse } from "./types/ForgotPassword/ForgotPasswordResponse";
+export * from "./types/ForgotPassword/ForgotPassword";
+import { GetAccountInput, GetAccountOutput } from "./types/GetAccount/GetAccount";
+import { GetAccountResponse } from "./types/GetAccount/GetAccountResponse";
+export * from "./types/GetAccount/GetAccount";
+import { GetGroupInput, GetGroupOutput } from "./types/GetGroup/GetGroup";
+import { GetGroupResponse } from "./types/GetGroup/GetGroupResponse";
+export * from "./types/GetGroup/GetGroup";
+import { GetGroupSCIMInput, GetGroupSCIMOutput } from "./types/GetGroupSCIM/GetGroupSCIM";
+import { GetGroupSCIMResponse } from "./types/GetGroupSCIM/GetGroupSCIMResponse";
+export * from "./types/GetGroupSCIM/GetGroupSCIM";
 
 const endpoints = {
     "ca-central-1": "https://iam.ca-central-1.fromsmash.co",
@@ -339,1169 +339,12 @@ export class Iam extends Client {
         super({ service: "iam", ...params });
     }
 
-    acceptInvitation(params: AcceptInvitationInput): Promise<AcceptInvitationOutput> {
+    updateTeam(params: UpdateTeamInput): Promise<UpdateTeamOutput> {
         return new Promise(async (resolve, reject) => {
             try {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "PUT",
-                    path: "/invitation/accept",
-                    headers: {},
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    bodyParameters: {
-                        password: params.password,
-                        secret: params.secret,
-                        account: params.account,
-                        user: params.user,
-                    },
-
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<AcceptInvitationResponse>(request);
-                const parsedResponse = this.parseResponse<AcceptInvitationResponse, AcceptInvitationOutput>(response, this.errors.AcceptInvitationError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    acceptUserInvitation(params: AcceptUserInvitationInput): Promise<AcceptUserInvitationOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/user/invitation/accept",
-                    headers: {},
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    bodyParameters: {
-                        password: params.password,
-                        secret: params.secret,
-                        account: params.account,
-                        user: params.user,
-                    },
-
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<AcceptUserInvitationResponse>(request);
-                const parsedResponse = this.parseResponse<AcceptUserInvitationResponse, AcceptUserInvitationOutput>(response, this.errors.AcceptUserInvitationError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    attachGroupRole(params: AttachGroupRoleInput): Promise<AttachGroupRoleOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/group/:groupId/role/:roleId/attach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        groupId: params.groupId,
-                        roleId: params.roleId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<AttachGroupRoleResponse>(request);
-                const parsedResponse = this.parseResponse<AttachGroupRoleResponse, AttachGroupRoleOutput>(response, this.errors.AttachGroupRoleError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    attachGroupUser(params: AttachGroupUserInput): Promise<AttachGroupUserOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/group/:groupId/user/:userId/attach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        groupId: params.groupId,
-                        userId: params.userId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<AttachGroupUserResponse>(request);
-                const parsedResponse = this.parseResponse<AttachGroupUserResponse, AttachGroupUserOutput>(response, this.errors.AttachGroupUserError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    attachRolePolicy(params: AttachRolePolicyInput): Promise<AttachRolePolicyOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/role/:roleId/policy/:policyId/attach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        roleId: params.roleId,
-                        policyId: params.policyId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<AttachRolePolicyResponse>(request);
-                const parsedResponse = this.parseResponse<AttachRolePolicyResponse, AttachRolePolicyOutput>(response, this.errors.AttachRolePolicyError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    attachTeamGroup(params: AttachTeamGroupInput): Promise<AttachTeamGroupOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/team/:teamId/group/:groupId/attach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        teamId: params.teamId,
-                        groupId: params.groupId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<AttachTeamGroupResponse>(request);
-                const parsedResponse = this.parseResponse<AttachTeamGroupResponse, AttachTeamGroupOutput>(response, this.errors.AttachTeamGroupError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    attachTeamGroupRole(params: AttachTeamGroupRoleInput): Promise<AttachTeamGroupRoleOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/team/:teamId/group/:groupId/role/:roleId/attach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        teamId: params.teamId,
-                        groupId: params.groupId,
-                        roleId: params.roleId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<AttachTeamGroupRoleResponse>(request);
-                const parsedResponse = this.parseResponse<AttachTeamGroupRoleResponse, AttachTeamGroupRoleOutput>(response, this.errors.AttachTeamGroupRoleError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    attachTeamGroupUser(params: AttachTeamGroupUserInput): Promise<AttachTeamGroupUserOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/team/:teamId/group/:groupId/user/:userId/attach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        teamId: params.teamId,
-                        groupId: params.groupId,
-                        userId: params.userId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<AttachTeamGroupUserResponse>(request);
-                const parsedResponse = this.parseResponse<AttachTeamGroupUserResponse, AttachTeamGroupUserOutput>(response, this.errors.AttachTeamGroupUserError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    attachTeamRole(params: AttachTeamRoleInput): Promise<AttachTeamRoleOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/team/:teamId/role/:roleId/attach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        teamId: params.teamId,
-                        roleId: params.roleId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<AttachTeamRoleResponse>(request);
-                const parsedResponse = this.parseResponse<AttachTeamRoleResponse, AttachTeamRoleOutput>(response, this.errors.AttachTeamRoleError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    attachTeamUser(params: AttachTeamUserInput): Promise<AttachTeamUserOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/team/:teamId/user/:userId/attach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        teamId: params.teamId,
-                        userId: params.userId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<AttachTeamUserResponse>(request);
-                const parsedResponse = this.parseResponse<AttachTeamUserResponse, AttachTeamUserOutput>(response, this.errors.AttachTeamUserError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    attachTeamUserRole(params: AttachTeamUserRoleInput): Promise<AttachTeamUserRoleOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/team/:teamId/user/:userId/role/:roleId/attach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        teamId: params.teamId,
-                        userId: params.userId,
-                        roleId: params.roleId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<AttachTeamUserRoleResponse>(request);
-                const parsedResponse = this.parseResponse<AttachTeamUserRoleResponse, AttachTeamUserRoleOutput>(response, this.errors.AttachTeamUserRoleError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    attachUserRole(params: AttachUserRoleInput): Promise<AttachUserRoleOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/user/:userId/role/:roleId/attach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        userId: params.userId,
-                        roleId: params.roleId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<AttachUserRoleResponse>(request);
-                const parsedResponse = this.parseResponse<AttachUserRoleResponse, AttachUserRoleOutput>(response, this.errors.AttachUserRoleError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    changePassword(params: ChangePasswordInput): Promise<ChangePasswordOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/password/change",
-                    headers: {},
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    bodyParameters: {
-                        password: params.password,
-                        account: params.account,
-                        secret: params.secret,
-                        id: params.id,
-                    },
-
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<ChangePasswordResponse>(request);
-                const parsedResponse = this.parseResponse<ChangePasswordResponse, ChangePasswordOutput>(response, this.errors.ChangePasswordError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    createAccount(params: CreateAccountInput): Promise<CreateAccountOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "POST",
-                    path: "/account",
-                    headers: {},
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    bodyParameters: {
-                        username: params.username,
-                        password: params.password,
-                        lastName: params.lastName,
-                        firstName: params.firstName,
-                        language: params.language,
-                    },
-
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<CreateAccountResponse>(request);
-                const parsedResponse = this.parseResponse<CreateAccountResponse, CreateAccountOutput>(response, this.errors.CreateAccountError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    createGroup(params: CreateGroupInput): Promise<CreateGroupOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "POST",
-                    path: "/group",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    bodyParameters: {
-                        name: params.name,
-                    },
-
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<CreateGroupResponse>(request);
-                const parsedResponse = this.parseResponse<CreateGroupResponse, CreateGroupOutput>(response, this.errors.CreateGroupError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    createGroupSCIM(params: CreateGroupSCIMInput): Promise<CreateGroupSCIMOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "POST",
-                    path: "/groups",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    bodyParameters: {
-                        schemas: params.schemas,
-                        externalId: params.externalId,
-                        displayName: params.displayName,
-                        meta: params.meta,
-                        members: params.members,
-                    },
-
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<CreateGroupSCIMResponse>(request);
-                const parsedResponse = this.parseResponse<CreateGroupSCIMResponse, CreateGroupSCIMOutput>(response, this.errors.CreateGroupSCIMError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    createPolicy(params: CreatePolicyInput): Promise<CreatePolicyOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "POST",
-                    path: "/policy",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    bodyParameters: {
-                        name: params.name,
-                        description: params.description,
-                        statement: params.statement,
-                    },
-
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<CreatePolicyResponse>(request);
-                const parsedResponse = this.parseResponse<CreatePolicyResponse, CreatePolicyOutput>(response, this.errors.CreatePolicyError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    createProvider(params: CreateProviderInput): Promise<CreateProviderOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "POST",
-                    path: "/provider",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    bodyParameters: {
-                        issuer: params.issuer,
-                        name: params.name,
-                        type: params.type,
-                        idpUrl: params.idpUrl,
-                        certificate: params.certificate,
-                        metadata: params.metadata,
-                        status: params.status,
-                    },
-
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<CreateProviderResponse>(request);
-                const parsedResponse = this.parseResponse<CreateProviderResponse, CreateProviderOutput>(response, this.errors.CreateProviderError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    createRole(params: CreateRoleInput): Promise<CreateRoleOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "POST",
-                    path: "/role",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    bodyParameters: {
-                        name: params.name,
-                        description: params.description,
-                    },
-
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<CreateRoleResponse>(request);
-                const parsedResponse = this.parseResponse<CreateRoleResponse, CreateRoleOutput>(response, this.errors.CreateRoleError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    createTeam(params: CreateTeamInput): Promise<CreateTeamOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "POST",
-                    path: "/team",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    bodyParameters: {
-                        name: params.name,
-                        description: params.description,
-                        domain: params.domain,
-                        config: params.config,
-                    },
-
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<CreateTeamResponse>(request);
-                const parsedResponse = this.parseResponse<CreateTeamResponse, CreateTeamOutput>(response, this.errors.CreateTeamError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    createToken(params: CreateTokenInput): Promise<CreateTokenOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "POST",
-                    path: "/token",
-                    headers: {},
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    bodyParameters: {
-                        username: params.username,
-                        password: params.password,
-                    },
-
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<CreateTokenResponse>(request);
-                const parsedResponse = this.parseResponse<CreateTokenResponse, CreateTokenOutput>(response, this.errors.CreateTokenError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    createUser(params: CreateUserInput): Promise<CreateUserOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "POST",
-                    path: "/user",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    bodyParameters: {
-                        username: params.username,
-                        password: params.password,
-                        lastName: params.lastName,
-                        firstName: params.firstName,
-                        language: params.language,
-                        status: params.status,
-                        authenticationMode: params.authenticationMode,
-                    },
-
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<CreateUserResponse>(request);
-                const parsedResponse = this.parseResponse<CreateUserResponse, CreateUserOutput>(response, this.errors.CreateUserError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    createUserSCIM(params: CreateUserSCIMInput): Promise<CreateUserSCIMOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "POST",
-                    path: "/users",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    bodyParameters: {
-                        schemas: params.schemas,
-                        externalId: params.externalId,
-                        userName: params.userName,
-                        active: params.active,
-                        emails: params.emails,
-                        meta: params.meta,
-                        name: params.name,
-                        displayName: params.displayName,
-                        locale: params.locale,
-                        groups: params.groups,
-                    },
-
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<CreateUserSCIMResponse>(request);
-                const parsedResponse = this.parseResponse<CreateUserSCIMResponse, CreateUserSCIMOutput>(response, this.errors.CreateUserSCIMError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    createUserToken(params: CreateUserTokenInput): Promise<CreateUserTokenOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "POST",
-                    path: "/user/:id/token",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        id: params.id,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    bodyParameters: {
-                        tokenDuration: params.tokenDuration,
-                        refreshTokenDuration: params.refreshTokenDuration,
-                    },
-
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<CreateUserTokenResponse>(request);
-                const parsedResponse = this.parseResponse<CreateUserTokenResponse, CreateUserTokenOutput>(response, this.errors.CreateUserTokenError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    deleteAccount(params: DeleteAccountInput): Promise<DeleteAccountOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "DELETE",
-                    path: "/account",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DeleteAccountResponse>(request);
-                const parsedResponse = this.parseResponse<DeleteAccountResponse, DeleteAccountOutput>(response, this.errors.DeleteAccountError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    deleteGroup(params: DeleteGroupInput): Promise<DeleteGroupOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "DELETE",
-                    path: "/group/:groupId",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        groupId: params.groupId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DeleteGroupResponse>(request);
-                const parsedResponse = this.parseResponse<DeleteGroupResponse, DeleteGroupOutput>(response, this.errors.DeleteGroupError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    deleteGroupSCIM(params: DeleteGroupSCIMInput): Promise<DeleteGroupSCIMOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "DELETE",
-                    path: "/groups/:id",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        id: params.id,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DeleteGroupSCIMResponse>(request);
-                const parsedResponse = this.parseResponse<DeleteGroupSCIMResponse, DeleteGroupSCIMOutput>(response, this.errors.DeleteGroupSCIMError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    deletePolicy(params: DeletePolicyInput): Promise<DeletePolicyOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "DELETE",
-                    path: "/policy/:policyId",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        policyId: params.policyId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DeletePolicyResponse>(request);
-                const parsedResponse = this.parseResponse<DeletePolicyResponse, DeletePolicyOutput>(response, this.errors.DeletePolicyError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    deleteProvider(params: DeleteProviderInput): Promise<DeleteProviderOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "DELETE",
-                    path: "/provider/:issuer",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        issuer: params.issuer,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DeleteProviderResponse>(request);
-                const parsedResponse = this.parseResponse<DeleteProviderResponse, DeleteProviderOutput>(response, this.errors.DeleteProviderError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    deleteRole(params: DeleteRoleInput): Promise<DeleteRoleOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "DELETE",
-                    path: "/role/:roleId",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        roleId: params.roleId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DeleteRoleResponse>(request);
-                const parsedResponse = this.parseResponse<DeleteRoleResponse, DeleteRoleOutput>(response, this.errors.DeleteRoleError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    deleteTeam(params: DeleteTeamInput): Promise<DeleteTeamOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "DELETE",
                     path: "/team/:teamId",
                     headers: {
                         Authorization: "Bearer " + this.token,
@@ -1512,11 +355,17 @@ export class Iam extends Client {
                     queryParameters: {
                         version: "07-2020",
                     },
+                    bodyParameters: {
+                        name: params.name,
+                        description: params.description,
+                        config: params.config,
+                    },
+
                     refreshTokenMethod: this.refreshTokenMethod,
                 };
                 const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DeleteTeamResponse>(request);
-                const parsedResponse = this.parseResponse<DeleteTeamResponse, DeleteTeamOutput>(response, this.errors.DeleteTeamError);
+                const response = await this.client.handle<UpdateTeamResponse>(request);
+                const parsedResponse = this.parseResponse<UpdateTeamResponse, UpdateTeamOutput>(response, this.errors.UpdateTeamError);
                 resolve(parsedResponse);
             } catch (error) {
                 if (error instanceof Error) {
@@ -1532,12 +381,99 @@ export class Iam extends Client {
         });
     }
 
-    deleteUser(params: DeleteUserInput): Promise<DeleteUserOutput> {
+    updateTeamGroup(params: UpdateTeamGroupInput): Promise<UpdateTeamGroupOutput> {
         return new Promise(async (resolve, reject) => {
             try {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
-                    method: "DELETE",
+                    method: "PUT",
+                    path: "/team/:teamId/group/:groupId",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        teamId: params.teamId,
+                        groupId: params.groupId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    bodyParameters: {
+                        name: params.name,
+                    },
+
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<UpdateTeamGroupResponse>(request);
+                const parsedResponse = this.parseResponse<UpdateTeamGroupResponse, UpdateTeamGroupOutput>(response, this.errors.UpdateTeamGroupError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    updateTeamUser(params: UpdateTeamUserInput): Promise<UpdateTeamUserOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/team/:teamId/user/:userId",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        teamId: params.teamId,
+                        userId: params.userId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    bodyParameters: {
+                        username: params.username,
+                        lastName: params.lastName,
+                        firstName: params.firstName,
+                        language: params.language,
+                        status: params.status,
+                        authenticationMode: params.authenticationMode,
+                    },
+
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<UpdateTeamUserResponse>(request);
+                const parsedResponse = this.parseResponse<UpdateTeamUserResponse, UpdateTeamUserOutput>(response, this.errors.UpdateTeamUserError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    updateUser(params: UpdateUserInput): Promise<UpdateUserOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
                     path: "/user/:userId",
                     headers: {
                         Authorization: "Bearer " + this.token,
@@ -1548,11 +484,20 @@ export class Iam extends Client {
                     queryParameters: {
                         version: "07-2020",
                     },
+                    bodyParameters: {
+                        username: params.username,
+                        lastName: params.lastName,
+                        firstName: params.firstName,
+                        language: params.language,
+                        status: params.status,
+                        authenticationMode: params.authenticationMode,
+                    },
+
                     refreshTokenMethod: this.refreshTokenMethod,
                 };
                 const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DeleteUserResponse>(request);
-                const parsedResponse = this.parseResponse<DeleteUserResponse, DeleteUserOutput>(response, this.errors.DeleteUserError);
+                const response = await this.client.handle<UpdateUserResponse>(request);
+                const parsedResponse = this.parseResponse<UpdateUserResponse, UpdateUserOutput>(response, this.errors.UpdateUserError);
                 resolve(parsedResponse);
             } catch (error) {
                 if (error instanceof Error) {
@@ -1568,12 +513,12 @@ export class Iam extends Client {
         });
     }
 
-    deleteUserSCIM(params: DeleteUserSCIMInput): Promise<DeleteUserSCIMOutput> {
+    updateUserSCIM(params: UpdateUserSCIMInput): Promise<UpdateUserSCIMOutput> {
         return new Promise(async (resolve, reject) => {
             try {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
-                    method: "DELETE",
+                    method: "PUT",
                     path: "/users/:id",
                     headers: {
                         Authorization: "Bearer " + this.token,
@@ -1584,526 +529,22 @@ export class Iam extends Client {
                     queryParameters: {
                         version: "07-2020",
                     },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DeleteUserSCIMResponse>(request);
-                const parsedResponse = this.parseResponse<DeleteUserSCIMResponse, DeleteUserSCIMOutput>(response, this.errors.DeleteUserSCIMError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    detachGroupRole(params: DetachGroupRoleInput): Promise<DetachGroupRoleOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/group/:groupId/role/:roleId/detach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        groupId: params.groupId,
-                        roleId: params.roleId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DetachGroupRoleResponse>(request);
-                const parsedResponse = this.parseResponse<DetachGroupRoleResponse, DetachGroupRoleOutput>(response, this.errors.DetachGroupRoleError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    detachGroupUser(params: DetachGroupUserInput): Promise<DetachGroupUserOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/group/:groupId/user/:userId/detach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        groupId: params.groupId,
-                        userId: params.userId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DetachGroupUserResponse>(request);
-                const parsedResponse = this.parseResponse<DetachGroupUserResponse, DetachGroupUserOutput>(response, this.errors.DetachGroupUserError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    detachRolePolicy(params: DetachRolePolicyInput): Promise<DetachRolePolicyOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/role/:roleId/policy/:policyId/detach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        roleId: params.roleId,
-                        policyId: params.policyId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DetachRolePolicyResponse>(request);
-                const parsedResponse = this.parseResponse<DetachRolePolicyResponse, DetachRolePolicyOutput>(response, this.errors.DetachRolePolicyError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    detachTeamGroup(params: DetachTeamGroupInput): Promise<DetachTeamGroupOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/team/:teamId/group/:groupId/detach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        teamId: params.teamId,
-                        groupId: params.groupId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DetachTeamGroupResponse>(request);
-                const parsedResponse = this.parseResponse<DetachTeamGroupResponse, DetachTeamGroupOutput>(response, this.errors.DetachTeamGroupError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    detachTeamGroupRole(params: DetachTeamGroupRoleInput): Promise<DetachTeamGroupRoleOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/team/:teamId/group/:groupId/role/:roleId/detach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        teamId: params.teamId,
-                        groupId: params.groupId,
-                        roleId: params.roleId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DetachTeamGroupRoleResponse>(request);
-                const parsedResponse = this.parseResponse<DetachTeamGroupRoleResponse, DetachTeamGroupRoleOutput>(response, this.errors.DetachTeamGroupRoleError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    detachTeamGroupUser(params: DetachTeamGroupUserInput): Promise<DetachTeamGroupUserOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/team/:teamId/group/:groupId/user/:userId/detach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        teamId: params.teamId,
-                        groupId: params.groupId,
-                        userId: params.userId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DetachTeamGroupUserResponse>(request);
-                const parsedResponse = this.parseResponse<DetachTeamGroupUserResponse, DetachTeamGroupUserOutput>(response, this.errors.DetachTeamGroupUserError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    detachTeamRole(params: DetachTeamRoleInput): Promise<DetachTeamRoleOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/team/:teamId/role/:roleId/detach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        teamId: params.teamId,
-                        roleId: params.roleId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DetachTeamRoleResponse>(request);
-                const parsedResponse = this.parseResponse<DetachTeamRoleResponse, DetachTeamRoleOutput>(response, this.errors.DetachTeamRoleError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    detachTeamUser(params: DetachTeamUserInput): Promise<DetachTeamUserOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/team/:teamId/user/:userId/detach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        teamId: params.teamId,
-                        userId: params.userId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DetachTeamUserResponse>(request);
-                const parsedResponse = this.parseResponse<DetachTeamUserResponse, DetachTeamUserOutput>(response, this.errors.DetachTeamUserError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    detachTeamUserRole(params: DetachTeamUserRoleInput): Promise<DetachTeamUserRoleOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/team/:teamId/user/:userId/role/:roleId/detach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        teamId: params.teamId,
-                        userId: params.userId,
-                        roleId: params.roleId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DetachTeamUserRoleResponse>(request);
-                const parsedResponse = this.parseResponse<DetachTeamUserRoleResponse, DetachTeamUserRoleOutput>(response, this.errors.DetachTeamUserRoleError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    detachUserRole(params: DetachUserRoleInput): Promise<DetachUserRoleOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/user/:userId/role/:roleId/detach",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        userId: params.userId,
-                        roleId: params.roleId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<DetachUserRoleResponse>(request);
-                const parsedResponse = this.parseResponse<DetachUserRoleResponse, DetachUserRoleOutput>(response, this.errors.DetachUserRoleError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    forgotPassword(params: ForgotPasswordInput): Promise<ForgotPasswordOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "PUT",
-                    path: "/password/forgot",
-                    headers: {},
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
                     bodyParameters: {
-                        username: params.username,
+                        schemas: params.schemas,
+                        userName: params.userName,
+                        name: params.name,
+                        emails: params.emails,
+                        displayName: params.displayName,
+                        locale: params.locale,
+                        active: params.active,
+                        groups: params.groups,
                     },
 
                     refreshTokenMethod: this.refreshTokenMethod,
                 };
                 const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<ForgotPasswordResponse>(request);
-                const parsedResponse = this.parseResponse<ForgotPasswordResponse, ForgotPasswordOutput>(response, this.errors.ForgotPasswordError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    getAccount(params: GetAccountInput): Promise<GetAccountOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "GET",
-                    path: "/account",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {},
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<GetAccountResponse>(request);
-                const parsedResponse = this.parseResponse<GetAccountResponse, GetAccountOutput>(response, this.errors.GetAccountError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    getGroup(params: GetGroupInput): Promise<GetGroupOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "GET",
-                    path: "/group/:groupId",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        groupId: params.groupId,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<GetGroupResponse>(request);
-                const parsedResponse = this.parseResponse<GetGroupResponse, GetGroupOutput>(response, this.errors.GetGroupError);
-                resolve(parsedResponse);
-            } catch (error) {
-                if (error instanceof Error) {
-                    if (error instanceof SDKError) {
-                        reject(error);
-                    } else {
-                        reject(new SDKError(error));
-                    }
-                } else {
-                    reject(new SDKError(error as string));
-                }
-            }
-        });
-    }
-
-    getGroupSCIM(params: GetGroupSCIMInput): Promise<GetGroupSCIMOutput> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const requestParams: HttpRequestHostParameters = {
-                    host: this.host,
-                    method: "GET",
-                    path: "/groups/:id",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        id: params.id,
-                    },
-                    queryParameters: {
-                        version: "07-2020",
-                    },
-                    refreshTokenMethod: this.refreshTokenMethod,
-                };
-                const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<GetGroupSCIMResponse>(request);
-                const parsedResponse = this.parseResponse<GetGroupSCIMResponse, GetGroupSCIMOutput>(response, this.errors.GetGroupSCIMError);
+                const response = await this.client.handle<UpdateUserSCIMResponse>(request);
+                const parsedResponse = this.parseResponse<UpdateUserSCIMResponse, UpdateUserSCIMOutput>(response, this.errors.UpdateUserSCIMError);
                 resolve(parsedResponse);
             } catch (error) {
                 if (error instanceof Error) {
@@ -4072,33 +2513,30 @@ export class Iam extends Client {
         });
     }
 
-    updateTeam(params: UpdateTeamInput): Promise<UpdateTeamOutput> {
+    acceptInvitation(params: AcceptInvitationInput): Promise<AcceptInvitationOutput> {
         return new Promise(async (resolve, reject) => {
             try {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "PUT",
-                    path: "/team/:teamId",
-                    headers: {
-                        Authorization: "Bearer " + this.token,
-                    },
-                    pathParameters: {
-                        teamId: params.teamId,
-                    },
+                    path: "/invitation/accept",
+                    headers: {},
+                    pathParameters: {},
                     queryParameters: {
                         version: "07-2020",
                     },
                     bodyParameters: {
-                        name: params.name,
-                        description: params.description,
-                        config: params.config,
+                        password: params.password,
+                        secret: params.secret,
+                        account: params.account,
+                        user: params.user,
                     },
 
                     refreshTokenMethod: this.refreshTokenMethod,
                 };
                 const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<UpdateTeamResponse>(request);
-                const parsedResponse = this.parseResponse<UpdateTeamResponse, UpdateTeamOutput>(response, this.errors.UpdateTeamError);
+                const response = await this.client.handle<AcceptInvitationResponse>(request);
+                const parsedResponse = this.parseResponse<AcceptInvitationResponse, AcceptInvitationOutput>(response, this.errors.AcceptInvitationError);
                 resolve(parsedResponse);
             } catch (error) {
                 if (error instanceof Error) {
@@ -4114,13 +2552,163 @@ export class Iam extends Client {
         });
     }
 
-    updateTeamGroup(params: UpdateTeamGroupInput): Promise<UpdateTeamGroupOutput> {
+    acceptUserInvitation(params: AcceptUserInvitationInput): Promise<AcceptUserInvitationOutput> {
         return new Promise(async (resolve, reject) => {
             try {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "PUT",
-                    path: "/team/:teamId/group/:groupId",
+                    path: "/user/invitation/accept",
+                    headers: {},
+                    pathParameters: {},
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    bodyParameters: {
+                        password: params.password,
+                        secret: params.secret,
+                        account: params.account,
+                        user: params.user,
+                    },
+
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<AcceptUserInvitationResponse>(request);
+                const parsedResponse = this.parseResponse<AcceptUserInvitationResponse, AcceptUserInvitationOutput>(response, this.errors.AcceptUserInvitationError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    attachGroupRole(params: AttachGroupRoleInput): Promise<AttachGroupRoleOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/group/:groupId/role/:roleId/attach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        groupId: params.groupId,
+                        roleId: params.roleId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<AttachGroupRoleResponse>(request);
+                const parsedResponse = this.parseResponse<AttachGroupRoleResponse, AttachGroupRoleOutput>(response, this.errors.AttachGroupRoleError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    attachGroupUser(params: AttachGroupUserInput): Promise<AttachGroupUserOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/group/:groupId/user/:userId/attach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        groupId: params.groupId,
+                        userId: params.userId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<AttachGroupUserResponse>(request);
+                const parsedResponse = this.parseResponse<AttachGroupUserResponse, AttachGroupUserOutput>(response, this.errors.AttachGroupUserError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    attachRolePolicy(params: AttachRolePolicyInput): Promise<AttachRolePolicyOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/role/:roleId/policy/:policyId/attach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        roleId: params.roleId,
+                        policyId: params.policyId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<AttachRolePolicyResponse>(request);
+                const parsedResponse = this.parseResponse<AttachRolePolicyResponse, AttachRolePolicyOutput>(response, this.errors.AttachRolePolicyError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    attachTeamGroup(params: AttachTeamGroupInput): Promise<AttachTeamGroupOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/team/:teamId/group/:groupId/attach",
                     headers: {
                         Authorization: "Bearer " + this.token,
                     },
@@ -4131,15 +2719,11 @@ export class Iam extends Client {
                     queryParameters: {
                         version: "07-2020",
                     },
-                    bodyParameters: {
-                        name: params.name,
-                    },
-
                     refreshTokenMethod: this.refreshTokenMethod,
                 };
                 const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<UpdateTeamGroupResponse>(request);
-                const parsedResponse = this.parseResponse<UpdateTeamGroupResponse, UpdateTeamGroupOutput>(response, this.errors.UpdateTeamGroupError);
+                const response = await this.client.handle<AttachTeamGroupResponse>(request);
+                const parsedResponse = this.parseResponse<AttachTeamGroupResponse, AttachTeamGroupOutput>(response, this.errors.AttachTeamGroupError);
                 resolve(parsedResponse);
             } catch (error) {
                 if (error instanceof Error) {
@@ -4155,13 +2739,126 @@ export class Iam extends Client {
         });
     }
 
-    updateTeamUser(params: UpdateTeamUserInput): Promise<UpdateTeamUserOutput> {
+    attachTeamGroupRole(params: AttachTeamGroupRoleInput): Promise<AttachTeamGroupRoleOutput> {
         return new Promise(async (resolve, reject) => {
             try {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "PUT",
-                    path: "/team/:teamId/user/:userId",
+                    path: "/team/:teamId/group/:groupId/role/:roleId/attach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        teamId: params.teamId,
+                        groupId: params.groupId,
+                        roleId: params.roleId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<AttachTeamGroupRoleResponse>(request);
+                const parsedResponse = this.parseResponse<AttachTeamGroupRoleResponse, AttachTeamGroupRoleOutput>(response, this.errors.AttachTeamGroupRoleError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    attachTeamGroupUser(params: AttachTeamGroupUserInput): Promise<AttachTeamGroupUserOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/team/:teamId/group/:groupId/user/:userId/attach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        teamId: params.teamId,
+                        groupId: params.groupId,
+                        userId: params.userId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<AttachTeamGroupUserResponse>(request);
+                const parsedResponse = this.parseResponse<AttachTeamGroupUserResponse, AttachTeamGroupUserOutput>(response, this.errors.AttachTeamGroupUserError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    attachTeamRole(params: AttachTeamRoleInput): Promise<AttachTeamRoleOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/team/:teamId/role/:roleId/attach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        teamId: params.teamId,
+                        roleId: params.roleId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<AttachTeamRoleResponse>(request);
+                const parsedResponse = this.parseResponse<AttachTeamRoleResponse, AttachTeamRoleOutput>(response, this.errors.AttachTeamRoleError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    attachTeamUser(params: AttachTeamUserInput): Promise<AttachTeamUserOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/team/:teamId/user/:userId/attach",
                     headers: {
                         Authorization: "Bearer " + this.token,
                     },
@@ -4172,20 +2869,11 @@ export class Iam extends Client {
                     queryParameters: {
                         version: "07-2020",
                     },
-                    bodyParameters: {
-                        username: params.username,
-                        lastName: params.lastName,
-                        firstName: params.firstName,
-                        language: params.language,
-                        status: params.status,
-                        authenticationMode: params.authenticationMode,
-                    },
-
                     refreshTokenMethod: this.refreshTokenMethod,
                 };
                 const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<UpdateTeamUserResponse>(request);
-                const parsedResponse = this.parseResponse<UpdateTeamUserResponse, UpdateTeamUserOutput>(response, this.errors.UpdateTeamUserError);
+                const response = await this.client.handle<AttachTeamUserResponse>(request);
+                const parsedResponse = this.parseResponse<AttachTeamUserResponse, AttachTeamUserOutput>(response, this.errors.AttachTeamUserError);
                 resolve(parsedResponse);
             } catch (error) {
                 if (error instanceof Error) {
@@ -4201,36 +2889,66 @@ export class Iam extends Client {
         });
     }
 
-    updateUser(params: UpdateUserInput): Promise<UpdateUserOutput> {
+    attachTeamUserRole(params: AttachTeamUserRoleInput): Promise<AttachTeamUserRoleOutput> {
         return new Promise(async (resolve, reject) => {
             try {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "PUT",
-                    path: "/user/:userId",
+                    path: "/team/:teamId/user/:userId/role/:roleId/attach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        teamId: params.teamId,
+                        userId: params.userId,
+                        roleId: params.roleId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<AttachTeamUserRoleResponse>(request);
+                const parsedResponse = this.parseResponse<AttachTeamUserRoleResponse, AttachTeamUserRoleOutput>(response, this.errors.AttachTeamUserRoleError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    attachUserRole(params: AttachUserRoleInput): Promise<AttachUserRoleOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/user/:userId/role/:roleId/attach",
                     headers: {
                         Authorization: "Bearer " + this.token,
                     },
                     pathParameters: {
                         userId: params.userId,
+                        roleId: params.roleId,
                     },
                     queryParameters: {
                         version: "07-2020",
                     },
-                    bodyParameters: {
-                        username: params.username,
-                        lastName: params.lastName,
-                        firstName: params.firstName,
-                        language: params.language,
-                        status: params.status,
-                        authenticationMode: params.authenticationMode,
-                    },
-
                     refreshTokenMethod: this.refreshTokenMethod,
                 };
                 const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<UpdateUserResponse>(request);
-                const parsedResponse = this.parseResponse<UpdateUserResponse, UpdateUserOutput>(response, this.errors.UpdateUserError);
+                const response = await this.client.handle<AttachUserRoleResponse>(request);
+                const parsedResponse = this.parseResponse<AttachUserRoleResponse, AttachUserRoleOutput>(response, this.errors.AttachUserRoleError);
                 resolve(parsedResponse);
             } catch (error) {
                 if (error instanceof Error) {
@@ -4246,13 +2964,464 @@ export class Iam extends Client {
         });
     }
 
-    updateUserSCIM(params: UpdateUserSCIMInput): Promise<UpdateUserSCIMOutput> {
+    changePassword(params: ChangePasswordInput): Promise<ChangePasswordOutput> {
         return new Promise(async (resolve, reject) => {
             try {
                 const requestParams: HttpRequestHostParameters = {
                     host: this.host,
                     method: "PUT",
-                    path: "/users/:id",
+                    path: "/password/change",
+                    headers: {},
+                    pathParameters: {},
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    bodyParameters: {
+                        password: params.password,
+                        account: params.account,
+                        secret: params.secret,
+                        id: params.id,
+                    },
+
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<ChangePasswordResponse>(request);
+                const parsedResponse = this.parseResponse<ChangePasswordResponse, ChangePasswordOutput>(response, this.errors.ChangePasswordError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    createAccount(params: CreateAccountInput): Promise<CreateAccountOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "POST",
+                    path: "/account",
+                    headers: {},
+                    pathParameters: {},
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    bodyParameters: {
+                        username: params.username,
+                        password: params.password,
+                        lastName: params.lastName,
+                        firstName: params.firstName,
+                        language: params.language,
+                    },
+
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<CreateAccountResponse>(request);
+                const parsedResponse = this.parseResponse<CreateAccountResponse, CreateAccountOutput>(response, this.errors.CreateAccountError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    createGroup(params: CreateGroupInput): Promise<CreateGroupOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "POST",
+                    path: "/group",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {},
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    bodyParameters: {
+                        name: params.name,
+                    },
+
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<CreateGroupResponse>(request);
+                const parsedResponse = this.parseResponse<CreateGroupResponse, CreateGroupOutput>(response, this.errors.CreateGroupError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    createGroupSCIM(params: CreateGroupSCIMInput): Promise<CreateGroupSCIMOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "POST",
+                    path: "/groups",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {},
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    bodyParameters: {
+                        schemas: params.schemas,
+                        externalId: params.externalId,
+                        displayName: params.displayName,
+                        meta: params.meta,
+                        members: params.members,
+                    },
+
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<CreateGroupSCIMResponse>(request);
+                const parsedResponse = this.parseResponse<CreateGroupSCIMResponse, CreateGroupSCIMOutput>(response, this.errors.CreateGroupSCIMError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    createPolicy(params: CreatePolicyInput): Promise<CreatePolicyOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "POST",
+                    path: "/policy",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {},
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    bodyParameters: {
+                        name: params.name,
+                        description: params.description,
+                        statement: params.statement,
+                    },
+
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<CreatePolicyResponse>(request);
+                const parsedResponse = this.parseResponse<CreatePolicyResponse, CreatePolicyOutput>(response, this.errors.CreatePolicyError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    createProvider(params: CreateProviderInput): Promise<CreateProviderOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "POST",
+                    path: "/provider",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {},
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    bodyParameters: {
+                        issuer: params.issuer,
+                        name: params.name,
+                        type: params.type,
+                        idpUrl: params.idpUrl,
+                        certificate: params.certificate,
+                        metadata: params.metadata,
+                        status: params.status,
+                    },
+
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<CreateProviderResponse>(request);
+                const parsedResponse = this.parseResponse<CreateProviderResponse, CreateProviderOutput>(response, this.errors.CreateProviderError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    createRole(params: CreateRoleInput): Promise<CreateRoleOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "POST",
+                    path: "/role",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {},
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    bodyParameters: {
+                        name: params.name,
+                        description: params.description,
+                    },
+
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<CreateRoleResponse>(request);
+                const parsedResponse = this.parseResponse<CreateRoleResponse, CreateRoleOutput>(response, this.errors.CreateRoleError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    createTeam(params: CreateTeamInput): Promise<CreateTeamOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "POST",
+                    path: "/team",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {},
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    bodyParameters: {
+                        name: params.name,
+                        description: params.description,
+                        domain: params.domain,
+                        config: params.config,
+                    },
+
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<CreateTeamResponse>(request);
+                const parsedResponse = this.parseResponse<CreateTeamResponse, CreateTeamOutput>(response, this.errors.CreateTeamError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    createToken(params: CreateTokenInput): Promise<CreateTokenOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "POST",
+                    path: "/token",
+                    headers: {},
+                    pathParameters: {},
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    bodyParameters: {
+                        username: params.username,
+                        password: params.password,
+                    },
+
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<CreateTokenResponse>(request);
+                const parsedResponse = this.parseResponse<CreateTokenResponse, CreateTokenOutput>(response, this.errors.CreateTokenError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    createUser(params: CreateUserInput): Promise<CreateUserOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "POST",
+                    path: "/user",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {},
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    bodyParameters: {
+                        username: params.username,
+                        password: params.password,
+                        lastName: params.lastName,
+                        firstName: params.firstName,
+                        language: params.language,
+                        status: params.status,
+                        authenticationMode: params.authenticationMode,
+                    },
+
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<CreateUserResponse>(request);
+                const parsedResponse = this.parseResponse<CreateUserResponse, CreateUserOutput>(response, this.errors.CreateUserError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    createUserSCIM(params: CreateUserSCIMInput): Promise<CreateUserSCIMOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "POST",
+                    path: "/users",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {},
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    bodyParameters: {
+                        schemas: params.schemas,
+                        externalId: params.externalId,
+                        userName: params.userName,
+                        active: params.active,
+                        emails: params.emails,
+                        meta: params.meta,
+                        name: params.name,
+                        displayName: params.displayName,
+                        locale: params.locale,
+                        groups: params.groups,
+                    },
+
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<CreateUserSCIMResponse>(request);
+                const parsedResponse = this.parseResponse<CreateUserSCIMResponse, CreateUserSCIMOutput>(response, this.errors.CreateUserSCIMError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    createUserToken(params: CreateUserTokenInput): Promise<CreateUserTokenOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "POST",
+                    path: "/user/:id/token",
                     headers: {
                         Authorization: "Bearer " + this.token,
                     },
@@ -4263,21 +3432,852 @@ export class Iam extends Client {
                         version: "07-2020",
                     },
                     bodyParameters: {
-                        schemas: params.schemas,
-                        userName: params.userName,
-                        name: params.name,
-                        emails: params.emails,
-                        displayName: params.displayName,
-                        locale: params.locale,
-                        active: params.active,
-                        groups: params.groups,
+                        tokenDuration: params.tokenDuration,
+                        refreshTokenDuration: params.refreshTokenDuration,
                     },
 
                     refreshTokenMethod: this.refreshTokenMethod,
                 };
                 const request = new HttpRequest(requestParams);
-                const response = await this.client.handle<UpdateUserSCIMResponse>(request);
-                const parsedResponse = this.parseResponse<UpdateUserSCIMResponse, UpdateUserSCIMOutput>(response, this.errors.UpdateUserSCIMError);
+                const response = await this.client.handle<CreateUserTokenResponse>(request);
+                const parsedResponse = this.parseResponse<CreateUserTokenResponse, CreateUserTokenOutput>(response, this.errors.CreateUserTokenError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    deleteAccount(params: DeleteAccountInput): Promise<DeleteAccountOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "DELETE",
+                    path: "/account",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {},
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DeleteAccountResponse>(request);
+                const parsedResponse = this.parseResponse<DeleteAccountResponse, DeleteAccountOutput>(response, this.errors.DeleteAccountError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    deleteGroup(params: DeleteGroupInput): Promise<DeleteGroupOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "DELETE",
+                    path: "/group/:groupId",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        groupId: params.groupId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DeleteGroupResponse>(request);
+                const parsedResponse = this.parseResponse<DeleteGroupResponse, DeleteGroupOutput>(response, this.errors.DeleteGroupError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    deleteGroupSCIM(params: DeleteGroupSCIMInput): Promise<DeleteGroupSCIMOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "DELETE",
+                    path: "/groups/:id",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        id: params.id,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DeleteGroupSCIMResponse>(request);
+                const parsedResponse = this.parseResponse<DeleteGroupSCIMResponse, DeleteGroupSCIMOutput>(response, this.errors.DeleteGroupSCIMError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    deletePolicy(params: DeletePolicyInput): Promise<DeletePolicyOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "DELETE",
+                    path: "/policy/:policyId",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        policyId: params.policyId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DeletePolicyResponse>(request);
+                const parsedResponse = this.parseResponse<DeletePolicyResponse, DeletePolicyOutput>(response, this.errors.DeletePolicyError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    deleteProvider(params: DeleteProviderInput): Promise<DeleteProviderOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "DELETE",
+                    path: "/provider/:issuer",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        issuer: params.issuer,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DeleteProviderResponse>(request);
+                const parsedResponse = this.parseResponse<DeleteProviderResponse, DeleteProviderOutput>(response, this.errors.DeleteProviderError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    deleteRole(params: DeleteRoleInput): Promise<DeleteRoleOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "DELETE",
+                    path: "/role/:roleId",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        roleId: params.roleId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DeleteRoleResponse>(request);
+                const parsedResponse = this.parseResponse<DeleteRoleResponse, DeleteRoleOutput>(response, this.errors.DeleteRoleError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    deleteTeam(params: DeleteTeamInput): Promise<DeleteTeamOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "DELETE",
+                    path: "/team/:teamId",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        teamId: params.teamId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DeleteTeamResponse>(request);
+                const parsedResponse = this.parseResponse<DeleteTeamResponse, DeleteTeamOutput>(response, this.errors.DeleteTeamError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    deleteUser(params: DeleteUserInput): Promise<DeleteUserOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "DELETE",
+                    path: "/user/:userId",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        userId: params.userId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DeleteUserResponse>(request);
+                const parsedResponse = this.parseResponse<DeleteUserResponse, DeleteUserOutput>(response, this.errors.DeleteUserError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    deleteUserSCIM(params: DeleteUserSCIMInput): Promise<DeleteUserSCIMOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "DELETE",
+                    path: "/users/:id",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        id: params.id,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DeleteUserSCIMResponse>(request);
+                const parsedResponse = this.parseResponse<DeleteUserSCIMResponse, DeleteUserSCIMOutput>(response, this.errors.DeleteUserSCIMError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    detachGroupRole(params: DetachGroupRoleInput): Promise<DetachGroupRoleOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/group/:groupId/role/:roleId/detach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        groupId: params.groupId,
+                        roleId: params.roleId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DetachGroupRoleResponse>(request);
+                const parsedResponse = this.parseResponse<DetachGroupRoleResponse, DetachGroupRoleOutput>(response, this.errors.DetachGroupRoleError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    detachGroupUser(params: DetachGroupUserInput): Promise<DetachGroupUserOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/group/:groupId/user/:userId/detach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        groupId: params.groupId,
+                        userId: params.userId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DetachGroupUserResponse>(request);
+                const parsedResponse = this.parseResponse<DetachGroupUserResponse, DetachGroupUserOutput>(response, this.errors.DetachGroupUserError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    detachRolePolicy(params: DetachRolePolicyInput): Promise<DetachRolePolicyOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/role/:roleId/policy/:policyId/detach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        roleId: params.roleId,
+                        policyId: params.policyId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DetachRolePolicyResponse>(request);
+                const parsedResponse = this.parseResponse<DetachRolePolicyResponse, DetachRolePolicyOutput>(response, this.errors.DetachRolePolicyError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    detachTeamGroup(params: DetachTeamGroupInput): Promise<DetachTeamGroupOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/team/:teamId/group/:groupId/detach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        teamId: params.teamId,
+                        groupId: params.groupId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DetachTeamGroupResponse>(request);
+                const parsedResponse = this.parseResponse<DetachTeamGroupResponse, DetachTeamGroupOutput>(response, this.errors.DetachTeamGroupError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    detachTeamGroupRole(params: DetachTeamGroupRoleInput): Promise<DetachTeamGroupRoleOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/team/:teamId/group/:groupId/role/:roleId/detach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        teamId: params.teamId,
+                        groupId: params.groupId,
+                        roleId: params.roleId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DetachTeamGroupRoleResponse>(request);
+                const parsedResponse = this.parseResponse<DetachTeamGroupRoleResponse, DetachTeamGroupRoleOutput>(response, this.errors.DetachTeamGroupRoleError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    detachTeamGroupUser(params: DetachTeamGroupUserInput): Promise<DetachTeamGroupUserOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/team/:teamId/group/:groupId/user/:userId/detach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        teamId: params.teamId,
+                        groupId: params.groupId,
+                        userId: params.userId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DetachTeamGroupUserResponse>(request);
+                const parsedResponse = this.parseResponse<DetachTeamGroupUserResponse, DetachTeamGroupUserOutput>(response, this.errors.DetachTeamGroupUserError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    detachTeamRole(params: DetachTeamRoleInput): Promise<DetachTeamRoleOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/team/:teamId/role/:roleId/detach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        teamId: params.teamId,
+                        roleId: params.roleId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DetachTeamRoleResponse>(request);
+                const parsedResponse = this.parseResponse<DetachTeamRoleResponse, DetachTeamRoleOutput>(response, this.errors.DetachTeamRoleError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    detachTeamUser(params: DetachTeamUserInput): Promise<DetachTeamUserOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/team/:teamId/user/:userId/detach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        teamId: params.teamId,
+                        userId: params.userId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DetachTeamUserResponse>(request);
+                const parsedResponse = this.parseResponse<DetachTeamUserResponse, DetachTeamUserOutput>(response, this.errors.DetachTeamUserError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    detachTeamUserRole(params: DetachTeamUserRoleInput): Promise<DetachTeamUserRoleOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/team/:teamId/user/:userId/role/:roleId/detach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        teamId: params.teamId,
+                        userId: params.userId,
+                        roleId: params.roleId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DetachTeamUserRoleResponse>(request);
+                const parsedResponse = this.parseResponse<DetachTeamUserRoleResponse, DetachTeamUserRoleOutput>(response, this.errors.DetachTeamUserRoleError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    detachUserRole(params: DetachUserRoleInput): Promise<DetachUserRoleOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/user/:userId/role/:roleId/detach",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        userId: params.userId,
+                        roleId: params.roleId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<DetachUserRoleResponse>(request);
+                const parsedResponse = this.parseResponse<DetachUserRoleResponse, DetachUserRoleOutput>(response, this.errors.DetachUserRoleError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    forgotPassword(params: ForgotPasswordInput): Promise<ForgotPasswordOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "PUT",
+                    path: "/password/forgot",
+                    headers: {},
+                    pathParameters: {},
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    bodyParameters: {
+                        username: params.username,
+                    },
+
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<ForgotPasswordResponse>(request);
+                const parsedResponse = this.parseResponse<ForgotPasswordResponse, ForgotPasswordOutput>(response, this.errors.ForgotPasswordError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    getAccount(params: GetAccountInput): Promise<GetAccountOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "GET",
+                    path: "/account",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {},
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<GetAccountResponse>(request);
+                const parsedResponse = this.parseResponse<GetAccountResponse, GetAccountOutput>(response, this.errors.GetAccountError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    getGroup(params: GetGroupInput): Promise<GetGroupOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "GET",
+                    path: "/group/:groupId",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        groupId: params.groupId,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<GetGroupResponse>(request);
+                const parsedResponse = this.parseResponse<GetGroupResponse, GetGroupOutput>(response, this.errors.GetGroupError);
+                resolve(parsedResponse);
+            } catch (error) {
+                if (error instanceof Error) {
+                    if (error instanceof SDKError) {
+                        reject(error);
+                    } else {
+                        reject(new SDKError(error));
+                    }
+                } else {
+                    reject(new SDKError(error as string));
+                }
+            }
+        });
+    }
+
+    getGroupSCIM(params: GetGroupSCIMInput): Promise<GetGroupSCIMOutput> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const requestParams: HttpRequestHostParameters = {
+                    host: this.host,
+                    method: "GET",
+                    path: "/groups/:id",
+                    headers: {
+                        Authorization: "Bearer " + this.token,
+                    },
+                    pathParameters: {
+                        id: params.id,
+                    },
+                    queryParameters: {
+                        version: "07-2020",
+                    },
+                    refreshTokenMethod: this.refreshTokenMethod,
+                };
+                const request = new HttpRequest(requestParams);
+                const response = await this.client.handle<GetGroupSCIMResponse>(request);
+                const parsedResponse = this.parseResponse<GetGroupSCIMResponse, GetGroupSCIMOutput>(response, this.errors.GetGroupSCIMError);
                 resolve(parsedResponse);
             } catch (error) {
                 if (error instanceof Error) {

@@ -1,4 +1,4 @@
 import { UpdateAccountOutput } from "./UpdateAccount";
-import { BadRequestError } from "./UpdateAccountError";
+import { BadRequestError, ConflictError } from "./UpdateAccountError";
 
-export type UpdateAccountResponse = UpdateAccountOutput | BadRequestError;
+export type UpdateAccountResponse = UpdateAccountOutput | BadRequestError | ConflictError;

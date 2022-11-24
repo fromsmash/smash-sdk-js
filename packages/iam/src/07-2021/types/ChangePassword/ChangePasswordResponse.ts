@@ -1,4 +1,4 @@
 import { ChangePasswordOutput } from "./ChangePassword";
-import { BadRequestError, InvalidSecretError, InvalidPasswordSecretError, ExpiredPasswordSecretError } from "./ChangePasswordError";
+import { BadRequestError, InvalidPasswordSecretError, ExpiredPasswordSecretError } from "./ChangePasswordError";
 
-export type ChangePasswordResponse = ChangePasswordOutput | BadRequestError | InvalidSecretError | InvalidPasswordSecretError | ExpiredPasswordSecretError;
+export type ChangePasswordResponse = ChangePasswordOutput | BadRequestError | InvalidPasswordSecretError | ExpiredPasswordSecretError;

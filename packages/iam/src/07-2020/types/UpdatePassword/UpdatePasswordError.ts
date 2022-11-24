@@ -24,10 +24,22 @@ export class WrongAuthError extends SDKError {}
         */
 export class InternalServerError extends SDKError {}
 
+/**
+                         
+        */
+export class BadGatewayError extends SDKError {}
+
+/**
+                         
+        */
+export class GatewayTimeoutError extends SDKError {}
+
 export default {
     BadRequestError,
     UnauthorizedError,
     NotMatchError,
     WrongAuthError,
     InternalServerError,
+    BadGatewayError,
+    GatewayTimeoutError,
 };
