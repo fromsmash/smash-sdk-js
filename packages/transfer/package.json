@@ -1,6 +1,6 @@
 {
 	"name": "@smash-sdk/transfer",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"description": "Smash Sdk transfer",
 	"repository": {
 		"type": "git",
@@ -13,7 +13,7 @@
 		"test": "jest"
 	},
 	"dependencies": {
-		"@smash-sdk/core": "^1.0.0"
+		"@smash-sdk/core": "^1.1.0"
 	},
 	"keywords": [
 		"smash",

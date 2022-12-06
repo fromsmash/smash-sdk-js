@@ -20,13 +20,16 @@ export interface UpdateTransferInput {
             channelName: string;
         };
     };
+
     customization?: {
         logo?: string;
         background?: string;
     };
+
     promotion?: {
         id: string;
     };
+
     preview?: string;
     password?: string;
     notificationType?: string;

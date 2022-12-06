@@ -1,4 +1,4 @@
-import { Client, ClientParameters, HttpRequest, HttpRequestUrlParameters, SDKError, UnknownError } from "@smash-sdk/core";
+import { Client, ClientParameters, HttpRequest, HttpRequestUrlParameters, isNode, SDKError, UnknownError } from "@smash-sdk/core";
 import { errors } from "./errors";
 import { DownloadInput, DownloadOutput } from "./types/Download/Download";
 import { DownloadResponse } from "./types/Download/DownloadResponse";
@@ -175,7 +175,10 @@ function convertToArrayBuffer(data: Buffer | string | ArrayBuffer): ArrayBuffer 
 }
 
 function isArrayLikeOrArrayBuffer(item: string | Buffer | ArrayBuffer) {
-	return typeof item === 'string' || item instanceof Buffer || item instanceof ArrayBuffer;
+	if (isNode()) {
+		return typeof item === 'string' || item instanceof Buffer || item instanceof ArrayBuffer;
+	}
+	return typeof item === 'string' || item instanceof ArrayBuffer;
 }
 
 interface S3Error {

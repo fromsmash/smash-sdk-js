@@ -22,13 +22,16 @@ export interface CreateTransferInput {
         };
         teams?: {};
     };
+
     customization?: {
         logo?: string;
         background?: string;
     };
+
     promotion?: {
         id: string;
     };
+
     preview?: string;
     accessTracking?: string;
     password?: string;
