@@ -1,0 +1,23 @@
+{
+	"name": "@smash-sdk/directory",
+	"version": "0.0.1",
+	"description": "Smash Sdk Directory",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fromsmash/smash-sdk-js"
+	},
+	"scripts": {
+		"transpile": "tsc",
+		"clean": "rimraf dist && rimraf node_modules",
+		"build": "npm run clean && npm i && npm run transpile && cp ./package.json ./dist/",
+		"test": "jest"
+	},
+	"dependencies": {
+		"@smash-sdk/core": "^2.0.0"
+	},
+	"keywords": [
+		"smash",
+		"sdk",
+		"directory"
+	]
+}
