@@ -1,6 +1,6 @@
 {
 	"name": "@smash-sdk/image",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Smash Sdk Image",
 	"repository": {
 		"type": "git",
@@ -13,7 +13,7 @@
 		"test": "jest"
 	},
 	"dependencies": {
-		"@smash-sdk/core": "^2.0.0"
+		"@smash-sdk/core": "^2.0.1"
 	},
 	"keywords": [
 		"smash",
