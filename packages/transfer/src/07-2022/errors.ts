@@ -151,6 +151,7 @@ import { NotFoundError as ListTransferFilesPreviewNotFoundError } from "./types/
 import { InternalServerError as ListTransferFilesPreviewInternalServerError } from "./types/ListTransferFilesPreview/ListTransferFilesPreviewError";
 import { BadGatewayError as ListTransferFilesPreviewBadGatewayError } from "./types/ListTransferFilesPreview/ListTransferFilesPreviewError";
 import { GatewayTimeoutError as ListTransferFilesPreviewGatewayTimeoutError } from "./types/ListTransferFilesPreview/ListTransferFilesPreviewError";
+import { InvalidParameterError as ListTransfersInvalidParameterError } from "./types/ListTransfers/ListTransfersError";
 import { UnauthorizedError as ListTransfersUnauthorizedError } from "./types/ListTransfers/ListTransfersError";
 import { NotFoundError as ListTransfersNotFoundError } from "./types/ListTransfers/ListTransfersError";
 import { InternalServerError as ListTransfersInternalServerError } from "./types/ListTransfers/ListTransfersError";
@@ -638,6 +639,7 @@ export const errors = {
         NetworkError,
     },
     ListTransfersError: {
+        InvalidParameterError: ListTransfersInvalidParameterError,
         UnauthorizedError: ListTransfersUnauthorizedError,
         NotFoundError: ListTransfersNotFoundError,
         InternalServerError: ListTransfersInternalServerError,

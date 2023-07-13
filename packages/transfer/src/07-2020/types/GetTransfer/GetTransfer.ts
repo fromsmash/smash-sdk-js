@@ -6,7 +6,7 @@ export interface GetTransferOutput {
     transfer: {
         id: string;
         size: number;
-        title: string;
+        title?: string;
         region:
             | "us-east-1"
             | "us-east-2"
@@ -38,9 +38,9 @@ export interface GetTransferOutput {
         status: "Uploading" | "Processing" | "Uploaded" | "Deleting" | "Deleted" | "Expired" | "Suspended" | "Dirty";
         preview: "Full" | "None";
         created: string;
-        deleted: string;
+        deleted?: string;
         modified: string;
-        language: string;
+        language?: string;
         filesNumber: number;
         transferUrl: string;
         uploadState: "Draft" | "Lock";
@@ -48,12 +48,12 @@ export interface GetTransferOutput {
         filesViews: number;
         transferDownloads: number;
         filesDownloads: number;
-        description: string;
-        promotion: {
+        description?: string;
+        promotion?: {
             id: string;
             url: string;
         };
-        customization: {
+        customization?: {
             logo: {
                 type: string;
                 sourceId: string;
@@ -77,7 +77,7 @@ export interface GetTransferOutput {
                 email: string;
             };
             receivers?: string[];
-            slack: {
+            slack?: {
                 me: string;
                 team: string;
                 channel: string;

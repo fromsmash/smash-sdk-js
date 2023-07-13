@@ -1,5 +1,8 @@
 export interface ListTransferFilesInput {
     transferId: string;
+    limit?: number;
+    start?: string;
+    sort?: string;
 }
 
 export interface ListTransferFilesOutput {
@@ -18,4 +21,6 @@ export interface ListTransferFilesOutput {
         crc32: number;
         downloads: number;
     }[];
+
+    next: string;
 }

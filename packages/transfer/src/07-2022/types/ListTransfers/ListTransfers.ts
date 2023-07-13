@@ -1,4 +1,8 @@
-export interface ListTransfersInput {}
+export interface ListTransfersInput {
+    limit?: number;
+    start?: string;
+    sort?: string;
+}
 
 export interface ListTransfersOutput {
     transfers: {
@@ -67,4 +71,6 @@ export interface ListTransfersOutput {
         accessTracking: "None" | "Email";
         queuedUntil: string;
     }[];
+
+    next: string;
 }

@@ -1,4 +1,4 @@
 import { ListTransfersOutput } from "./ListTransfers";
-import { NotFoundError } from "./ListTransfersError";
+import { InvalidParameterError, NotFoundError } from "./ListTransfersError";
 
-export type ListTransfersResponse = ListTransfersOutput | NotFoundError;
+export type ListTransfersResponse = ListTransfersOutput | InvalidParameterError | NotFoundError;

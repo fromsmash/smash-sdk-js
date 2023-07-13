@@ -166,7 +166,7 @@ export class Transfer extends ExtendedTransfer {
     public errors = errors;
 
     constructor(params: ClientParameters = {}) {
-        super({ service: "transfer", ...params, type: "regional", userAgent: "@smash-sdk/transfer@0.0.13" });
+        super({ service: "transfer", ...params, type: "regional", userAgent: "@smash-sdk/transfer@0.0.14-alpha.0" });
     }
 
     createTeamTransfer(params: CreateTeamTransferInput): Promise<CreateTeamTransferOutput> {
@@ -1535,6 +1535,9 @@ export class Transfer extends ExtendedTransfer {
                         transferId: params["transferId"],
                     },
                     queryParameters: {
+                        limit: params["limit"],
+                        start: params["start"],
+                        sort: params["sort"],
                         version: "07-2020",
                     },
                     refreshTokenMethod: this.refreshTokenMethod,
@@ -1596,7 +1599,7 @@ export class Transfer extends ExtendedTransfer {
         });
     }
 
-    listTransfers(): Promise<ListTransfersOutput> {
+    listTransfers(params: ListTransfersInput = {}): Promise<ListTransfersOutput> {
         return new Promise(async (resolve, reject) => {
             try {
                 const requestParams: HttpRequestHostParameters = {
@@ -1608,6 +1611,9 @@ export class Transfer extends ExtendedTransfer {
                     },
                     pathParameters: {},
                     queryParameters: {
+                        limit: params["limit"],
+                        start: params["start"],
+                        sort: params["sort"],
                         version: "07-2020",
                     },
                     refreshTokenMethod: this.refreshTokenMethod,
