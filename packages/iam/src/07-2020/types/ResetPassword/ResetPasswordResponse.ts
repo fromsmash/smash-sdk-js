@@ -1,4 +1,4 @@
 import { ResetPasswordOutput } from "./ResetPassword";
-import { InvalidParameterError, InvalidSecretError, InvalidPasswordSecretError, ExpiredPasswordSecretError } from "./ResetPasswordError";
+import { InvalidParameterError, NotFoundError, InvalidForgotPasswordError, InvalidForgotPasswordSecretError, ExpiredForgotPasswordError } from "./ResetPasswordError";
 
-export type ResetPasswordResponse = ResetPasswordOutput | InvalidParameterError | InvalidSecretError | InvalidPasswordSecretError | ExpiredPasswordSecretError;
+export type ResetPasswordResponse = ResetPasswordOutput | InvalidParameterError | NotFoundError | InvalidForgotPasswordError | InvalidForgotPasswordSecretError | ExpiredForgotPasswordError;

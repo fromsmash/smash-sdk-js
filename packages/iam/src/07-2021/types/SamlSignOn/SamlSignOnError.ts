@@ -2,7 +2,7 @@ import { SDKError } from "@smash-sdk/core";
 
 export class InvalidParameterError extends SDKError {}
 
-export class InvalidConfigurationError extends SDKError {}
+export class UserNotAllowedToSignOnError extends SDKError {}
 
 export class NotFoundError extends SDKError {}
 
@@ -16,7 +16,7 @@ export class GatewayTimeoutError extends SDKError {}
 
 export default {
     InvalidParameterError,
-    InvalidConfigurationError,
+    UserNotAllowedToSignOnError,
     NotFoundError,
     ConflictError,
     InternalServerError,

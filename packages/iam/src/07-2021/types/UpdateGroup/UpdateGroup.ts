@@ -9,7 +9,7 @@ export interface UpdateGroupOutput {
         name: string;
         created: string;
         modified: string;
-        usersCount: string;
-        provisioned: string;
+        usersCount: number;
+        provisioned: boolean;
     };
 }

@@ -11,7 +11,7 @@ export interface ListTeamUsersOutput {
         provisioned: boolean;
         groupsCount: number;
         teamsCount: number;
-        status: string;
+        status: "Enabled" | "Disabled";
         label?: string;
     }[];
 }

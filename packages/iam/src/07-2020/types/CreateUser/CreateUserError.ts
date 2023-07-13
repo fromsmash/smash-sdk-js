@@ -4,7 +4,7 @@ export class InvalidParameterError extends SDKError {}
 
 export class UnauthorizedError extends SDKError {}
 
-export class ForbiddenError extends SDKError {}
+export class InvalidSubscriptionError extends SDKError {}
 
 export class ConflictError extends SDKError {}
 
@@ -17,7 +17,7 @@ export class GatewayTimeoutError extends SDKError {}
 export default {
     InvalidParameterError,
     UnauthorizedError,
-    ForbiddenError,
+    InvalidSubscriptionError,
     ConflictError,
     InternalServerError,
     BadGatewayError,

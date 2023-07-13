@@ -1,4 +1,4 @@
 import { CreateAccountOutput } from "./CreateAccount";
-import { InvalidParameterError, ConflictError } from "./CreateAccountError";
+import { InvalidParameterError, NotFoundError, ConflictError } from "./CreateAccountError";
 
-export type CreateAccountResponse = CreateAccountOutput | InvalidParameterError | ConflictError;
+export type CreateAccountResponse = CreateAccountOutput | InvalidParameterError | NotFoundError | ConflictError;

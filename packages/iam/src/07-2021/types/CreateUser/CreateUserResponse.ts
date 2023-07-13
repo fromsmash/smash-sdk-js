@@ -1,4 +1,4 @@
 import { CreateUserOutput } from "./CreateUser";
-import { InvalidParameterError, ForbiddenError, ConflictError } from "./CreateUserError";
+import { InvalidParameterError, InvalidSubscriptionError, ConflictError } from "./CreateUserError";
 
-export type CreateUserResponse = CreateUserOutput | InvalidParameterError | ForbiddenError | ConflictError;
+export type CreateUserResponse = CreateUserOutput | InvalidParameterError | InvalidSubscriptionError | ConflictError;

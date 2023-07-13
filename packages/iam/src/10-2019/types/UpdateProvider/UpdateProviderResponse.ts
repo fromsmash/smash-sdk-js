@@ -1,4 +1,4 @@
 import { UpdateProviderOutput } from "./UpdateProvider";
-import { InvalidParameterError, NotFoundError } from "./UpdateProviderError";
+import { InvalidParameterError, NotFoundError, InvalidCertificateError } from "./UpdateProviderError";
 
-export type UpdateProviderResponse = UpdateProviderOutput | InvalidParameterError | NotFoundError;
+export type UpdateProviderResponse = UpdateProviderOutput | InvalidParameterError | NotFoundError | InvalidCertificateError;

@@ -9,7 +9,7 @@ export interface GetSigninConfigurationOutput {
         providers: {
             type: string;
             idpUrl: string;
-            status: string;
+            status: "Enabled" | "Disabled";
         }[];
     };
 }

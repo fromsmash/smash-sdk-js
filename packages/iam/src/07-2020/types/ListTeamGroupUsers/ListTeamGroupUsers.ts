@@ -6,7 +6,7 @@ export interface ListTeamGroupUsersInput {
 export interface ListTeamGroupUsersOutput {
     users: {
         id: string;
-        status: string;
+        status: "Enabled" | "Disabled";
         username: string;
         lastName: string;
         firstName: string;

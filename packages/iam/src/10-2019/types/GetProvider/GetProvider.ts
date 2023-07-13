@@ -8,7 +8,7 @@ export interface GetProviderOutput {
         type: string;
         idpUrl: string;
         issuer: string;
-        status: string;
+        status: "Enabled" | "Disabled";
         created: string;
         modified: string;
         metadata?: string;

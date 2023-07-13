@@ -11,7 +11,7 @@ export interface GetTeamOutput {
             authentication: {
                 mode: "Anonymous" | "Authentified";
                 rules?: {
-                    type: "Wilcard" | "Email";
+                    type: "Wildcard" | "Email";
                     value: string;
                 }[];
             };

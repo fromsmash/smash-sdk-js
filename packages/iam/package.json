@@ -1,6 +1,6 @@
 {
 	"name": "@smash-sdk/iam",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"description": "Smash Sdk Iam",
 	"repository": {
 		"type": "git",
@@ -13,11 +13,43 @@
 		"test": "jest"
 	},
 	"dependencies": {
-		"@smash-sdk/core": "^2.0.0"
+		"@smash-sdk/core": "^2.0.1"
 	},
 	"keywords": [
 		"smash",
 		"sdk",
-		"iam"
+		"iam",
+		"fromsmash",
+		"node",
+		"nodejs",
+		"transfer",
+		"upload",
+		"uploader",
+		"file-upload",
+		"file-uploader",
+		"files",
+		"big-file",
+		"big-files",
+		"big file",
+		"big files",
+		"multipart",
+		"multipart-upload",
+		"multipart-uploader",
+		"cdn",
+		"library",
+		"typescript",
+		"browser",
+		"html",
+		"html5",
+		"html5-uploader",
+		"progress",
+		"angular",
+		"react",
+		"vue",
+		"http",
+		"https",
+		"promise",
+		"async",
+		"await"
 	]
 }

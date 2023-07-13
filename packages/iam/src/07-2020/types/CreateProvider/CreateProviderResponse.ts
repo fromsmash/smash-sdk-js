@@ -1,4 +1,4 @@
 import { CreateProviderOutput } from "./CreateProvider";
-import { InvalidParameterError, ConflictError } from "./CreateProviderError";
+import { InvalidParameterError, InvalidCertificateError, ConflictError } from "./CreateProviderError";
 
-export type CreateProviderResponse = CreateProviderOutput | InvalidParameterError | ConflictError;
+export type CreateProviderResponse = CreateProviderOutput | InvalidParameterError | InvalidCertificateError | ConflictError;

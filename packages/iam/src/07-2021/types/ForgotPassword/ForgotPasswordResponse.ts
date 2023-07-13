@@ -1,4 +1,4 @@
 import { ForgotPasswordOutput } from "./ForgotPassword";
-import { InvalidParameterError, NotFoundError } from "./ForgotPasswordError";
+import { InvalidParameterError, NotFoundError, InvalidIdentityUsernameError } from "./ForgotPasswordError";
 
-export type ForgotPasswordResponse = ForgotPasswordOutput | InvalidParameterError | NotFoundError;
+export type ForgotPasswordResponse = ForgotPasswordOutput | InvalidParameterError | NotFoundError | InvalidIdentityUsernameError;

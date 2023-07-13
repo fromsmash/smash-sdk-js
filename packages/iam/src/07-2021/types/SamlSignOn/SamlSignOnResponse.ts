@@ -1,4 +1,4 @@
 import { SamlSignOnOutput } from "./SamlSignOn";
-import { InvalidParameterError, NotFoundError, InvalidConfigurationError, ConflictError } from "./SamlSignOnError";
+import { InvalidParameterError, NotFoundError, UserNotAllowedToSignOnError, ConflictError } from "./SamlSignOnError";
 
-export type SamlSignOnResponse = SamlSignOnOutput | InvalidParameterError | NotFoundError | InvalidConfigurationError | ConflictError;
+export type SamlSignOnResponse = SamlSignOnOutput | InvalidParameterError | NotFoundError | UserNotAllowedToSignOnError | ConflictError;

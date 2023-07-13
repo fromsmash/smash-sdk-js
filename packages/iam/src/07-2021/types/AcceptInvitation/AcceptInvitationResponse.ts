@@ -1,4 +1,4 @@
 import { AcceptInvitationOutput } from "./AcceptInvitation";
-import { InvalidParameterError, InvalidSecretError, InvalidInviteError, ExpiredSecretError } from "./AcceptInvitationError";
+import { InvalidParameterError, NotFoundError, InvalidInvitationError, InvalidInvitationSecretError, ExpiredInvitationError } from "./AcceptInvitationError";
 
-export type AcceptInvitationResponse = AcceptInvitationOutput | InvalidParameterError | InvalidSecretError | InvalidInviteError | ExpiredSecretError;
+export type AcceptInvitationResponse = AcceptInvitationOutput | InvalidParameterError | NotFoundError | InvalidInvitationError | InvalidInvitationSecretError | ExpiredInvitationError;

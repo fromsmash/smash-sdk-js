@@ -1,4 +1,4 @@
 import { UpdateUserOutput } from "./UpdateUser";
-import { InvalidParameterError, NotFoundError, ForbiddenError } from "./UpdateUserError";
+import { InvalidParameterError, NotFoundError, ForbiddenToUpdateProvisionedUserError, InvalidSubscriptionError } from "./UpdateUserError";
 
-export type UpdateUserResponse = UpdateUserOutput | InvalidParameterError | NotFoundError | ForbiddenError;
+export type UpdateUserResponse = UpdateUserOutput | InvalidParameterError | NotFoundError | ForbiddenToUpdateProvisionedUserError | InvalidSubscriptionError;

@@ -1,4 +1,4 @@
 import { UpdateTeamUserOutput } from "./UpdateTeamUser";
-import { InvalidParameterError, NotFoundError, WrongAuthError } from "./UpdateTeamUserError";
+import { InvalidParameterError, NotFoundError, InvalidSubscriptionError, ForbiddenToUpdateProvisionedUserError, ConflictError } from "./UpdateTeamUserError";
 
-export type UpdateTeamUserResponse = UpdateTeamUserOutput | InvalidParameterError | NotFoundError | WrongAuthError;
+export type UpdateTeamUserResponse = UpdateTeamUserOutput | InvalidParameterError | NotFoundError | InvalidSubscriptionError | ForbiddenToUpdateProvisionedUserError | ConflictError;

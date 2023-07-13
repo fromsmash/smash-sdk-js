@@ -9,7 +9,7 @@ export interface ListTeamsOutput {
             authentication: {
                 mode: "Anonymous" | "Authentified";
                 rules?: {
-                    type: "Wilcard" | "Email";
+                    type: "Wildcard" | "Email";
                     value: string;
                 }[];
             };

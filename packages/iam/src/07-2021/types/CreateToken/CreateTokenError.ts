@@ -2,13 +2,13 @@ import { SDKError } from "@smash-sdk/core";
 
 export class InvalidParameterError extends SDKError {}
 
-export class BadCredentialsError extends SDKError {}
+export class InvalidCredentialsError extends SDKError {}
 
 export class PasswordRevokedError extends SDKError {}
 
 export class IdentityDisabledError extends SDKError {}
 
-export class WrongAuthError extends SDKError {}
+export class InvalidAuthenticationModeError extends SDKError {}
 
 export class NotFoundError extends SDKError {}
 
@@ -22,10 +22,10 @@ export class GatewayTimeoutError extends SDKError {}
 
 export default {
     InvalidParameterError,
-    BadCredentialsError,
+    InvalidCredentialsError,
     PasswordRevokedError,
     IdentityDisabledError,
-    WrongAuthError,
+    InvalidAuthenticationModeError,
     NotFoundError,
     ConflictError,
     InternalServerError,

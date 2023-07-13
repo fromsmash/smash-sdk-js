@@ -19,8 +19,9 @@ import { BadGatewayError as UpdateManagedPolicyBadGatewayError } from "./types/U
 import { GatewayTimeoutError as UpdateManagedPolicyGatewayTimeoutError } from "./types/UpdateManagedPolicy/UpdateManagedPolicyError";
 import { InvalidParameterError as UpdatePasswordInvalidParameterError } from "./types/UpdatePassword/UpdatePasswordError";
 import { UnauthorizedError as UpdatePasswordUnauthorizedError } from "./types/UpdatePassword/UpdatePasswordError";
-import { NotMatchError as UpdatePasswordNotMatchError } from "./types/UpdatePassword/UpdatePasswordError";
-import { WrongAuthError as UpdatePasswordWrongAuthError } from "./types/UpdatePassword/UpdatePasswordError";
+import { InvalidAuthenticationModeError as UpdatePasswordInvalidAuthenticationModeError } from "./types/UpdatePassword/UpdatePasswordError";
+import { PasswordDoesNotMatchError as UpdatePasswordPasswordDoesNotMatchError } from "./types/UpdatePassword/UpdatePasswordError";
+import { NotFoundError as UpdatePasswordNotFoundError } from "./types/UpdatePassword/UpdatePasswordError";
 import { InternalServerError as UpdatePasswordInternalServerError } from "./types/UpdatePassword/UpdatePasswordError";
 import { BadGatewayError as UpdatePasswordBadGatewayError } from "./types/UpdatePassword/UpdatePasswordError";
 import { GatewayTimeoutError as UpdatePasswordGatewayTimeoutError } from "./types/UpdatePassword/UpdatePasswordError";
@@ -32,6 +33,7 @@ import { BadGatewayError as UpdatePolicyBadGatewayError } from "./types/UpdatePo
 import { GatewayTimeoutError as UpdatePolicyGatewayTimeoutError } from "./types/UpdatePolicy/UpdatePolicyError";
 import { InvalidParameterError as UpdateProviderInvalidParameterError } from "./types/UpdateProvider/UpdateProviderError";
 import { UnauthorizedError as UpdateProviderUnauthorizedError } from "./types/UpdateProvider/UpdateProviderError";
+import { InvalidCertificateError as UpdateProviderInvalidCertificateError } from "./types/UpdateProvider/UpdateProviderError";
 import { NotFoundError as UpdateProviderNotFoundError } from "./types/UpdateProvider/UpdateProviderError";
 import { InternalServerError as UpdateProviderInternalServerError } from "./types/UpdateProvider/UpdateProviderError";
 import { BadGatewayError as UpdateProviderBadGatewayError } from "./types/UpdateProvider/UpdateProviderError";
@@ -56,14 +58,17 @@ import { BadGatewayError as UpdateTeamGroupBadGatewayError } from "./types/Updat
 import { GatewayTimeoutError as UpdateTeamGroupGatewayTimeoutError } from "./types/UpdateTeamGroup/UpdateTeamGroupError";
 import { InvalidParameterError as UpdateTeamUserInvalidParameterError } from "./types/UpdateTeamUser/UpdateTeamUserError";
 import { UnauthorizedError as UpdateTeamUserUnauthorizedError } from "./types/UpdateTeamUser/UpdateTeamUserError";
-import { WrongAuthError as UpdateTeamUserWrongAuthError } from "./types/UpdateTeamUser/UpdateTeamUserError";
+import { InvalidSubscriptionError as UpdateTeamUserInvalidSubscriptionError } from "./types/UpdateTeamUser/UpdateTeamUserError";
+import { ForbiddenToUpdateProvisionedUserError as UpdateTeamUserForbiddenToUpdateProvisionedUserError } from "./types/UpdateTeamUser/UpdateTeamUserError";
 import { NotFoundError as UpdateTeamUserNotFoundError } from "./types/UpdateTeamUser/UpdateTeamUserError";
+import { ConflictError as UpdateTeamUserConflictError } from "./types/UpdateTeamUser/UpdateTeamUserError";
 import { InternalServerError as UpdateTeamUserInternalServerError } from "./types/UpdateTeamUser/UpdateTeamUserError";
 import { BadGatewayError as UpdateTeamUserBadGatewayError } from "./types/UpdateTeamUser/UpdateTeamUserError";
 import { GatewayTimeoutError as UpdateTeamUserGatewayTimeoutError } from "./types/UpdateTeamUser/UpdateTeamUserError";
 import { InvalidParameterError as UpdateUserInvalidParameterError } from "./types/UpdateUser/UpdateUserError";
 import { UnauthorizedError as UpdateUserUnauthorizedError } from "./types/UpdateUser/UpdateUserError";
-import { ForbiddenError as UpdateUserForbiddenError } from "./types/UpdateUser/UpdateUserError";
+import { ForbiddenToUpdateProvisionedUserError as UpdateUserForbiddenToUpdateProvisionedUserError } from "./types/UpdateUser/UpdateUserError";
+import { InvalidSubscriptionError as UpdateUserInvalidSubscriptionError } from "./types/UpdateUser/UpdateUserError";
 import { NotFoundError as UpdateUserNotFoundError } from "./types/UpdateUser/UpdateUserError";
 import { InternalServerError as UpdateUserInternalServerError } from "./types/UpdateUser/UpdateUserError";
 import { BadGatewayError as UpdateUserBadGatewayError } from "./types/UpdateUser/UpdateUserError";
@@ -164,6 +169,7 @@ import { BadGatewayError as InviteTeamUserBadGatewayError } from "./types/Invite
 import { GatewayTimeoutError as InviteTeamUserGatewayTimeoutError } from "./types/InviteTeamUser/InviteTeamUserError";
 import { InvalidParameterError as InviteUserInvalidParameterError } from "./types/InviteUser/InviteUserError";
 import { UnauthorizedError as InviteUserUnauthorizedError } from "./types/InviteUser/InviteUserError";
+import { InvalidEmailError as InviteUserInvalidEmailError } from "./types/InviteUser/InviteUserError";
 import { NotFoundError as InviteUserNotFoundError } from "./types/InviteUser/InviteUserError";
 import { InternalServerError as InviteUserInternalServerError } from "./types/InviteUser/InviteUserError";
 import { BadGatewayError as InviteUserBadGatewayError } from "./types/InviteUser/InviteUserError";
@@ -315,9 +321,10 @@ import { InternalServerError as RenewTokenInternalServerError } from "./types/Re
 import { BadGatewayError as RenewTokenBadGatewayError } from "./types/RenewToken/RenewTokenError";
 import { GatewayTimeoutError as RenewTokenGatewayTimeoutError } from "./types/RenewToken/RenewTokenError";
 import { InvalidParameterError as ResetPasswordInvalidParameterError } from "./types/ResetPassword/ResetPasswordError";
-import { InvalidSecretError as ResetPasswordInvalidSecretError } from "./types/ResetPassword/ResetPasswordError";
-import { InvalidPasswordSecretError as ResetPasswordInvalidPasswordSecretError } from "./types/ResetPassword/ResetPasswordError";
-import { ExpiredPasswordSecretError as ResetPasswordExpiredPasswordSecretError } from "./types/ResetPassword/ResetPasswordError";
+import { InvalidForgotPasswordError as ResetPasswordInvalidForgotPasswordError } from "./types/ResetPassword/ResetPasswordError";
+import { InvalidForgotPasswordSecretError as ResetPasswordInvalidForgotPasswordSecretError } from "./types/ResetPassword/ResetPasswordError";
+import { ExpiredForgotPasswordError as ResetPasswordExpiredForgotPasswordError } from "./types/ResetPassword/ResetPasswordError";
+import { NotFoundError as ResetPasswordNotFoundError } from "./types/ResetPassword/ResetPasswordError";
 import { InternalServerError as ResetPasswordInternalServerError } from "./types/ResetPassword/ResetPasswordError";
 import { BadGatewayError as ResetPasswordBadGatewayError } from "./types/ResetPassword/ResetPasswordError";
 import { GatewayTimeoutError as ResetPasswordGatewayTimeoutError } from "./types/ResetPassword/ResetPasswordError";
@@ -339,7 +346,7 @@ import { InternalServerError as SSOSignInInternalServerError } from "./types/SSO
 import { BadGatewayError as SSOSignInBadGatewayError } from "./types/SSOSignIn/SSOSignInError";
 import { GatewayTimeoutError as SSOSignInGatewayTimeoutError } from "./types/SSOSignIn/SSOSignInError";
 import { InvalidParameterError as SamlSignOnInvalidParameterError } from "./types/SamlSignOn/SamlSignOnError";
-import { InvalidConfigurationError as SamlSignOnInvalidConfigurationError } from "./types/SamlSignOn/SamlSignOnError";
+import { UserNotAllowedToSignOnError as SamlSignOnUserNotAllowedToSignOnError } from "./types/SamlSignOn/SamlSignOnError";
 import { NotFoundError as SamlSignOnNotFoundError } from "./types/SamlSignOn/SamlSignOnError";
 import { ConflictError as SamlSignOnConflictError } from "./types/SamlSignOn/SamlSignOnError";
 import { InternalServerError as SamlSignOnInternalServerError } from "./types/SamlSignOn/SamlSignOnError";
@@ -354,16 +361,16 @@ import { InternalServerError as UpdateAccountInternalServerError } from "./types
 import { BadGatewayError as UpdateAccountBadGatewayError } from "./types/UpdateAccount/UpdateAccountError";
 import { GatewayTimeoutError as UpdateAccountGatewayTimeoutError } from "./types/UpdateAccount/UpdateAccountError";
 import { InvalidParameterError as AcceptInvitationInvalidParameterError } from "./types/AcceptInvitation/AcceptInvitationError";
-import { InvalidSecretError as AcceptInvitationInvalidSecretError } from "./types/AcceptInvitation/AcceptInvitationError";
-import { InvalidInviteError as AcceptInvitationInvalidInviteError } from "./types/AcceptInvitation/AcceptInvitationError";
-import { ExpiredSecretError as AcceptInvitationExpiredSecretError } from "./types/AcceptInvitation/AcceptInvitationError";
+import { InvalidInvitationError as AcceptInvitationInvalidInvitationError } from "./types/AcceptInvitation/AcceptInvitationError";
+import { InvalidInvitationSecretError as AcceptInvitationInvalidInvitationSecretError } from "./types/AcceptInvitation/AcceptInvitationError";
+import { ExpiredInvitationError as AcceptInvitationExpiredInvitationError } from "./types/AcceptInvitation/AcceptInvitationError";
+import { NotFoundError as AcceptInvitationNotFoundError } from "./types/AcceptInvitation/AcceptInvitationError";
 import { InternalServerError as AcceptInvitationInternalServerError } from "./types/AcceptInvitation/AcceptInvitationError";
 import { BadGatewayError as AcceptInvitationBadGatewayError } from "./types/AcceptInvitation/AcceptInvitationError";
 import { GatewayTimeoutError as AcceptInvitationGatewayTimeoutError } from "./types/AcceptInvitation/AcceptInvitationError";
 import { InvalidParameterError as AcceptUserInvitationInvalidParameterError } from "./types/AcceptUserInvitation/AcceptUserInvitationError";
-import { InvalidSecretError as AcceptUserInvitationInvalidSecretError } from "./types/AcceptUserInvitation/AcceptUserInvitationError";
-import { InvalidInviteError as AcceptUserInvitationInvalidInviteError } from "./types/AcceptUserInvitation/AcceptUserInvitationError";
-import { ExpiredSecretError as AcceptUserInvitationExpiredSecretError } from "./types/AcceptUserInvitation/AcceptUserInvitationError";
+import { InvalidInvitationError as AcceptUserInvitationInvalidInvitationError } from "./types/AcceptUserInvitation/AcceptUserInvitationError";
+import { ExpiredInvitationError as AcceptUserInvitationExpiredInvitationError } from "./types/AcceptUserInvitation/AcceptUserInvitationError";
 import { NotFoundError as AcceptUserInvitationNotFoundError } from "./types/AcceptUserInvitation/AcceptUserInvitationError";
 import { InternalServerError as AcceptUserInvitationInternalServerError } from "./types/AcceptUserInvitation/AcceptUserInvitationError";
 import { BadGatewayError as AcceptUserInvitationBadGatewayError } from "./types/AcceptUserInvitation/AcceptUserInvitationError";
@@ -439,13 +446,15 @@ import { InternalServerError as AttachUserRoleInternalServerError } from "./type
 import { BadGatewayError as AttachUserRoleBadGatewayError } from "./types/AttachUserRole/AttachUserRoleError";
 import { GatewayTimeoutError as AttachUserRoleGatewayTimeoutError } from "./types/AttachUserRole/AttachUserRoleError";
 import { InvalidParameterError as ChangePasswordInvalidParameterError } from "./types/ChangePassword/ChangePasswordError";
-import { InvalidPasswordSecretError as ChangePasswordInvalidPasswordSecretError } from "./types/ChangePassword/ChangePasswordError";
+import { InvalidForgotPasswordError as ChangePasswordInvalidForgotPasswordError } from "./types/ChangePassword/ChangePasswordError";
 import { ExpiredPasswordSecretError as ChangePasswordExpiredPasswordSecretError } from "./types/ChangePassword/ChangePasswordError";
+import { InvalidForgotPasswordSecretError as ChangePasswordInvalidForgotPasswordSecretError } from "./types/ChangePassword/ChangePasswordError";
 import { NotFoundError as ChangePasswordNotFoundError } from "./types/ChangePassword/ChangePasswordError";
 import { InternalServerError as ChangePasswordInternalServerError } from "./types/ChangePassword/ChangePasswordError";
 import { BadGatewayError as ChangePasswordBadGatewayError } from "./types/ChangePassword/ChangePasswordError";
 import { GatewayTimeoutError as ChangePasswordGatewayTimeoutError } from "./types/ChangePassword/ChangePasswordError";
 import { InvalidParameterError as CreateAccountInvalidParameterError } from "./types/CreateAccount/CreateAccountError";
+import { NotFoundError as CreateAccountNotFoundError } from "./types/CreateAccount/CreateAccountError";
 import { ConflictError as CreateAccountConflictError } from "./types/CreateAccount/CreateAccountError";
 import { InternalServerError as CreateAccountInternalServerError } from "./types/CreateAccount/CreateAccountError";
 import { BadGatewayError as CreateAccountBadGatewayError } from "./types/CreateAccount/CreateAccountError";
@@ -471,6 +480,7 @@ import { BadGatewayError as CreatePolicyBadGatewayError } from "./types/CreatePo
 import { GatewayTimeoutError as CreatePolicyGatewayTimeoutError } from "./types/CreatePolicy/CreatePolicyError";
 import { InvalidParameterError as CreateProviderInvalidParameterError } from "./types/CreateProvider/CreateProviderError";
 import { UnauthorizedError as CreateProviderUnauthorizedError } from "./types/CreateProvider/CreateProviderError";
+import { InvalidCertificateError as CreateProviderInvalidCertificateError } from "./types/CreateProvider/CreateProviderError";
 import { ConflictError as CreateProviderConflictError } from "./types/CreateProvider/CreateProviderError";
 import { InternalServerError as CreateProviderInternalServerError } from "./types/CreateProvider/CreateProviderError";
 import { BadGatewayError as CreateProviderBadGatewayError } from "./types/CreateProvider/CreateProviderError";
@@ -488,10 +498,10 @@ import { InternalServerError as CreateTeamInternalServerError } from "./types/Cr
 import { BadGatewayError as CreateTeamBadGatewayError } from "./types/CreateTeam/CreateTeamError";
 import { GatewayTimeoutError as CreateTeamGatewayTimeoutError } from "./types/CreateTeam/CreateTeamError";
 import { InvalidParameterError as CreateTokenInvalidParameterError } from "./types/CreateToken/CreateTokenError";
-import { BadCredentialsError as CreateTokenBadCredentialsError } from "./types/CreateToken/CreateTokenError";
+import { InvalidCredentialsError as CreateTokenInvalidCredentialsError } from "./types/CreateToken/CreateTokenError";
 import { PasswordRevokedError as CreateTokenPasswordRevokedError } from "./types/CreateToken/CreateTokenError";
 import { IdentityDisabledError as CreateTokenIdentityDisabledError } from "./types/CreateToken/CreateTokenError";
-import { WrongAuthError as CreateTokenWrongAuthError } from "./types/CreateToken/CreateTokenError";
+import { InvalidAuthenticationModeError as CreateTokenInvalidAuthenticationModeError } from "./types/CreateToken/CreateTokenError";
 import { NotFoundError as CreateTokenNotFoundError } from "./types/CreateToken/CreateTokenError";
 import { ConflictError as CreateTokenConflictError } from "./types/CreateToken/CreateTokenError";
 import { InternalServerError as CreateTokenInternalServerError } from "./types/CreateToken/CreateTokenError";
@@ -499,7 +509,7 @@ import { BadGatewayError as CreateTokenBadGatewayError } from "./types/CreateTok
 import { GatewayTimeoutError as CreateTokenGatewayTimeoutError } from "./types/CreateToken/CreateTokenError";
 import { InvalidParameterError as CreateUserInvalidParameterError } from "./types/CreateUser/CreateUserError";
 import { UnauthorizedError as CreateUserUnauthorizedError } from "./types/CreateUser/CreateUserError";
-import { ForbiddenError as CreateUserForbiddenError } from "./types/CreateUser/CreateUserError";
+import { InvalidSubscriptionError as CreateUserInvalidSubscriptionError } from "./types/CreateUser/CreateUserError";
 import { ConflictError as CreateUserConflictError } from "./types/CreateUser/CreateUserError";
 import { InternalServerError as CreateUserInternalServerError } from "./types/CreateUser/CreateUserError";
 import { BadGatewayError as CreateUserBadGatewayError } from "./types/CreateUser/CreateUserError";
@@ -638,6 +648,7 @@ import { InternalServerError as DetachUserRoleInternalServerError } from "./type
 import { BadGatewayError as DetachUserRoleBadGatewayError } from "./types/DetachUserRole/DetachUserRoleError";
 import { GatewayTimeoutError as DetachUserRoleGatewayTimeoutError } from "./types/DetachUserRole/DetachUserRoleError";
 import { InvalidParameterError as ForgotPasswordInvalidParameterError } from "./types/ForgotPassword/ForgotPasswordError";
+import { InvalidIdentityUsernameError as ForgotPasswordInvalidIdentityUsernameError } from "./types/ForgotPassword/ForgotPasswordError";
 import { NotFoundError as ForgotPasswordNotFoundError } from "./types/ForgotPassword/ForgotPasswordError";
 import { InternalServerError as ForgotPasswordInternalServerError } from "./types/ForgotPassword/ForgotPasswordError";
 import { BadGatewayError as ForgotPasswordBadGatewayError } from "./types/ForgotPassword/ForgotPasswordError";
@@ -677,8 +688,9 @@ export const errors = {
     UpdatePasswordError: {
         InvalidParameterError: UpdatePasswordInvalidParameterError,
         UnauthorizedError: UpdatePasswordUnauthorizedError,
-        NotMatchError: UpdatePasswordNotMatchError,
-        WrongAuthError: UpdatePasswordWrongAuthError,
+        InvalidAuthenticationModeError: UpdatePasswordInvalidAuthenticationModeError,
+        PasswordDoesNotMatchError: UpdatePasswordPasswordDoesNotMatchError,
+        NotFoundError: UpdatePasswordNotFoundError,
         InternalServerError: UpdatePasswordInternalServerError,
         BadGatewayError: UpdatePasswordBadGatewayError,
         GatewayTimeoutError: UpdatePasswordGatewayTimeoutError,
@@ -698,6 +710,7 @@ export const errors = {
     UpdateProviderError: {
         InvalidParameterError: UpdateProviderInvalidParameterError,
         UnauthorizedError: UpdateProviderUnauthorizedError,
+        InvalidCertificateError: UpdateProviderInvalidCertificateError,
         NotFoundError: UpdateProviderNotFoundError,
         InternalServerError: UpdateProviderInternalServerError,
         BadGatewayError: UpdateProviderBadGatewayError,
@@ -738,8 +751,10 @@ export const errors = {
     UpdateTeamUserError: {
         InvalidParameterError: UpdateTeamUserInvalidParameterError,
         UnauthorizedError: UpdateTeamUserUnauthorizedError,
-        WrongAuthError: UpdateTeamUserWrongAuthError,
+        InvalidSubscriptionError: UpdateTeamUserInvalidSubscriptionError,
+        ForbiddenToUpdateProvisionedUserError: UpdateTeamUserForbiddenToUpdateProvisionedUserError,
         NotFoundError: UpdateTeamUserNotFoundError,
+        ConflictError: UpdateTeamUserConflictError,
         InternalServerError: UpdateTeamUserInternalServerError,
         BadGatewayError: UpdateTeamUserBadGatewayError,
         GatewayTimeoutError: UpdateTeamUserGatewayTimeoutError,
@@ -749,7 +764,8 @@ export const errors = {
     UpdateUserError: {
         InvalidParameterError: UpdateUserInvalidParameterError,
         UnauthorizedError: UpdateUserUnauthorizedError,
-        ForbiddenError: UpdateUserForbiddenError,
+        ForbiddenToUpdateProvisionedUserError: UpdateUserForbiddenToUpdateProvisionedUserError,
+        InvalidSubscriptionError: UpdateUserInvalidSubscriptionError,
         NotFoundError: UpdateUserNotFoundError,
         InternalServerError: UpdateUserInternalServerError,
         BadGatewayError: UpdateUserBadGatewayError,
@@ -922,6 +938,7 @@ export const errors = {
     InviteUserError: {
         InvalidParameterError: InviteUserInvalidParameterError,
         UnauthorizedError: InviteUserUnauthorizedError,
+        InvalidEmailError: InviteUserInvalidEmailError,
         NotFoundError: InviteUserNotFoundError,
         InternalServerError: InviteUserInternalServerError,
         BadGatewayError: InviteUserBadGatewayError,
@@ -1181,9 +1198,10 @@ export const errors = {
     },
     ResetPasswordError: {
         InvalidParameterError: ResetPasswordInvalidParameterError,
-        InvalidSecretError: ResetPasswordInvalidSecretError,
-        InvalidPasswordSecretError: ResetPasswordInvalidPasswordSecretError,
-        ExpiredPasswordSecretError: ResetPasswordExpiredPasswordSecretError,
+        InvalidForgotPasswordError: ResetPasswordInvalidForgotPasswordError,
+        InvalidForgotPasswordSecretError: ResetPasswordInvalidForgotPasswordSecretError,
+        ExpiredForgotPasswordError: ResetPasswordExpiredForgotPasswordError,
+        NotFoundError: ResetPasswordNotFoundError,
         InternalServerError: ResetPasswordInternalServerError,
         BadGatewayError: ResetPasswordBadGatewayError,
         GatewayTimeoutError: ResetPasswordGatewayTimeoutError,
@@ -1221,7 +1239,7 @@ export const errors = {
     },
     SamlSignOnError: {
         InvalidParameterError: SamlSignOnInvalidParameterError,
-        InvalidConfigurationError: SamlSignOnInvalidConfigurationError,
+        UserNotAllowedToSignOnError: SamlSignOnUserNotAllowedToSignOnError,
         NotFoundError: SamlSignOnNotFoundError,
         ConflictError: SamlSignOnConflictError,
         InternalServerError: SamlSignOnInternalServerError,
@@ -1244,9 +1262,10 @@ export const errors = {
     },
     AcceptInvitationError: {
         InvalidParameterError: AcceptInvitationInvalidParameterError,
-        InvalidSecretError: AcceptInvitationInvalidSecretError,
-        InvalidInviteError: AcceptInvitationInvalidInviteError,
-        ExpiredSecretError: AcceptInvitationExpiredSecretError,
+        InvalidInvitationError: AcceptInvitationInvalidInvitationError,
+        InvalidInvitationSecretError: AcceptInvitationInvalidInvitationSecretError,
+        ExpiredInvitationError: AcceptInvitationExpiredInvitationError,
+        NotFoundError: AcceptInvitationNotFoundError,
         InternalServerError: AcceptInvitationInternalServerError,
         BadGatewayError: AcceptInvitationBadGatewayError,
         GatewayTimeoutError: AcceptInvitationGatewayTimeoutError,
@@ -1255,9 +1274,8 @@ export const errors = {
     },
     AcceptUserInvitationError: {
         InvalidParameterError: AcceptUserInvitationInvalidParameterError,
-        InvalidSecretError: AcceptUserInvitationInvalidSecretError,
-        InvalidInviteError: AcceptUserInvitationInvalidInviteError,
-        ExpiredSecretError: AcceptUserInvitationExpiredSecretError,
+        InvalidInvitationError: AcceptUserInvitationInvalidInvitationError,
+        ExpiredInvitationError: AcceptUserInvitationExpiredInvitationError,
         NotFoundError: AcceptUserInvitationNotFoundError,
         InternalServerError: AcceptUserInvitationInternalServerError,
         BadGatewayError: AcceptUserInvitationBadGatewayError,
@@ -1377,8 +1395,9 @@ export const errors = {
     },
     ChangePasswordError: {
         InvalidParameterError: ChangePasswordInvalidParameterError,
-        InvalidPasswordSecretError: ChangePasswordInvalidPasswordSecretError,
+        InvalidForgotPasswordError: ChangePasswordInvalidForgotPasswordError,
         ExpiredPasswordSecretError: ChangePasswordExpiredPasswordSecretError,
+        InvalidForgotPasswordSecretError: ChangePasswordInvalidForgotPasswordSecretError,
         NotFoundError: ChangePasswordNotFoundError,
         InternalServerError: ChangePasswordInternalServerError,
         BadGatewayError: ChangePasswordBadGatewayError,
@@ -1388,6 +1407,7 @@ export const errors = {
     },
     CreateAccountError: {
         InvalidParameterError: CreateAccountInvalidParameterError,
+        NotFoundError: CreateAccountNotFoundError,
         ConflictError: CreateAccountConflictError,
         InternalServerError: CreateAccountInternalServerError,
         BadGatewayError: CreateAccountBadGatewayError,
@@ -1429,6 +1449,7 @@ export const errors = {
     CreateProviderError: {
         InvalidParameterError: CreateProviderInvalidParameterError,
         UnauthorizedError: CreateProviderUnauthorizedError,
+        InvalidCertificateError: CreateProviderInvalidCertificateError,
         ConflictError: CreateProviderConflictError,
         InternalServerError: CreateProviderInternalServerError,
         BadGatewayError: CreateProviderBadGatewayError,
@@ -1458,10 +1479,10 @@ export const errors = {
     },
     CreateTokenError: {
         InvalidParameterError: CreateTokenInvalidParameterError,
-        BadCredentialsError: CreateTokenBadCredentialsError,
+        InvalidCredentialsError: CreateTokenInvalidCredentialsError,
         PasswordRevokedError: CreateTokenPasswordRevokedError,
         IdentityDisabledError: CreateTokenIdentityDisabledError,
-        WrongAuthError: CreateTokenWrongAuthError,
+        InvalidAuthenticationModeError: CreateTokenInvalidAuthenticationModeError,
         NotFoundError: CreateTokenNotFoundError,
         ConflictError: CreateTokenConflictError,
         InternalServerError: CreateTokenInternalServerError,
@@ -1473,7 +1494,7 @@ export const errors = {
     CreateUserError: {
         InvalidParameterError: CreateUserInvalidParameterError,
         UnauthorizedError: CreateUserUnauthorizedError,
-        ForbiddenError: CreateUserForbiddenError,
+        InvalidSubscriptionError: CreateUserInvalidSubscriptionError,
         ConflictError: CreateUserConflictError,
         InternalServerError: CreateUserInternalServerError,
         BadGatewayError: CreateUserBadGatewayError,
@@ -1700,6 +1721,7 @@ export const errors = {
     },
     ForgotPasswordError: {
         InvalidParameterError: ForgotPasswordInvalidParameterError,
+        InvalidIdentityUsernameError: ForgotPasswordInvalidIdentityUsernameError,
         NotFoundError: ForgotPasswordNotFoundError,
         InternalServerError: ForgotPasswordInternalServerError,
         BadGatewayError: ForgotPasswordBadGatewayError,

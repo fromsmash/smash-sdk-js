@@ -5,10 +5,10 @@ export interface ListGroupUsersInput {
 export interface ListGroupUsersOutput {
     users: {
         id: string;
-        status: string;
+        status: "Enabled" | "Disabled";
         username: string;
         lastName: string;
         firstName: string;
-        provisioned: string;
+        provisioned: boolean;
     }[];
 }

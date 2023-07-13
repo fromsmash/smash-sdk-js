@@ -6,7 +6,7 @@ export interface CreateTeamInput {
         authentication?: {
             mode: "Anonymous" | "Authentified";
             rules?: {
-                type: "Wilcard" | "Email";
+                type: "Wildcard" | "Email";
                 value: string;
             }[];
         };
@@ -22,7 +22,7 @@ export interface CreateTeamOutput {
             authentication: {
                 mode: "Anonymous" | "Authentified";
                 rules?: {
-                    type: "Wilcard" | "Email";
+                    type: "Wildcard" | "Email";
                     value: string;
                 }[];
             };

@@ -6,7 +6,7 @@ export interface ListProvidersOutput {
         type: string;
         idpUrl: string;
         issuer: string;
-        status: string;
+        status: "Enabled" | "Disabled";
         created: string;
         metadata?: string;
         modified: string;

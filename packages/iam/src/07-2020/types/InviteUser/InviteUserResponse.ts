@@ -1,4 +1,4 @@
 import { InviteUserOutput } from "./InviteUser";
-import { InvalidParameterError, NotFoundError } from "./InviteUserError";
+import { InvalidParameterError, NotFoundError, InvalidEmailError } from "./InviteUserError";
 
-export type InviteUserResponse = InviteUserOutput | InvalidParameterError | NotFoundError;
+export type InviteUserResponse = InviteUserOutput | InvalidParameterError | NotFoundError | InvalidEmailError;
