@@ -31,7 +31,7 @@ export class Vat extends Client {
     public errors = errors;
 
     constructor(params: ClientParameters = {}) {
-        super({ service: "vat", ...params, type: "regional", userAgent: "@smash-sdk/vat@0.0.3" });
+        super({ service: "vat", ...params, type: "regional", userAgent: "@smash-sdk/vat@0.0.4" });
     }
 
     computeVat(params: ComputeVatInput): Promise<ComputeVatOutput> {
