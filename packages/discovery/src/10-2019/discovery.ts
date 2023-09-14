@@ -25,7 +25,7 @@ export class Discovery extends Client {
     public errors = errors;
 
     constructor(params: ClientParameters = {}) {
-        super({ service: "discovery", ...params, type: "regional", userAgent: "@smash-sdk/discovery@0.0.10" });
+        super({ service: "discovery", ...params, type: "regional", userAgent: "@smash-sdk/discovery@0.0.11" });
     }
 
     listPublicServices(): Promise<ListPublicServicesOutput> {
