@@ -1,6 +1,6 @@
 {
 	"name": "@smash-sdk/transfer",
-	"version": "0.0.14",
+	"version": "0.0.15",
 	"description": "Smash Sdk Transfer",
 	"repository": {
 		"type": "git",
@@ -8,17 +8,17 @@
 	},
 	"scripts": {
 		"transpile": "tsc",
-		"clean": "rimraf dist && rimraf node_modules",
+		"clean": "rimraf dist && rimraf node_modules && rimraf package-lock.json",
 		"build": "npm run clean && npm i && npm run transpile && cp ./package.json ./dist/",
 		"test": "jest"
 	},
 	"dependencies": {
-		"@smash-sdk/core": "^2.0.1"
+		"@smash-sdk/core": "^2.0.2"
 	},
 	"keywords": [
-		"smash",
-		"sdk",
-		"transfer",
+	    "smash",
+	    "sdk",
+	    "transfer",
 		"fromsmash",
 		"node",
 		"nodejs",
@@ -51,5 +51,5 @@
 		"promise",
 		"async",
 		"await"
-	]
+  	]
 }

@@ -2,7 +2,7 @@ export interface ListTransferFilesPreviewInput {
     transferId: string;
     limit?: number;
     start?: string;
-    sort?: string;
+    sort?: "asc" | "desc";
 }
 
 export interface ListTransferFilesPreviewOutput {

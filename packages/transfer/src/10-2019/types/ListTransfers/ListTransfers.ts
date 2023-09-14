@@ -1,7 +1,7 @@
 export interface ListTransfersInput {
     limit?: number;
     start?: string;
-    sort?: string;
+    sort?: "asc" | "desc";
 }
 
 export interface ListTransfersOutput {
