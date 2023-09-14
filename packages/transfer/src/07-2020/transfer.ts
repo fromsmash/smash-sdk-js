@@ -166,7 +166,7 @@ export class Transfer extends ExtendedTransfer {
     public errors = errors;
 
     constructor(params: ClientParameters = {}) {
-        super({ service: "transfer", ...params, type: "regional", userAgent: "@smash-sdk/transfer@0.0.15" });
+        super({ service: "transfer", ...params, type: "regional", userAgent: "@smash-sdk/transfer@0.0.16" });
     }
 
     createTeamTransfer(params: CreateTeamTransferInput): Promise<CreateTeamTransferOutput> {
