@@ -38,7 +38,7 @@ export class Link extends Client {
     public errors = errors;
 
     constructor(params: ClientParameters = {}) {
-        super({ service: "link", ...params, type: "global", userAgent: "@smash-sdk/link@0.0.3" });
+        super({ service: "link", ...params, type: "global", userAgent: "@smash-sdk/link@0.0.4" });
     }
 
     deleteLink(params: DeleteLinkInput): Promise<DeleteLinkOutput> {
