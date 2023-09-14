@@ -28,7 +28,7 @@ export class Image extends Client {
     public errors = errors;
 
     constructor(params: ClientParameters = {}) {
-        super({ service: "image", ...params, type: "regional", userAgent: "@smash-sdk/image@0.0.1" });
+        super({ service: "image", ...params, type: "regional", userAgent: "@smash-sdk/image@0.0.3" });
     }
 
     createImage(params: CreateImageInput = {}): Promise<CreateImageOutput> {
