@@ -1,6 +1,6 @@
 {
 	"name": "@smash-sdk/directory",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Smash Sdk Directory",
 	"repository": {
 		"type": "git",
@@ -8,16 +8,48 @@
 	},
 	"scripts": {
 		"transpile": "tsc",
-		"clean": "rimraf dist && rimraf node_modules",
+		"clean": "rimraf dist && rimraf node_modules && rimraf package-lock.json",
 		"build": "npm run clean && npm i && npm run transpile && cp ./package.json ./dist/",
 		"test": "jest"
 	},
 	"dependencies": {
-		"@smash-sdk/core": "^2.0.1"
+		"@smash-sdk/core": "^2.0.2"
 	},
 	"keywords": [
-		"smash",
-		"sdk",
-		"directory"
-	]
+	    "smash",
+	    "sdk",
+	    "directory",
+		"fromsmash",
+		"node",
+		"nodejs",
+		"transfer",
+		"upload",
+		"uploader",
+		"file-upload",
+		"file-uploader",
+		"files",
+		"big-file",
+		"big-files",
+		"big file",
+		"big files",
+		"multipart",
+		"multipart-upload",
+		"multipart-uploader",
+		"cdn",
+		"library",
+		"typescript",
+		"browser",
+		"html",
+		"html5",
+		"html5-uploader",
+		"progress",
+		"angular",
+		"react",
+		"vue",
+		"http",
+		"https",
+		"promise",
+		"async",
+		"await"
+  	]
 }
