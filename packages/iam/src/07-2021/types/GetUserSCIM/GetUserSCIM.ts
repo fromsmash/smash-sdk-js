@@ -3,7 +3,8 @@ export interface GetUserSCIMInput {
 }
 
 export interface GetUserSCIMOutput {
-    schemas: string;
+    schemas: string[];
+
     id: string;
     externalId: string;
     meta: {

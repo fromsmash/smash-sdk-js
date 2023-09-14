@@ -4,10 +4,10 @@ export interface GetSigninConfigurationInput {
 
 export interface GetSigninConfigurationOutput {
     configuration: {
-        type: string;
+        type: "SSO" | "Standard";
         username: string;
         providers: {
-            type: string;
+            type: "Saml" | "OpenId";
             idpUrl: string;
             status: "Enabled" | "Disabled";
         }[];

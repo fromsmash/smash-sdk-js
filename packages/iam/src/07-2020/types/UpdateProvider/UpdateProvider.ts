@@ -8,7 +8,7 @@ export interface UpdateProviderInput {
 export interface UpdateProviderOutput {
     provider: {
         name: string;
-        type: string;
+        type: "Saml" | "OpenId";
         idpUrl: string;
         issuer: string;
         created: string;

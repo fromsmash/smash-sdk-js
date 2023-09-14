@@ -27,7 +27,8 @@ export interface UpdateUserSCIMInput {
 }
 
 export interface UpdateUserSCIMOutput {
-    schemas: string;
+    schemas: string[];
+
     id: string;
     externalId: string;
     meta: {

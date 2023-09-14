@@ -14,7 +14,8 @@ export interface CreateGroupSCIMInput {
 }
 
 export interface CreateGroupSCIMOutput {
-    schemas: string;
+    schemas: string[];
+
     id: string;
     displayName: string;
     externalId: string;

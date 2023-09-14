@@ -11,7 +11,8 @@ export interface PatchGroupSCIMInput {
 }
 
 export interface PatchGroupSCIMOutput {
-    schemas: string;
+    schemas: string[];
+
     id: string;
     displayName: string;
     externalId: string;

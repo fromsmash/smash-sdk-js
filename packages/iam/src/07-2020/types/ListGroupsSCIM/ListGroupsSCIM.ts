@@ -6,13 +6,14 @@ export interface ListGroupsSCIMInput {
 }
 
 export interface ListGroupsSCIMOutput {
-    schemas: string;
+    schemas: string[];
+
     totalResults: number;
-    itemsPerPage: string;
+    itemsPerPage: number;
     startIndex: number;
 
     Resources: {
-        schemas: string;
+        schemas: string[];
         id: string;
         displayName: string;
         externalId: string;

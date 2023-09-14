@@ -3,7 +3,8 @@ export interface GetGroupSCIMInput {
 }
 
 export interface GetGroupSCIMOutput {
-    schemas: string;
+    schemas: string[];
+
     id: string;
     displayName: string;
     externalId: string;

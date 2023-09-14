@@ -11,7 +11,8 @@ export interface PatchUserSCIMInput {
 }
 
 export interface PatchUserSCIMOutput {
-    schemas: string;
+    schemas: string[];
+
     id: string;
     externalId: string;
     meta: {

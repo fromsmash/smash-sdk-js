@@ -1729,6 +1729,10 @@ export const errors = {
         UnknownError,
         NetworkError,
     },
+    DecodeTokenError: {
+        UnknownError,
+        NetworkError,
+    },
     InvalidSdkConfigurationError,
     InvalidRegionOrHostError,
     InvalidRegionError,

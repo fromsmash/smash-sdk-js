@@ -13,7 +13,8 @@ export interface UpdateGroupSCIMInput {
 }
 
 export interface UpdateGroupSCIMOutput {
-    schemas: string;
+    schemas: string[];
+
     id: string;
     displayName: string;
     externalId: string;

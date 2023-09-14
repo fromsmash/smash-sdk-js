@@ -1,4 +1,4 @@
-import { Client } from "@smash-sdk/core";
+import { ExtendedIam } from "./extendedIam";
 import { HttpRequest, HttpRequestHostParameters, SDKError, ClientParameters, config } from "@smash-sdk/core";
 import { errors } from "./errors";
 export * from "./errors";
@@ -319,6 +319,8 @@ import { ForgotPasswordInput, ForgotPasswordOutput } from "./types/ForgotPasswor
 import { ForgotPasswordResponse } from "./types/ForgotPassword/ForgotPasswordResponse";
 export * from "./types/ForgotPassword/ForgotPassword";
 
+export * from "./types/DecodeToken/DecodeToken";
+
 const endpoints = {
     "ca-central-1": "https://iam.ca-central-1.fromsmash.co",
     "eu-central-1": "https://iam.eu-central-1.fromsmash.co",
@@ -333,11 +335,11 @@ const endpoints = {
 
 config.setHosts("iam", endpoints);
 
-export class Iam extends Client {
+export class Iam extends ExtendedIam {
     public errors = errors;
 
     constructor(params: ClientParameters = {}) {
-        super({ service: "iam", ...params, type: "regional", userAgent: "@smash-sdk/iam@0.0.9-alpha.4" });
+        super({ service: "iam", ...params, type: "regional", userAgent: "@smash-sdk/iam@0.0.10" });
     }
 
     updateGroup(params: UpdateGroupInput): Promise<UpdateGroupOutput> {
@@ -3541,6 +3543,8 @@ export class Iam extends Client {
                     },
 
                     bodyParameters: {
+                        scope: params["scope"],
+                        ip: params["ip"],
                         tokenDuration: params["tokenDuration"],
                         refreshTokenDuration: params["refreshTokenDuration"],
                     },

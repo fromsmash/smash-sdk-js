@@ -5,7 +5,7 @@ export interface GetProviderInput {
 export interface GetProviderOutput {
     provider: {
         name: string;
-        type: string;
+        type: "Saml" | "OpenId";
         idpUrl: string;
         issuer: string;
         status: "Enabled" | "Disabled";

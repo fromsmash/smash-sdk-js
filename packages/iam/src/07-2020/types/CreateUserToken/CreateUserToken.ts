@@ -1,5 +1,7 @@
 export interface CreateUserTokenInput {
     userId: string;
+    scope?: "None" | "IP";
+    ip?: string;
     tokenDuration?: string;
     refreshTokenDuration?: string;
 }

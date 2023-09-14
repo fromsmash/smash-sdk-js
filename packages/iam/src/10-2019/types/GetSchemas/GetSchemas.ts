@@ -1,10 +1,11 @@
 export interface GetSchemasInput {}
 
 export interface GetSchemasOutput {
-    schemas: string;
-    totalResults: string;
-    itemsPerPage: string;
-    startIndex: string;
+    schemas: string[];
+
+    totalResults: number;
+    itemsPerPage: number;
+    startIndex: number;
 
     Resources: {
         id: string;

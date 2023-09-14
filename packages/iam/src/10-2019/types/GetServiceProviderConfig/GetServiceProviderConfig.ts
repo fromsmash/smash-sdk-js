@@ -1,7 +1,8 @@
 export interface GetServiceProviderConfigInput {}
 
 export interface GetServiceProviderConfigOutput {
-    schemas: string;
+    schemas: string[];
+
     patch: {
         supported: string;
     };

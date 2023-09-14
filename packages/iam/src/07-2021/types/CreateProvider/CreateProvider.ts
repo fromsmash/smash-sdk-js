@@ -11,7 +11,7 @@ export interface CreateProviderInput {
 export interface CreateProviderOutput {
     provider: {
         name: string;
-        type: string;
+        type: "Saml" | "OpenId";
         idpUrl: string;
         issuer: string;
         created: string;

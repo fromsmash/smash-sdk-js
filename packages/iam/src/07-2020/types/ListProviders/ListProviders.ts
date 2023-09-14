@@ -3,7 +3,7 @@ export interface ListProvidersInput {}
 export interface ListProvidersOutput {
     providers: {
         name: string;
-        type: string;
+        type: "Saml" | "OpenId";
         idpUrl: string;
         issuer: string;
         status: "Enabled" | "Disabled";

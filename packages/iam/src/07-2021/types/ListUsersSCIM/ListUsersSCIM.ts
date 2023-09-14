@@ -6,13 +6,14 @@ export interface ListUsersSCIMInput {
 }
 
 export interface ListUsersSCIMOutput {
-    schemas: string;
-    totalResults: string;
-    itemsPerPage: string;
-    startIndex: string;
+    schemas: string[];
+
+    totalResults: number;
+    itemsPerPage: number;
+    startIndex: number;
 
     Resources: {
-        schemas: string;
+        schemas: string[];
         id: string;
         externalId: string;
         meta: {
@@ -34,7 +35,7 @@ export interface ListUsersSCIMOutput {
         }[];
         displayName: string;
         locale: string;
-        active: string;
+        active: boolean;
         groups: {
             display: string;
             value: string;
