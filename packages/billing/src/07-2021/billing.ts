@@ -76,7 +76,7 @@ export class Billing extends Client {
     public errors = errors;
 
     constructor(params: ClientParameters = {}) {
-        super({ service: "billing", ...params, type: "regional", userAgent: "@smash-sdk/billing@0.0.3" });
+        super({ service: "billing", ...params, type: "regional", userAgent: "@smash-sdk/billing@0.0.4" });
     }
 
     listInvoices(): Promise<ListInvoicesOutput> {
