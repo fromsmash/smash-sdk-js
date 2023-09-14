@@ -1,6 +1,6 @@
 {
 	"name": "@smash-sdk/domain",
-	"version": "0.0.10",
+	"version": "0.0.11",
 	"description": "Smash Sdk Domain",
 	"repository": {
 		"type": "git",
@@ -9,7 +9,7 @@
 	"scripts": {
 		"transpile": "tsc",
 		"clean": "rimraf dist && rimraf node_modules && rimraf package-lock.json",
-		"build": "npm run clean && npm i && npm run transpile && cp ./package.json ./dist/",
+		"build": "npm run clean && npm i && npm run transpile && cp ./package.json ./dist/ && cp ./README.md ./dist/",
 		"test": "jest"
 	},
 	"dependencies": {

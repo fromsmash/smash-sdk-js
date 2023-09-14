@@ -44,7 +44,7 @@ export class Domain extends Client {
     public errors = errors;
 
     constructor(params: ClientParameters = {}) {
-        super({ service: "domain", ...params, type: "global", userAgent: "@smash-sdk/domain@0.0.10" });
+        super({ service: "domain", ...params, type: "global", userAgent: "@smash-sdk/domain@0.0.11" });
     }
 
     createDomain(params: CreateDomainInput): Promise<CreateDomainOutput> {
