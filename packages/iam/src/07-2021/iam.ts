@@ -339,7 +339,7 @@ export class Iam extends ExtendedIam {
     public errors = errors;
 
     constructor(params: ClientParameters = {}) {
-        super({ service: "iam", ...params, type: "regional", userAgent: "@smash-sdk/iam@0.0.10" });
+        super({ service: "iam", ...params, type: "regional", userAgent: "@smash-sdk/iam@0.0.11" });
     }
 
     updateGroup(params: UpdateGroupInput): Promise<UpdateGroupOutput> {

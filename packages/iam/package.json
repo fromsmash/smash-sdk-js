@@ -1,9 +1,9 @@
 {
     "name": "@smash-sdk/iam",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "description": "Smash Sdk Iam",
     "repository": { "type": "git", "url": "https://github.com/fromsmash/smash-sdk-js" },
-    "scripts": { "transpile": "tsc", "clean": "rimraf dist && rimraf node_modules && rimraf package-lock.json", "build": "npm run clean && npm i && npm run transpile && cp ./package.json ./dist/", "test": "jest" },
+    "scripts": { "transpile": "tsc", "clean": "rimraf dist && rimraf node_modules && rimraf package-lock.json", "build": "npm run clean && npm i && npm run transpile && cp ./package.json ./dist/ && cp ./README.md ./dist/", "test": "jest" },
     "dependencies": { "@smash-sdk/core": "^2.0.2", "jwt-decode": "^3.1.2" },
     "keywords": [
         "smash",
