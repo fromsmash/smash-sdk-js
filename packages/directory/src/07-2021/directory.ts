@@ -32,7 +32,7 @@ export class Directory extends Client {
     public errors = errors;
 
     constructor(params: ClientParameters = {}) {
-        super({ service: "directory", ...params, type: "global", userAgent: "@smash-sdk/directory@0.0.3" });
+        super({ service: "directory", ...params, type: "global", userAgent: "@smash-sdk/directory@0.0.4" });
     }
 
     changePassword(params: ChangePasswordInput): Promise<ChangePasswordOutput> {
