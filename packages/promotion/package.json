@@ -1,0 +1,55 @@
+{
+	"name": "@smash-sdk/promotion",
+	"version": "0.0.1",
+	"description": "Smash Sdk Promotion",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fromsmash/smash-sdk-js"
+	},
+	"scripts": {
+		"transpile": "tsc",
+		"clean": "rimraf dist && rimraf node_modules && rimraf package-lock.json",
+		"build": "npm run clean && npm i && npm run transpile && cp ./package.json ./dist/",
+		"test": "jest"
+	},
+	"dependencies": {
+		"@smash-sdk/core": "^2.0.2"
+	},
+	"keywords": [
+	    "smash",
+	    "sdk",
+	    "promotion",
+		"fromsmash",
+		"node",
+		"nodejs",
+		"transfer",
+		"upload",
+		"uploader",
+		"file-upload",
+		"file-uploader",
+		"files",
+		"big-file",
+		"big-files",
+		"big file",
+		"big files",
+		"multipart",
+		"multipart-upload",
+		"multipart-uploader",
+		"cdn",
+		"library",
+		"typescript",
+		"browser",
+		"html",
+		"html5",
+		"html5-uploader",
+		"progress",
+		"angular",
+		"react",
+		"vue",
+		"http",
+		"https",
+		"promise",
+		"async",
+		"await"
+  	]
+}
