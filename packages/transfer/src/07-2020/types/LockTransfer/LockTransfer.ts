@@ -5,7 +5,7 @@ export interface LockTransferInput {
 export interface LockTransferOutput {
     transfer: {
         id: string;
-        title: string;
+        title?: string;
         region:
             | "us-east-1"
             | "us-east-2"
@@ -39,7 +39,7 @@ export interface LockTransferOutput {
         created: string;
         deleted: string;
         modified: string;
-        language: string;
+        language: "en" | "fr" | "de" | "es" | "pt" | "it";
         delivery?: {
             type: "Email" | "Link";
             sender: {
@@ -56,7 +56,7 @@ export interface LockTransferOutput {
         };
         transferUrl: string;
         uploadState: "Draft" | "Lock";
-        description: string;
+        description?: string;
         notificationType: "All" | "None";
         availabilityEndDate: string;
         availabilityDuration: number;

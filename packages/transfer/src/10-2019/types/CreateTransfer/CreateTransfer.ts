@@ -3,7 +3,7 @@ export interface CreateTransferInput {
     filesNumber: number;
     domain?: string;
     customUrl?: string;
-    language?: string;
+    language?: "en" | "fr" | "de" | "es" | "pt" | "it";
     availabilityDuration?: number;
     title?: string;
     delivery?: {
@@ -42,7 +42,7 @@ export interface CreateTransferOutput {
     transfer: {
         id: string;
         size: number;
-        title: string;
+        title?: string;
         description?: string;
         region:
             | "us-east-1"
@@ -77,7 +77,7 @@ export interface CreateTransferOutput {
         created: string;
         deleted: string;
         modified: string;
-        language: string;
+        language: "en" | "fr" | "de" | "es" | "pt" | "it";
         filesNumber: number;
         transferUrl: string;
         uploadState: "Draft" | "Lock";

@@ -4,7 +4,7 @@ export interface CreateTeamTransferInput {
     filesNumber: number;
     domain?: string;
     customUrl?: string;
-    language?: string;
+    language?: "en" | "fr" | "de" | "es" | "pt" | "it";
     availabilityDuration?: number;
     title?: string;
     delivery?: {
@@ -43,7 +43,7 @@ export interface CreateTeamTransferOutput {
     transfer: {
         id: string;
         size: number;
-        title: string;
+        title?: string;
         description?: string;
         status: "Uploading" | "Processing" | "Uploaded" | "Deleting" | "Deleted" | "Expired" | "Suspended" | "Dirty";
         region:
@@ -78,7 +78,7 @@ export interface CreateTeamTransferOutput {
         created: string;
         deleted: string;
         modified: string;
-        language: string;
+        language: "en" | "fr" | "de" | "es" | "pt" | "it";
         filesNumber: number;
         transferUrl: string;
         uploadState: "Draft" | "Lock";

@@ -7,7 +7,7 @@ export interface GetTeamTransferOutput {
     transfer: {
         id: string;
         size: number;
-        title: string;
+        title?: string;
         region:
             | "us-east-1"
             | "us-east-2"
@@ -41,7 +41,7 @@ export interface GetTeamTransferOutput {
         preview: "Full" | "None";
         deleted: string;
         modified: string;
-        language: string;
+        language: "en" | "fr" | "de" | "es" | "pt" | "it";
         filesNumber: number;
         transferUrl: string;
         uploadState: "Draft" | "Lock";
@@ -49,7 +49,7 @@ export interface GetTeamTransferOutput {
         filesViews: number;
         transferDownloads: number;
         filesDownloads: number;
-        description: string;
+        description?: string;
         promotion: {
             id: string;
             url: string;

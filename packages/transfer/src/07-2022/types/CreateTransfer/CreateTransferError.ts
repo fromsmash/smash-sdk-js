@@ -20,6 +20,8 @@ export class UsageExceededError extends SDKError {}
 
 export class PasswordRequiredError extends SDKError {}
 
+export class EmailNotVerifiedError extends SDKError {}
+
 export class CustomUrlAlreadyInUseError extends SDKError {}
 
 export class InternalServerError extends SDKError {}
@@ -39,6 +41,7 @@ export default {
     EmailNotAllowedError,
     UsageExceededError,
     PasswordRequiredError,
+    EmailNotVerifiedError,
     CustomUrlAlreadyInUseError,
     InternalServerError,
     BadGatewayError,

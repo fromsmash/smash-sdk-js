@@ -6,7 +6,7 @@ export interface DeleteReportOutput {
     transfer: {
         id: string;
         size: string;
-        title: string;
+        title?: string;
         status: "Uploading" | "Processing" | "Uploaded" | "Deleting" | "Deleted" | "Expired" | "Suspended" | "Dirty";
         region:
             | "us-east-1"
@@ -39,7 +39,7 @@ export interface DeleteReportOutput {
         created: string;
         deleted: string;
         modified: string;
-        language: string;
+        language: "en" | "fr" | "de" | "es" | "pt" | "it";
         filesNumber: number;
         uploadState: string;
         transferUrl: string;

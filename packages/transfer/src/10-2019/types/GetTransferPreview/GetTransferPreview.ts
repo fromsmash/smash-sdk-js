@@ -8,7 +8,7 @@ export interface GetTransferPreviewOutput {
     transfer: {
         id: string;
         size: number;
-        title: string;
+        title?: string;
         region:
             | "us-east-1"
             | "us-east-2"
@@ -42,7 +42,7 @@ export interface GetTransferPreviewOutput {
         created: string;
         deleted: string;
         modified: string;
-        language: string;
+        language: "en" | "fr" | "de" | "es" | "pt" | "it";
         download: string;
         filesNumber: number;
         transferUrl: string;

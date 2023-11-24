@@ -2,7 +2,7 @@ export interface UpdateTransferInput {
     transferId: string;
     size?: number;
     filesNumber?: number;
-    language?: string;
+    language?: "en" | "fr" | "de" | "es" | "pt" | "it";
     availabilityDuration?: number;
     title?: string;
     delivery?: {
@@ -75,7 +75,7 @@ export interface UpdateTransferOutput {
         created: string;
         deleted: string;
         modified: string;
-        language: string;
+        language: "en" | "fr" | "de" | "es" | "pt" | "it";
         filesNumber: number;
         transferUrl: string;
         uploadState: "Draft" | "Lock";
