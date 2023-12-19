@@ -40,7 +40,7 @@ export interface GetTransferOutput {
         created: string;
         deleted?: string;
         modified: string;
-        language?: string;
+        language?: "en" | "fr" | "de" | "es" | "pt" | "it";
         filesNumber: number;
         transferUrl: string;
         uploadState: "Draft" | "Lock";

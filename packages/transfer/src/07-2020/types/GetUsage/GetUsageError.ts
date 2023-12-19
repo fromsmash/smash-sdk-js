@@ -1,14 +1,17 @@
 import { SDKError } from "@smash-sdk/core";
 
-export class UnauthorizedError extends SDKError {}
+export class GenericError extends SDKError {}
 
-export class InternalServerError extends SDKError {}
+export class UnauthorizedError extends GenericError {}
 
-export class BadGatewayError extends SDKError {}
+export class InternalServerError extends GenericError {}
 
-export class GatewayTimeoutError extends SDKError {}
+export class BadGatewayError extends GenericError {}
+
+export class GatewayTimeoutError extends GenericError {}
 
 export default {
+    GenericError,
     UnauthorizedError,
     InternalServerError,
     BadGatewayError,

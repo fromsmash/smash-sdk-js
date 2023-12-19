@@ -40,7 +40,7 @@ export interface DeleteUserTransferOutput {
         created: string;
         deleted: string;
         modified: string;
-        language: "en" | "fr" | "de" | "es" | "pt" | "it";
+        language?: "en" | "fr" | "de" | "es" | "pt" | "it";
         filesNumber: number;
         uploadState: string;
         transferUrl: string;

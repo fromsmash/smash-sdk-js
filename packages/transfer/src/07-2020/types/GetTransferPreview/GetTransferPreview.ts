@@ -42,7 +42,7 @@ export interface GetTransferPreviewOutput {
         created: string;
         deleted: string;
         modified: string;
-        language: "en" | "fr" | "de" | "es" | "pt" | "it";
+        language?: "en" | "fr" | "de" | "es" | "pt" | "it";
         download: string;
         filesNumber: string;
         transferUrl: string;

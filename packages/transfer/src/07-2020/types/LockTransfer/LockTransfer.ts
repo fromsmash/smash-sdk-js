@@ -39,7 +39,7 @@ export interface LockTransferOutput {
         created: string;
         deleted: string;
         modified: string;
-        language: "en" | "fr" | "de" | "es" | "pt" | "it";
+        language?: "en" | "fr" | "de" | "es" | "pt" | "it";
         delivery?: {
             type: "Email" | "Link";
             sender: {

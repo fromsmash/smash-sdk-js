@@ -1,20 +1,23 @@
 import { SDKError } from "@smash-sdk/core";
 
-export class InvalidParameterError extends SDKError {}
+export class GenericError extends SDKError {}
 
-export class UnauthorizedError extends SDKError {}
+export class InvalidParameterError extends GenericError {}
 
-export class TransferNotUploadedError extends SDKError {}
+export class UnauthorizedError extends GenericError {}
 
-export class NotFoundError extends SDKError {}
+export class TransferNotUploadedError extends GenericError {}
 
-export class InternalServerError extends SDKError {}
+export class NotFoundError extends GenericError {}
 
-export class BadGatewayError extends SDKError {}
+export class InternalServerError extends GenericError {}
 
-export class GatewayTimeoutError extends SDKError {}
+export class BadGatewayError extends GenericError {}
+
+export class GatewayTimeoutError extends GenericError {}
 
 export default {
+    GenericError,
     InvalidParameterError,
     UnauthorizedError,
     TransferNotUploadedError,

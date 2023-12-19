@@ -1,10 +1,12 @@
 import { SDKError } from "@smash-sdk/core";
 
-export class BadRequestError extends SDKError { }
+export class GenericError extends SDKError { }
 
-export class NotFoundError extends SDKError { }
+export class BadRequestError extends GenericError { }
 
-export class InternalServerError extends SDKError { }
+export class NotFoundError extends GenericError { }
+
+export class InternalServerError extends GenericError { }
 
 interface S3Error {
 	name: string;
@@ -13,7 +15,8 @@ interface S3Error {
 	message: string;
 	resource?: string;
 }
-export class NoSuchUploadError extends SDKError {
+
+export class NoSuchUploadError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -29,7 +32,7 @@ export class NoSuchUploadError extends SDKError {
                 this.message = error.message;
         }
 }
-export class AccessControlListNotSupportedError extends SDKError {
+export class AccessControlListNotSupportedError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -45,7 +48,7 @@ export class AccessControlListNotSupportedError extends SDKError {
                 this.message = error.message;
         }
 }
-export class AccessDeniedError extends SDKError {
+export class AccessDeniedError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -61,7 +64,7 @@ export class AccessDeniedError extends SDKError {
                 this.message = error.message;
         }
 }
-export class AccessPointAlreadyOwnedByYouError extends SDKError {
+export class AccessPointAlreadyOwnedByYouError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -77,7 +80,7 @@ export class AccessPointAlreadyOwnedByYouError extends SDKError {
                 this.message = error.message;
         }
 }
-export class AccountProblemError extends SDKError {
+export class AccountProblemError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -93,7 +96,7 @@ export class AccountProblemError extends SDKError {
                 this.message = error.message;
         }
 }
-export class AllAccessDisabledError extends SDKError {
+export class AllAccessDisabledError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -109,7 +112,7 @@ export class AllAccessDisabledError extends SDKError {
                 this.message = error.message;
         }
 }
-export class AmbiguousGrantByEmailAddressError extends SDKError {
+export class AmbiguousGrantByEmailAddressError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -125,7 +128,7 @@ export class AmbiguousGrantByEmailAddressError extends SDKError {
                 this.message = error.message;
         }
 }
-export class AuthorizationHeaderMalformedError extends SDKError {
+export class AuthorizationHeaderMalformedError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -141,7 +144,7 @@ export class AuthorizationHeaderMalformedError extends SDKError {
                 this.message = error.message;
         }
 }
-export class BadDigestError extends SDKError {
+export class BadDigestError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -157,7 +160,7 @@ export class BadDigestError extends SDKError {
                 this.message = error.message;
         }
 }
-export class EntityTooSmallError extends SDKError {
+export class EntityTooSmallError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -173,7 +176,7 @@ export class EntityTooSmallError extends SDKError {
                 this.message = error.message;
         }
 }
-export class EntityTooLargeError extends SDKError {
+export class EntityTooLargeError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -189,7 +192,7 @@ export class EntityTooLargeError extends SDKError {
                 this.message = error.message;
         }
 }
-export class ExpiredTokenError extends SDKError {
+export class ExpiredTokenError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -205,7 +208,7 @@ export class ExpiredTokenError extends SDKError {
                 this.message = error.message;
         }
 }
-export class IllegalLocationConstraintExceptionError extends SDKError {
+export class IllegalLocationConstraintExceptionError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -221,7 +224,7 @@ export class IllegalLocationConstraintExceptionError extends SDKError {
                 this.message = error.message;
         }
 }
-export class IllegalVersioningConfigurationExceptionError extends SDKError {
+export class IllegalVersioningConfigurationExceptionError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -237,7 +240,7 @@ export class IllegalVersioningConfigurationExceptionError extends SDKError {
                 this.message = error.message;
         }
 }
-export class IncompleteBodyError extends SDKError {
+export class IncompleteBodyError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -253,7 +256,7 @@ export class IncompleteBodyError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InlineDataTooLargeError extends SDKError {
+export class InlineDataTooLargeError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -269,7 +272,7 @@ export class InlineDataTooLargeError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InternalError extends SDKError {
+export class InternalError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -285,7 +288,7 @@ export class InternalError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidAccessKeyIdError extends SDKError {
+export class InvalidAccessKeyIdError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -301,7 +304,7 @@ export class InvalidAccessKeyIdError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidArgumentError extends SDKError {
+export class InvalidArgumentError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -317,7 +320,7 @@ export class InvalidArgumentError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidBucketNameError extends SDKError {
+export class InvalidBucketNameError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -333,7 +336,7 @@ export class InvalidBucketNameError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidBucketStateError extends SDKError {
+export class InvalidBucketStateError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -349,7 +352,7 @@ export class InvalidBucketStateError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidDigestError extends SDKError {
+export class InvalidDigestError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -365,7 +368,7 @@ export class InvalidDigestError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidLocationConstraintError extends SDKError {
+export class InvalidLocationConstraintError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -381,7 +384,7 @@ export class InvalidLocationConstraintError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidObjectStateError extends SDKError {
+export class InvalidObjectStateError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -397,7 +400,7 @@ export class InvalidObjectStateError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidPartError extends SDKError {
+export class InvalidPartError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -413,7 +416,7 @@ export class InvalidPartError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidPartOrderError extends SDKError {
+export class InvalidPartOrderError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -429,7 +432,7 @@ export class InvalidPartOrderError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidPayerError extends SDKError {
+export class InvalidPayerError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -445,7 +448,7 @@ export class InvalidPayerError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidPolicyDocumentError extends SDKError {
+export class InvalidPolicyDocumentError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -461,7 +464,7 @@ export class InvalidPolicyDocumentError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidRangeError extends SDKError {
+export class InvalidRangeError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -477,7 +480,7 @@ export class InvalidRangeError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidRequestError extends SDKError {
+export class InvalidRequestError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -493,7 +496,7 @@ export class InvalidRequestError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidSecurityError extends SDKError {
+export class InvalidSecurityError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -509,7 +512,7 @@ export class InvalidSecurityError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidTokenError extends SDKError {
+export class InvalidTokenError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -525,7 +528,7 @@ export class InvalidTokenError extends SDKError {
                 this.message = error.message;
         }
 }
-export class InvalidURIError extends SDKError {
+export class InvalidURIError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -541,7 +544,7 @@ export class InvalidURIError extends SDKError {
                 this.message = error.message;
         }
 }
-export class KeyTooLongError extends SDKError {
+export class KeyTooLongError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -557,7 +560,7 @@ export class KeyTooLongError extends SDKError {
                 this.message = error.message;
         }
 }
-export class MaxMessageLengthExceededError extends SDKError {
+export class MaxMessageLengthExceededError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -573,7 +576,7 @@ export class MaxMessageLengthExceededError extends SDKError {
                 this.message = error.message;
         }
 }
-export class MetadataTooLargeError extends SDKError {
+export class MetadataTooLargeError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -589,7 +592,7 @@ export class MetadataTooLargeError extends SDKError {
                 this.message = error.message;
         }
 }
-export class MissingContentLengthError extends SDKError {
+export class MissingContentLengthError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -605,7 +608,7 @@ export class MissingContentLengthError extends SDKError {
                 this.message = error.message;
         }
 }
-export class MissingRequestBodyError extends SDKError {
+export class MissingRequestBodyError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -621,7 +624,7 @@ export class MissingRequestBodyError extends SDKError {
                 this.message = error.message;
         }
 }
-export class MissingSecurityHeaderError extends SDKError {
+export class MissingSecurityHeaderError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -637,7 +640,7 @@ export class MissingSecurityHeaderError extends SDKError {
                 this.message = error.message;
         }
 }
-export class NoSuchBucketError extends SDKError {
+export class NoSuchBucketError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -653,7 +656,7 @@ export class NoSuchBucketError extends SDKError {
                 this.message = error.message;
         }
 }
-export class NoSuchBucketPolicyError extends SDKError {
+export class NoSuchBucketPolicyError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -669,7 +672,7 @@ export class NoSuchBucketPolicyError extends SDKError {
                 this.message = error.message;
         }
 }
-export class NoSuchCORSConfigurationError extends SDKError {
+export class NoSuchCORSConfigurationError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -685,7 +688,7 @@ export class NoSuchCORSConfigurationError extends SDKError {
                 this.message = error.message;
         }
 }
-export class NoSuchKeyError extends SDKError {
+export class NoSuchKeyError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -701,7 +704,7 @@ export class NoSuchKeyError extends SDKError {
                 this.message = error.message;
         }
 }
-export class NotImplementedError extends SDKError {
+export class NotImplementedError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -717,7 +720,7 @@ export class NotImplementedError extends SDKError {
                 this.message = error.message;
         }
 }
-export class RequestHeaderSectionTooLargeError extends SDKError {
+export class RequestHeaderSectionTooLargeError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -733,7 +736,7 @@ export class RequestHeaderSectionTooLargeError extends SDKError {
                 this.message = error.message;
         }
 }       
-export class RequestTimeoutError extends SDKError {
+export class RequestTimeoutError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -749,7 +752,7 @@ export class RequestTimeoutError extends SDKError {
                 this.message = error.message;
         }
 }
-export class RequestTimeTooSkewedError extends SDKError {
+export class RequestTimeTooSkewedError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -765,7 +768,7 @@ export class RequestTimeTooSkewedError extends SDKError {
                 this.message = error.message;
         }
 }
-export class ServerSideEncryptionConfigurationNotFoundError extends SDKError {
+export class ServerSideEncryptionConfigurationNotFoundError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -781,7 +784,7 @@ export class ServerSideEncryptionConfigurationNotFoundError extends SDKError {
                 this.message = error.message;
         }
 }
-export class ServiceUnavailableError extends SDKError {
+export class ServiceUnavailableError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -797,7 +800,7 @@ export class ServiceUnavailableError extends SDKError {
                 this.message = error.message;
         }
 }
-export class SignatureDoesNotMatchError extends SDKError {
+export class SignatureDoesNotMatchError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -813,7 +816,7 @@ export class SignatureDoesNotMatchError extends SDKError {
                 this.message = error.message;
         }
 }
-export class SlowDownError extends SDKError {
+export class SlowDownError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -829,7 +832,7 @@ export class SlowDownError extends SDKError {
                 this.message = error.message;
         }
 }
-export class TokenRefreshRequiredError extends SDKError {
+export class TokenRefreshRequiredError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -845,7 +848,7 @@ export class TokenRefreshRequiredError extends SDKError {
                 this.message = error.message;
         }
 }
-export class UnexpectedContentError extends SDKError {
+export class UnexpectedContentError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -861,7 +864,7 @@ export class UnexpectedContentError extends SDKError {
                 this.message = error.message;
         }
 }
-export class UserKeyMustBeSpecifiedError extends SDKError {
+export class UserKeyMustBeSpecifiedError extends GenericError {
         name: string;
         code: number;
         requestId: string;
@@ -879,6 +882,7 @@ export class UserKeyMustBeSpecifiedError extends SDKError {
 }
 
 export default {
+        GenericError,
         BadRequestError,
         InternalServerError,
         NotFoundError,
