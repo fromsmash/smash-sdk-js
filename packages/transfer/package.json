@@ -1,6 +1,6 @@
 {
 	"name": "@smash-sdk/transfer",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Smash Sdk Transfer",
 	"repository": {
 		"type": "git",
@@ -16,9 +16,9 @@
 		"@smash-sdk/core": "^2.0.4"
 	},
 	"keywords": [
-		"smash",
-		"sdk",
-		"transfer",
+	    "smash",
+	    "sdk",
+	    "transfer",
 		"fromsmash",
 		"node",
 		"nodejs",
@@ -51,5 +51,5 @@
 		"promise",
 		"async",
 		"await"
-	]
+  	]
 }

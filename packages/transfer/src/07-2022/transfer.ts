@@ -167,7 +167,7 @@ export class Transfer extends ExtendedTransfer {
     static errors = errors;
 
     constructor(params: ClientParameters = {}) {
-        super({ service: "transfer", ...params, type: "regional", userAgent: "@smash-sdk/transfer@0.0.18" });
+        super({ service: "transfer", ...params, type: "regional", userAgent: "@smash-sdk/transfer@0.1.1" });
     }
 
     getReport(params: GetReportInput): Promise<GetReportOutput> {

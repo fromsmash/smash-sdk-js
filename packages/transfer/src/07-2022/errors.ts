@@ -370,8 +370,70 @@ import { BadGatewayError as GetMetricStatisticBadGatewayError } from "./types/Ge
 import { GatewayTimeoutError as GetMetricStatisticGatewayTimeoutError } from "./types/GetMetricStatistic/GetMetricStatisticError";
 import { GenericError as DownloadGenericError } from "./types/Download/DownloadError";
 import { BadRequestError as DownloadBadRequestError } from "./types/Download/DownloadError";
+import { UnauthorizedError as DownloadUnauthorizedError } from "./types/Download/DownloadError";
+import { FobiddenError as DownloadFobiddenError } from "./types/Download/DownloadError";
+import { NotFoundError as DownloadNotFoundError } from "./types/Download/DownloadError";
+import { InternalServerError as DownloadInternalServerError } from "./types/Download/DownloadError";
+import { BadGatewayError as DownloadBadGatewayError } from "./types/Download/DownloadError";
+import { GatewayTimeoutError as DownloadGatewayTimeoutError } from "./types/Download/DownloadError";
 import { GenericError as UploadTransferFilePartGenericError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
 import { BadRequestError as UploadTransferFilePartBadRequestError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InternalServerError as UploadTransferFilePartInternalServerError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { NotFoundError as UploadTransferFilePartNotFoundError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { NoSuchUploadError as UploadTransferFilePartNoSuchUploadError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { AccessControlListNotSupportedError as UploadTransferFilePartAccessControlListNotSupportedError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { AccessDeniedError as UploadTransferFilePartAccessDeniedError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { AccessPointAlreadyOwnedByYouError as UploadTransferFilePartAccessPointAlreadyOwnedByYouError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { AccountProblemError as UploadTransferFilePartAccountProblemError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { AllAccessDisabledError as UploadTransferFilePartAllAccessDisabledError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { AmbiguousGrantByEmailAddressError as UploadTransferFilePartAmbiguousGrantByEmailAddressError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { AuthorizationHeaderMalformedError as UploadTransferFilePartAuthorizationHeaderMalformedError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { BadDigestError as UploadTransferFilePartBadDigestError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { EntityTooSmallError as UploadTransferFilePartEntityTooSmallError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { EntityTooLargeError as UploadTransferFilePartEntityTooLargeError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { ExpiredTokenError as UploadTransferFilePartExpiredTokenError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { IllegalLocationConstraintExceptionError as UploadTransferFilePartIllegalLocationConstraintExceptionError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { IllegalVersioningConfigurationExceptionError as UploadTransferFilePartIllegalVersioningConfigurationExceptionError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { IncompleteBodyError as UploadTransferFilePartIncompleteBodyError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InlineDataTooLargeError as UploadTransferFilePartInlineDataTooLargeError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InternalError as UploadTransferFilePartInternalError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidAccessKeyIdError as UploadTransferFilePartInvalidAccessKeyIdError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidArgumentError as UploadTransferFilePartInvalidArgumentError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidBucketNameError as UploadTransferFilePartInvalidBucketNameError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidBucketStateError as UploadTransferFilePartInvalidBucketStateError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidDigestError as UploadTransferFilePartInvalidDigestError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidLocationConstraintError as UploadTransferFilePartInvalidLocationConstraintError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidObjectStateError as UploadTransferFilePartInvalidObjectStateError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidPartError as UploadTransferFilePartInvalidPartError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidPartOrderError as UploadTransferFilePartInvalidPartOrderError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidPayerError as UploadTransferFilePartInvalidPayerError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidPolicyDocumentError as UploadTransferFilePartInvalidPolicyDocumentError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidRangeError as UploadTransferFilePartInvalidRangeError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidRequestError as UploadTransferFilePartInvalidRequestError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidSecurityError as UploadTransferFilePartInvalidSecurityError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidTokenError as UploadTransferFilePartInvalidTokenError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { InvalidURIError as UploadTransferFilePartInvalidURIError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { KeyTooLongError as UploadTransferFilePartKeyTooLongError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { MaxMessageLengthExceededError as UploadTransferFilePartMaxMessageLengthExceededError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { MetadataTooLargeError as UploadTransferFilePartMetadataTooLargeError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { MissingContentLengthError as UploadTransferFilePartMissingContentLengthError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { MissingRequestBodyError as UploadTransferFilePartMissingRequestBodyError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { MissingSecurityHeaderError as UploadTransferFilePartMissingSecurityHeaderError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { NoSuchBucketError as UploadTransferFilePartNoSuchBucketError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { NoSuchBucketPolicyError as UploadTransferFilePartNoSuchBucketPolicyError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { NoSuchCORSConfigurationError as UploadTransferFilePartNoSuchCORSConfigurationError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { NoSuchKeyError as UploadTransferFilePartNoSuchKeyError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { NotImplementedError as UploadTransferFilePartNotImplementedError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { RequestHeaderSectionTooLargeError as UploadTransferFilePartRequestHeaderSectionTooLargeError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { RequestTimeoutError as UploadTransferFilePartRequestTimeoutError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { RequestTimeTooSkewedError as UploadTransferFilePartRequestTimeTooSkewedError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { ServerSideEncryptionConfigurationNotFoundError as UploadTransferFilePartServerSideEncryptionConfigurationNotFoundError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { ServiceUnavailableError as UploadTransferFilePartServiceUnavailableError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { SignatureDoesNotMatchError as UploadTransferFilePartSignatureDoesNotMatchError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { SlowDownError as UploadTransferFilePartSlowDownError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { TokenRefreshRequiredError as UploadTransferFilePartTokenRefreshRequiredError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { UnexpectedContentError as UploadTransferFilePartUnexpectedContentError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
+import { UserKeyMustBeSpecifiedError as UploadTransferFilePartUserKeyMustBeSpecifiedError } from "./types/UploadTransferFilePart/UploadTransferFilePartError";
 
 export const errors = {
     GetReport: {
@@ -933,12 +995,74 @@ export const errors = {
     },
     Download: {
         BadRequestError: DownloadBadRequestError,
+        UnauthorizedError: DownloadUnauthorizedError,
+        FobiddenError: DownloadFobiddenError,
+        NotFoundError: DownloadNotFoundError,
+        InternalServerError: DownloadInternalServerError,
+        BadGatewayError: DownloadBadGatewayError,
+        GatewayTimeoutError: DownloadGatewayTimeoutError,
         GenericError: DownloadGenericError,
         UnknownError,
         NetworkError,
     },
     UploadTransferFilePart: {
         BadRequestError: UploadTransferFilePartBadRequestError,
+        InternalServerError: UploadTransferFilePartInternalServerError,
+        NotFoundError: UploadTransferFilePartNotFoundError,
+        NoSuchUploadError: UploadTransferFilePartNoSuchUploadError,
+        AccessControlListNotSupportedError: UploadTransferFilePartAccessControlListNotSupportedError,
+        AccessDeniedError: UploadTransferFilePartAccessDeniedError,
+        AccessPointAlreadyOwnedByYouError: UploadTransferFilePartAccessPointAlreadyOwnedByYouError,
+        AccountProblemError: UploadTransferFilePartAccountProblemError,
+        AllAccessDisabledError: UploadTransferFilePartAllAccessDisabledError,
+        AmbiguousGrantByEmailAddressError: UploadTransferFilePartAmbiguousGrantByEmailAddressError,
+        AuthorizationHeaderMalformedError: UploadTransferFilePartAuthorizationHeaderMalformedError,
+        BadDigestError: UploadTransferFilePartBadDigestError,
+        EntityTooSmallError: UploadTransferFilePartEntityTooSmallError,
+        EntityTooLargeError: UploadTransferFilePartEntityTooLargeError,
+        ExpiredTokenError: UploadTransferFilePartExpiredTokenError,
+        IllegalLocationConstraintExceptionError: UploadTransferFilePartIllegalLocationConstraintExceptionError,
+        IllegalVersioningConfigurationExceptionError: UploadTransferFilePartIllegalVersioningConfigurationExceptionError,
+        IncompleteBodyError: UploadTransferFilePartIncompleteBodyError,
+        InlineDataTooLargeError: UploadTransferFilePartInlineDataTooLargeError,
+        InternalError: UploadTransferFilePartInternalError,
+        InvalidAccessKeyIdError: UploadTransferFilePartInvalidAccessKeyIdError,
+        InvalidArgumentError: UploadTransferFilePartInvalidArgumentError,
+        InvalidBucketNameError: UploadTransferFilePartInvalidBucketNameError,
+        InvalidBucketStateError: UploadTransferFilePartInvalidBucketStateError,
+        InvalidDigestError: UploadTransferFilePartInvalidDigestError,
+        InvalidLocationConstraintError: UploadTransferFilePartInvalidLocationConstraintError,
+        InvalidObjectStateError: UploadTransferFilePartInvalidObjectStateError,
+        InvalidPartError: UploadTransferFilePartInvalidPartError,
+        InvalidPartOrderError: UploadTransferFilePartInvalidPartOrderError,
+        InvalidPayerError: UploadTransferFilePartInvalidPayerError,
+        InvalidPolicyDocumentError: UploadTransferFilePartInvalidPolicyDocumentError,
+        InvalidRangeError: UploadTransferFilePartInvalidRangeError,
+        InvalidRequestError: UploadTransferFilePartInvalidRequestError,
+        InvalidSecurityError: UploadTransferFilePartInvalidSecurityError,
+        InvalidTokenError: UploadTransferFilePartInvalidTokenError,
+        InvalidURIError: UploadTransferFilePartInvalidURIError,
+        KeyTooLongError: UploadTransferFilePartKeyTooLongError,
+        MaxMessageLengthExceededError: UploadTransferFilePartMaxMessageLengthExceededError,
+        MetadataTooLargeError: UploadTransferFilePartMetadataTooLargeError,
+        MissingContentLengthError: UploadTransferFilePartMissingContentLengthError,
+        MissingRequestBodyError: UploadTransferFilePartMissingRequestBodyError,
+        MissingSecurityHeaderError: UploadTransferFilePartMissingSecurityHeaderError,
+        NoSuchBucketError: UploadTransferFilePartNoSuchBucketError,
+        NoSuchBucketPolicyError: UploadTransferFilePartNoSuchBucketPolicyError,
+        NoSuchCORSConfigurationError: UploadTransferFilePartNoSuchCORSConfigurationError,
+        NoSuchKeyError: UploadTransferFilePartNoSuchKeyError,
+        NotImplementedError: UploadTransferFilePartNotImplementedError,
+        RequestHeaderSectionTooLargeError: UploadTransferFilePartRequestHeaderSectionTooLargeError,
+        RequestTimeoutError: UploadTransferFilePartRequestTimeoutError,
+        RequestTimeTooSkewedError: UploadTransferFilePartRequestTimeTooSkewedError,
+        ServerSideEncryptionConfigurationNotFoundError: UploadTransferFilePartServerSideEncryptionConfigurationNotFoundError,
+        ServiceUnavailableError: UploadTransferFilePartServiceUnavailableError,
+        SignatureDoesNotMatchError: UploadTransferFilePartSignatureDoesNotMatchError,
+        SlowDownError: UploadTransferFilePartSlowDownError,
+        TokenRefreshRequiredError: UploadTransferFilePartTokenRefreshRequiredError,
+        UnexpectedContentError: UploadTransferFilePartUnexpectedContentError,
+        UserKeyMustBeSpecifiedError: UploadTransferFilePartUserKeyMustBeSpecifiedError,
         GenericError: UploadTransferFilePartGenericError,
         UnknownError,
         NetworkError,
@@ -1502,12 +1626,74 @@ export const errors = {
     },
     DownloadError: {
         BadRequestError: DownloadBadRequestError,
+        UnauthorizedError: DownloadUnauthorizedError,
+        FobiddenError: DownloadFobiddenError,
+        NotFoundError: DownloadNotFoundError,
+        InternalServerError: DownloadInternalServerError,
+        BadGatewayError: DownloadBadGatewayError,
+        GatewayTimeoutError: DownloadGatewayTimeoutError,
         GenericError: DownloadGenericError,
         UnknownError,
         NetworkError,
     },
     UploadTransferFilePartError: {
         BadRequestError: UploadTransferFilePartBadRequestError,
+        InternalServerError: UploadTransferFilePartInternalServerError,
+        NotFoundError: UploadTransferFilePartNotFoundError,
+        NoSuchUploadError: UploadTransferFilePartNoSuchUploadError,
+        AccessControlListNotSupportedError: UploadTransferFilePartAccessControlListNotSupportedError,
+        AccessDeniedError: UploadTransferFilePartAccessDeniedError,
+        AccessPointAlreadyOwnedByYouError: UploadTransferFilePartAccessPointAlreadyOwnedByYouError,
+        AccountProblemError: UploadTransferFilePartAccountProblemError,
+        AllAccessDisabledError: UploadTransferFilePartAllAccessDisabledError,
+        AmbiguousGrantByEmailAddressError: UploadTransferFilePartAmbiguousGrantByEmailAddressError,
+        AuthorizationHeaderMalformedError: UploadTransferFilePartAuthorizationHeaderMalformedError,
+        BadDigestError: UploadTransferFilePartBadDigestError,
+        EntityTooSmallError: UploadTransferFilePartEntityTooSmallError,
+        EntityTooLargeError: UploadTransferFilePartEntityTooLargeError,
+        ExpiredTokenError: UploadTransferFilePartExpiredTokenError,
+        IllegalLocationConstraintExceptionError: UploadTransferFilePartIllegalLocationConstraintExceptionError,
+        IllegalVersioningConfigurationExceptionError: UploadTransferFilePartIllegalVersioningConfigurationExceptionError,
+        IncompleteBodyError: UploadTransferFilePartIncompleteBodyError,
+        InlineDataTooLargeError: UploadTransferFilePartInlineDataTooLargeError,
+        InternalError: UploadTransferFilePartInternalError,
+        InvalidAccessKeyIdError: UploadTransferFilePartInvalidAccessKeyIdError,
+        InvalidArgumentError: UploadTransferFilePartInvalidArgumentError,
+        InvalidBucketNameError: UploadTransferFilePartInvalidBucketNameError,
+        InvalidBucketStateError: UploadTransferFilePartInvalidBucketStateError,
+        InvalidDigestError: UploadTransferFilePartInvalidDigestError,
+        InvalidLocationConstraintError: UploadTransferFilePartInvalidLocationConstraintError,
+        InvalidObjectStateError: UploadTransferFilePartInvalidObjectStateError,
+        InvalidPartError: UploadTransferFilePartInvalidPartError,
+        InvalidPartOrderError: UploadTransferFilePartInvalidPartOrderError,
+        InvalidPayerError: UploadTransferFilePartInvalidPayerError,
+        InvalidPolicyDocumentError: UploadTransferFilePartInvalidPolicyDocumentError,
+        InvalidRangeError: UploadTransferFilePartInvalidRangeError,
+        InvalidRequestError: UploadTransferFilePartInvalidRequestError,
+        InvalidSecurityError: UploadTransferFilePartInvalidSecurityError,
+        InvalidTokenError: UploadTransferFilePartInvalidTokenError,
+        InvalidURIError: UploadTransferFilePartInvalidURIError,
+        KeyTooLongError: UploadTransferFilePartKeyTooLongError,
+        MaxMessageLengthExceededError: UploadTransferFilePartMaxMessageLengthExceededError,
+        MetadataTooLargeError: UploadTransferFilePartMetadataTooLargeError,
+        MissingContentLengthError: UploadTransferFilePartMissingContentLengthError,
+        MissingRequestBodyError: UploadTransferFilePartMissingRequestBodyError,
+        MissingSecurityHeaderError: UploadTransferFilePartMissingSecurityHeaderError,
+        NoSuchBucketError: UploadTransferFilePartNoSuchBucketError,
+        NoSuchBucketPolicyError: UploadTransferFilePartNoSuchBucketPolicyError,
+        NoSuchCORSConfigurationError: UploadTransferFilePartNoSuchCORSConfigurationError,
+        NoSuchKeyError: UploadTransferFilePartNoSuchKeyError,
+        NotImplementedError: UploadTransferFilePartNotImplementedError,
+        RequestHeaderSectionTooLargeError: UploadTransferFilePartRequestHeaderSectionTooLargeError,
+        RequestTimeoutError: UploadTransferFilePartRequestTimeoutError,
+        RequestTimeTooSkewedError: UploadTransferFilePartRequestTimeTooSkewedError,
+        ServerSideEncryptionConfigurationNotFoundError: UploadTransferFilePartServerSideEncryptionConfigurationNotFoundError,
+        ServiceUnavailableError: UploadTransferFilePartServiceUnavailableError,
+        SignatureDoesNotMatchError: UploadTransferFilePartSignatureDoesNotMatchError,
+        SlowDownError: UploadTransferFilePartSlowDownError,
+        TokenRefreshRequiredError: UploadTransferFilePartTokenRefreshRequiredError,
+        UnexpectedContentError: UploadTransferFilePartUnexpectedContentError,
+        UserKeyMustBeSpecifiedError: UploadTransferFilePartUserKeyMustBeSpecifiedError,
         GenericError: UploadTransferFilePartGenericError,
         UnknownError,
         NetworkError,
