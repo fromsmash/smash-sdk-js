@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://api.fromsmash.com/"><img src="https://developer.fromsmash.com/LOGO_SMASH_API.png" align="center" width="135" /></a>
+  <a href="https://fromsmash.com/"><img src="https://developer.fromsmash.com/LOGO_SMASH_API.png" align="center" width="135" alt="Send big files"/></a>
 <h1 align="center">Smash SDK for JavaScript</h1>
 </p>
 The Smash SDK for JavaScript is a JavaScript library for the Smash API. It enables you to easily work with Smash Web Services and has a modular architecture with a separate package for each service. It provides a set of tools and utilities for building applications that interact with the Smash services.
